@@ -1,0 +1,25 @@
+.screen {
+	padding: 55px 0;
+    @media (max-width: $sm) {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    &__container {
+    }
+    &__goods-rubric {
+    	margin: 0 0 59px;
+        @media (max-width: $sm) {
+            margin-bottom: 30px;
+        }
+    }
+    &__title {
+    	margin: 0 0 13px;
+    	text-align: center;
+        @media (max-width: $sm) {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+    }
+    &__goods-list {
+    }
+}

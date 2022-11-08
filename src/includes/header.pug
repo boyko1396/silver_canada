@@ -1,0 +1,83 @@
+header.header
+  nav(role="navigation").header__menu
+    ul.header__menu-list
+      li.header__menu-item
+        a(href="#").header__menu-link Earrings
+      li.header__menu-item
+        a(href="#").header__menu-link Necklace
+      li.header__menu-item
+        a(href="#").header__menu-link Chains
+      li.header__menu-item
+        a(href="#").header__menu-link Set
+      li.header__menu-item
+        a(href="#").header__menu-link Engagement ring
+    ul.header__menu-list
+      li.header__menu-item
+        a(href="#").header__menu-link Contact
+      li.header__menu-item
+        a(href="#").header__menu-link About
+      li.header__menu-item
+        a(href="#").header__menu-link Sale
+      li.header__menu-item
+        a(href="#").header__menu-link Gift certificates
+      li.header__menu-item
+        a(href="#").header__menu-link Payment and delivery
+      li.header__menu-item
+        a(href="#").header__menu-link Cashback
+      li.header__menu-item
+        a(href="#").header__menu-link FAQ
+  .header__top
+    .container-fluid.header__top-container
+      .header__top-toggle-wrap
+        button(type="button").js-header-nav-toggle.header__top-toggle
+          span
+          span
+          span
+      a(href="/").header__top-logo
+        img(src="images/logo-black.png" alt="Luxury Life")
+      .header__top-action
+        button(type="button").d-sm-none.action-btn.action-btn--size-md.header__top-action-item
+          svg.icon.action-btn__icon
+            use(xlink:href="images/sprite.svg#search")
+        button(type="button").d-sm-none.action-btn.action-btn--size-md.header__top-action-item
+          svg.icon.action-btn__icon
+            use(xlink:href="images/sprite.svg#phone-type-1")
+        button(type="button").d-sm-none.action-btn.action-btn--size-md.header__top-action-item
+          svg.icon.action-btn__icon
+            use(xlink:href="images/sprite.svg#user")
+        button(type="button").d-sm-none.action-btn.action-btn--size-md.header__top-action-item
+          svg.icon.action-btn__icon
+            use(xlink:href="images/sprite.svg#favorites")
+        button(type="button").action-btn.action-btn--size-md.header__top-action-item
+          svg.icon.action-btn__icon
+            use(xlink:href="images/sprite.svg#basket")
+          span.action-btn__badge 2
+  .header__nav
+    .container.header__nav-container
+      nav.d-sm-none.header-nav.header__nav-el
+        ul.header-nav__list
+          li.header-nav__item
+            a(href="#").header-nav__link Catalog
+          li.header-nav__item
+            a(href="#").header-nav__link Contact
+          li.header-nav__item
+            a(href="#").header-nav__link About
+          li.header-nav__item
+            a(href="#").header-nav__link Sale
+          li.header-nav__item
+            a(href="#").header-nav__link Gift certificates
+      .header__nav-action.d-sm-block
+        form(action="#").search-form.header__nav-action-item
+          input(type="search" name="q" required placeholder="Search...").search-form__input
+          button(type="button").action-btn.action-btn--size-md.search-form__btn
+            svg.icon.action-btn__icon
+              use(xlink:href="images/sprite.svg#search")
+        button(type="button").action-btn.action-btn--size-md.header__nav-action-item
+          svg.icon.action-btn__icon
+            use(xlink:href="images/sprite.svg#phone-type-1")
+        button(type="button").action-btn.action-btn--size-md.header__nav-action-item
+          svg.icon.action-btn__icon
+            use(xlink:href="images/sprite.svg#user")
+        button(type="button").action-btn.action-btn--size-md.header__nav-action-item
+          svg.icon.action-btn__icon
+            use(xlink:href="images/sprite.svg#favorites")

@@ -1,0 +1,20 @@
+@import "default/variables";
+@import "default/variables-css";
+@import "default/fonts";
+@import "libs/normalize";
+@import "default/interface";
+@import "libs/slick.min";
+
+@import "blocks/grid";
+@import "blocks/components";
+
+@import "layouts/header";
+@import "layouts/main-slider";
+@import "layouts/footer";
+@import "layouts/screen";
+@import "layouts/promotions-section";
+@import "layouts/engagement-section";
+@import "layouts/info-screen";
+@import "layouts/seo-screen";
+
+@import "media";

@@ -1,0 +1,43 @@
+.row {
+    margin: 0 var(--gap-);
+    display: flex;
+    flex-wrap: wrap;
+    &__col {
+        max-width: 100%;
+        min-height: 1px;
+        padding: 0 var(--gap);
+        flex-grow: 1;
+        &--2 {
+            max-width: 16.6666666667%;
+            flex-basis: 16.6666666667%;
+        }
+        &--3 {
+            max-width: 25%;
+            flex-basis: 25%;
+        }
+        &--4 {
+            max-width: 33.33333333%;
+            flex-basis: 33.33333333%;
+        }
+        &--5 {
+            max-width: 41.6666666667%;
+            flex-basis: 41.6666666667%;
+        }
+        &--6 {
+            max-width: 50%;
+            flex-basis: 50%;
+        }
+        &--7 {
+            max-width: 58.3333333333%;
+            flex-basis: 58.3333333333%;
+        }
+        &--12 {
+            max-width: 100%;
+            flex-basis: 100%;
+        }
+    }
+}
+
+[class^='row__col'] {
+    @extend .row__col;
+}

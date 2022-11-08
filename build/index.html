@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>Финансовый тест</title><link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/images/favicon/site.webmanifest">
+<link rel="shortcut icon" href="/images/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="css/styles.css"/>
+  </head>
+  <body>
+    <div id="root">
+      <header class="header">
+        <nav class="header__menu" role="navigation">
+          <ul class="header__menu-list">
+            <li class="header__menu-item"><a class="header__menu-link" href="#">Earrings</a></li>
+            <li class="header__menu-item"><a class="header__menu-link" href="#">Necklace</a></li>
+            <li class="header__menu-item"><a class="header__menu-link" href="#">Chains</a></li>
+            <li class="header__menu-item"><a class="header__menu-link" href="#">Set</a></li>
+            <li class="header__menu-item"><a class="header__menu-link" href="#">Engagement ring</a></li>
+          </ul>
+          <ul class="header__menu-list">
+            <li class="header__menu-item"><a class="header__menu-link" href="#">Contact</a></li>
+            <li class="header__menu-item"><a class="header__menu-link" href="#">About</a></li>
+            <li class="header__menu-item"><a class="header__menu-link" href="#">Sale</a></li>
+            <li class="header__menu-item"><a class="header__menu-link" href="#">Gift certificates</a></li>
+            <li class="header__menu-item"><a class="header__menu-link" href="#">Payment and delivery</a></li>
+            <li class="header__menu-item"><a class="header__menu-link" href="#">Cashback</a></li>
+            <li class="header__menu-item"><a class="header__menu-link" href="#">FAQ</a></li>
+          </ul>
+        </nav>
+        <div class="header__top">
+          <div class="container-fluid header__top-container">
+            <div class="header__top-toggle-wrap">
+              <button class="js-header-nav-toggle header__top-toggle" type="button"><span></span><span></span><span></span></button>
+            </div><a class="header__top-logo" href="/"><img src="images/logo-black.png" alt="Luxury Life"/></a>
+            <div class="header__top-action">
+              <button class="d-sm-none action-btn action-btn--size-md header__top-action-item" type="button">
+                <svg class="icon action-btn__icon">
+                  <use xlink:href="images/sprite.svg#search"></use>
+                </svg>
+              </button>
+              <button class="d-sm-none action-btn action-btn--size-md header__top-action-item" type="button">
+                <svg class="icon action-btn__icon">
+                  <use xlink:href="images/sprite.svg#phone-type-1"></use>
+                </svg>
+              </button>
+              <button class="d-sm-none action-btn action-btn--size-md header__top-action-item" type="button">
+                <svg class="icon action-btn__icon">
+                  <use xlink:href="images/sprite.svg#user"></use>
+                </svg>
+              </button>
+              <button class="d-sm-none action-btn action-btn--size-md header__top-action-item" type="button">
+                <svg class="icon action-btn__icon">
+                  <use xlink:href="images/sprite.svg#favorites"></use>
+                </svg>
+              </button>
+              <button class="action-btn action-btn--size-md header__top-action-item" type="button">
+                <svg class="icon action-btn__icon">
+                  <use xlink:href="images/sprite.svg#basket"></use>
+                </svg><span class="action-btn__badge">2</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="header__nav">
+          <div class="container header__nav-container">
+            <nav class="d-sm-none header-nav header__nav-el">
+              <ul class="header-nav__list">
+                <li class="header-nav__item"><a class="header-nav__link" href="#">Catalog</a></li>
+                <li class="header-nav__item"><a class="header-nav__link" href="#">Contact</a></li>
+                <li class="header-nav__item"><a class="header-nav__link" href="#">About</a></li>
+                <li class="header-nav__item"><a class="header-nav__link" href="#">Sale</a></li>
+                <li class="header-nav__item"><a class="header-nav__link" href="#">Gift certificates</a></li>
+              </ul>
+            </nav>
+            <div class="header__nav-action d-sm-block">
+              <form class="search-form header__nav-action-item" action="#">
+                <input class="search-form__input" type="search" name="q" required="required" placeholder="Search..."/>
+                <button class="action-btn action-btn--size-md search-form__btn" type="button">
+                  <svg class="icon action-btn__icon">
+                    <use xlink:href="images/sprite.svg#search"></use>
+                  </svg>
+                </button>
+              </form>
+              <button class="action-btn action-btn--size-md header__nav-action-item" type="button">
+                <svg class="icon action-btn__icon">
+                  <use xlink:href="images/sprite.svg#phone-type-1"></use>
+                </svg>
+              </button>
+              <button class="action-btn action-btn--size-md header__nav-action-item" type="button">
+                <svg class="icon action-btn__icon">
+                  <use xlink:href="images/sprite.svg#user"></use>
+                </svg>
+              </button>
+              <button class="action-btn action-btn--size-md header__nav-action-item" type="button">
+                <svg class="icon action-btn__icon">
+                  <use xlink:href="images/sprite.svg#favorites"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="main-slider">
+        <div class="js-main-slider-init main-slider__init">
+          <div class="main-slider__slide">
+            <picture class="main-slider__picture"><img src="images/main-slider-1.jpg" alt="Gold earrings with diamant"/></picture>
+            <div class="container main-slider__container">
+              <div class="main-slider__content">
+                <h1 class="title-size-1 main-slider__title">Gold earrings with diamant</h1>
+                <div class="content main-slider__text">
+                  <p>14 karat red gold ring with cubic zirkonia</p>
+                </div>
+                <div class="main-slider__price"><span class="main-slider__price-new">3472$</span><span class="main-slider__price-old">5472$</span></div><a class="btn btn--size-md btn--theme-dark main-slider__btn" href="#"><span class="btn__inner"><span class="btn__title">See details</span>
+                    <svg class="icon btn__icon btn__icon--ltr">
+                      <use xlink:href="images/sprite.svg#arrow-type-1"></use>
+                    </svg></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="main-slider__slide">
+            <picture class="main-slider__picture"><img src="images/main-slider-1.jpg" alt="Gold earrings with diamant"/></picture>
+            <div class="container main-slider__container">
+              <div class="main-slider__content">
+                <h1 class="title-size-1 main-slider__title">Gold earrings with diamant2</h1>
+                <div class="content main-slider__text">
+                  <p>14 karat red gold ring with cubic zirkonia</p>
+                </div>
+                <div class="main-slider__price"><span class="main-slider__price-new">3472$</span><span class="main-slider__price-old">5472$</span></div><a class="btn btn--size-md btn--theme-dark main-slider__btn" href="#"><span class="btn__inner"><span class="btn__title">See details</span>
+                    <svg class="icon btn__icon btn__icon--ltr">
+                      <use xlink:href="images/sprite.svg#arrow-type-1"></use>
+                    </svg></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="main-slider__slide">
+            <picture class="main-slider__picture"><img src="images/main-slider-1.jpg" alt="Gold earrings with diamant"/></picture>
+            <div class="container main-slider__container">
+              <div class="main-slider__content">
+                <h1 class="title-size-1 main-slider__title">Gold earrings with diamant2</h1>
+                <div class="content main-slider__text">
+                  <p>14 karat red gold ring with cubic zirkonia</p>
+                </div>
+                <div class="main-slider__price"><span class="main-slider__price-new">3472$</span><span class="main-slider__price-old">5472$</span></div><a class="btn btn--size-md btn--theme-dark main-slider__btn" href="#"><span class="btn__inner"><span class="btn__title">See details</span>
+                    <svg class="icon btn__icon btn__icon--ltr">
+                      <use xlink:href="images/sprite.svg#arrow-type-1"></use>
+                    </svg></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="main-slider__slide">
+            <picture class="main-slider__picture"><img src="images/main-slider-1.jpg" alt="Gold earrings with diamant"/></picture>
+            <div class="container main-slider__container">
+              <div class="main-slider__content">
+                <h1 class="title-size-1 main-slider__title">Gold earrings with diamant2</h1>
+                <div class="content main-slider__text">
+                  <p>14 karat red gold ring with cubic zirkonia</p>
+                </div>
+                <div class="main-slider__price"><span class="main-slider__price-new">3472$</span><span class="main-slider__price-old">5472$</span></div><a class="btn btn--size-md btn--theme-dark main-slider__btn" href="#"><span class="btn__inner"><span class="btn__title">See details</span>
+                    <svg class="icon btn__icon btn__icon--ltr">
+                      <use xlink:href="images/sprite.svg#arrow-type-1"></use>
+                    </svg></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="main-slider__slide">
+            <picture class="main-slider__picture"><img src="images/main-slider-1.jpg" alt="Gold earrings with diamant"/></picture>
+            <div class="container main-slider__container">
+              <div class="main-slider__content">
+                <h1 class="title-size-1 main-slider__title">Gold earrings with diamant2</h1>
+                <div class="content main-slider__text">
+                  <p>14 karat red gold ring with cubic zirkonia</p>
+                </div>
+                <div class="main-slider__price"><span class="main-slider__price-new">3472$</span><span class="main-slider__price-old">5472$</span></div><a class="btn btn--size-md btn--theme-dark main-slider__btn" href="#"><span class="btn__inner"><span class="btn__title">See details</span>
+                    <svg class="icon btn__icon btn__icon--ltr">
+                      <use xlink:href="images/sprite.svg#arrow-type-1"></use>
+                    </svg></span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-slider__dots"></div>
+      </section>
+      <section class="screen">
+        <div class="container screen__container">
+          <div class="goods-rubric screen__goods-rubric">
+            <div class="goods-rubric__row">
+              <div class="goods-rubric__col">
+                <article class="goods-rubric-card goods-rubric__card">
+                  <picture class="goods-rubric-card__picture"><img src="images/goods-rubric-1.svg" alt="Engagement ring"/></picture>
+                  <h3 class="title-size-5 goods-rubric-card__title"><a class="goods-rubric-card__link" href="#">Engagement ring</a></h3>
+                </article>
+              </div>
+              <div class="goods-rubric__col">
+                <article class="goods-rubric-card goods-rubric__card">
+                  <picture class="goods-rubric-card__picture"><img src="images/goods-rubric-2.svg" alt="Earrings"/></picture>
+                  <h3 class="title-size-5 goods-rubric-card__title"><a class="goods-rubric-card__link" href="#">Earrings</a></h3>
+                </article>
+              </div>
+              <div class="goods-rubric__col">
+                <article class="goods-rubric-card goods-rubric__card">
+                  <picture class="goods-rubric-card__picture"><img src="images/goods-rubric-3.svg" alt="Necklace"/></picture>
+                  <h3 class="title-size-5 goods-rubric-card__title"><a class="goods-rubric-card__link" href="#">Necklace</a></h3>
+                </article>
+              </div>
+              <div class="goods-rubric__col">
+                <article class="goods-rubric-card goods-rubric__card">
+                  <picture class="goods-rubric-card__picture"><img src="images/goods-rubric-4.svg" alt="Chains"/></picture>
+                  <h3 class="title-size-5 goods-rubric-card__title"><a class="goods-rubric-card__link" href="#">Chains</a></h3>
+                </article>
+              </div>
+              <div class="goods-rubric__col">
+                <article class="goods-rubric-card goods-rubric__card">
+                  <picture class="goods-rubric-card__picture"><img src="images/goods-rubric-5.svg" alt="Set"/></picture>
+                  <h3 class="title-size-5 goods-rubric-card__title"><a class="goods-rubric-card__link" href="#">Set</a></h3>
+                </article>
+              </div>
+            </div>
+          </div>
+          <h2 class="title-size-2 screen__title">We recommend</h2>
+          <div class="goods-list screen__goods-list">
+            <div class="js-goods-slider-mobile-init goods-list__row">
+              <div class="goods-list__col">
+                <article class="good-card goods-list__card">
+                  <picture class="good-card__picture"><img src="images/good-card-1.jpg" alt="Silver earrings with cubic zirconia"/></picture>
+                  <div class="good-card__content">
+                    <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
+                    <div class="good-card__price">
+                      <div class="good-card__price-new">6264 грн</div>
+                      <div class="good-card__price-old">8764 грн</div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="goods-list__col">
+                <article class="good-card goods-list__card">
+                  <picture class="good-card__picture"><img src="images/good-card-2.jpg" alt="Silver earrings with cubic zirconia"/></picture>
+                  <div class="good-card__content">
+                    <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
+                    <div class="good-card__price">
+                      <div class="good-card__price-new">6264 грн</div>
+                      <div class="good-card__price-old">8764 грн</div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="goods-list__col">
+                <article class="good-card goods-list__card">
+                  <picture class="good-card__picture"><img src="images/good-card-3.jpg" alt="Silver earrings with cubic zirconia"/></picture>
+                  <div class="good-card__content">
+                    <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
+                    <div class="good-card__price">
+                      <div class="good-card__price-new">6264 грн</div>
+                      <div class="good-card__price-old">8764 грн</div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="goods-list__col">
+                <article class="good-card goods-list__card">
+                  <picture class="good-card__picture"><img src="images/good-card-1.jpg" alt="Silver earrings with cubic zirconia"/></picture>
+                  <div class="good-card__content">
+                    <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
+                    <div class="good-card__price">
+                      <div class="good-card__price-new">6264 грн</div>
+                      <div class="good-card__price-old">8764 грн</div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="goods-list__col">
+                <article class="good-card goods-list__card">
+                  <picture class="good-card__picture"><img src="images/good-card-2.jpg" alt="Silver earrings with cubic zirconia"/></picture>
+                  <div class="good-card__content">
+                    <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
+                    <div class="good-card__price">
+                      <div class="good-card__price-new">6264 грн</div>
+                      <div class="good-card__price-old">8764 грн</div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="goods-list__col">
+                <article class="good-card goods-list__card">
+                  <picture class="good-card__picture"><img src="images/good-card-3.jpg" alt="Silver earrings with cubic zirconia"/></picture>
+                  <div class="good-card__content">
+                    <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
+                    <div class="good-card__price">
+                      <div class="good-card__price-new">6264 грн</div>
+                      <div class="good-card__price-old">8764 грн</div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="goods-list__col">
+                <article class="good-card goods-list__card">
+                  <picture class="good-card__picture"><img src="images/good-card-1.jpg" alt="Silver earrings with cubic zirconia"/></picture>
+                  <div class="good-card__content">
+                    <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
+                    <div class="good-card__price">
+                      <div class="good-card__price-new">6264 грн</div>
+                      <div class="good-card__price-old">8764 грн</div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="goods-list__col">
+                <article class="good-card goods-list__card">
+                  <picture class="good-card__picture"><img src="images/good-card-2.jpg" alt="Silver earrings with cubic zirconia"/></picture>
+                  <div class="good-card__content">
+                    <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
+                    <div class="good-card__price">
+                      <div class="good-card__price-new">6264 грн</div>
+                      <div class="good-card__price-old">8764 грн</div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="promotions-section">
+        <div class="container promotions-section__container">
+          <h2 class="visually-hidden promotions-section__title">Promotions and discounts</h2>
+          <div class="js-promotions-slider-init promotions-section__slider">
+            <div class="promotions-section__slider-slide">
+              <div class="promotions-card promotions-card--banner promotions-section__slider-card">
+                <picture class="promotions-card__banner"><img src="images/promotions-card-1.jpg" alt="Gift certificates"/></picture>
+              </div>
+            </div>
+            <div class="promotions-section__slider-slide">
+              <div class="promotions-card promotions-card--banner promotions-section__slider-card">
+                <picture class="promotions-card__banner"><img src="images/promotions-card-2.jpg" alt="Rings engagement"/></picture>
+              </div>
+            </div>
+            <div class="promotions-section__slider-slide">
+              <div class="promotions-card promotions-card--banner promotions-section__slider-card">
+                <picture class="promotions-card__banner"><img src="images/promotions-card-1.jpg" alt="Gift certificates"/></picture>
+              </div>
+            </div>
+            <div class="promotions-section__slider-slide">
+              <div class="promotions-card promotions-card--banner promotions-section__slider-card">
+                <picture class="promotions-card__banner"><img src="images/promotions-card-2.jpg" alt="Rings engagement"/></picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="engagement-section">
+        <div class="container engagement-section__container">
+          <div class="row engagement-section__row">
+            <div class="row__col--5 engagement-section__col--picture">
+              <picture class="d-sm-none engagement-section__picture"><img src="images/engagement-section-1.jpg" alt="Advertising engagement rings and engagement rings"/></picture>
+            </div>
+            <div class="row__col--7 engagement-section__col--slider">
+              <div class="engagement-section__content">
+                <h2 class="title-size-2 engagement-section__title">Advertising engagement rings and&nbsp;engagement rings</h2>
+                <picture class="d-sm-block engagement-section__picture"><img src="images/engagement-section-1.jpg" alt="Advertising engagement rings and engagement rings"/></picture>
+                <div class="goods-slider engagement-section__goods-slider">
+                  <div class="js-goods-slider-init goods-slider__init">
+                    <div class="goods-slider__slide">
+                      <article class="good-card goods-slider__slide-card">
+                        <picture class="good-card__picture"><img src="images/good-card-1.jpg" alt="Silver earrings with cubic zirconia"/></picture>
+                        <div class="good-card__content">
+                          <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
+                          <div class="good-card__price">
+                            <div class="good-card__price-new">6264 грн</div>
+                            <div class="good-card__price-old">8764 грн</div>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="goods-slider__slide">
+                      <article class="good-card goods-slider__slide-card">
+                        <picture class="good-card__picture"><img src="images/good-card-1.jpg" alt="Silver earrings with cubic zirconia"/></picture>
+                        <div class="good-card__content">
+                          <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
+                          <div class="good-card__price">
+                            <div class="good-card__price-new">6264 грн</div>
+                            <div class="good-card__price-old">8764 грн</div>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="goods-slider__slide">
+                      <article class="good-card goods-slider__slide-card">
+                        <picture class="good-card__picture"><img src="images/good-card-1.jpg" alt="Silver earrings with cubic zirconia"/></picture>
+                        <div class="good-card__content">
+                          <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
+                          <div class="good-card__price">
+                            <div class="good-card__price-new">6264 грн</div>
+                            <div class="good-card__price-old">8764 грн</div>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="goods-slider__slide">
+                      <article class="good-card goods-slider__slide-card">
+                        <picture class="good-card__picture"><img src="images/good-card-1.jpg" alt="Silver earrings with cubic zirconia"/></picture>
+                        <div class="good-card__content">
+                          <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
+                          <div class="good-card__price">
+                            <div class="good-card__price-new">6264 грн</div>
+                            <div class="good-card__price-old">8764 грн</div>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="screen">
+        <div class="container screen__container">
+          <h2 class="title-size-2 screen__title">New items</h2>
+          <div class="goods-list screen__goods-list">
+            <div class="js-goods-slider-mobile-init goods-list__row">
+              <div class="goods-list__col">
+                <article class="good-card goods-list__card">
+                  <picture class="good-card__picture"><img src="images/good-card-1.jpg" alt="Silver earrings with cubic zirconia"/></picture>
+                  <div class="good-card__content">
+                    <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
+                    <div class="good-card__price">
+                      <div class="good-card__price-new">6264 грн</div>
+                      <div class="good-card__price-old">8764 грн</div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="goods-list__col">
+                <article class="good-card goods-list__card">
+                  <picture class="good-card__picture"><img src="images/good-card-2.jpg" alt="Silver earrings with cubic zirconia"/></picture>
+                  <div class="good-card__content">
+                    <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
+                    <div class="good-card__price">
+                      <div class="good-card__price-new">6264 грн</div>
+                      <div class="good-card__price-old">8764 грн</div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="goods-list__col">
+                <article class="good-card goods-list__card">
+                  <picture class="good-card__picture"><img src="images/good-card-3.jpg" alt="Silver earrings with cubic zirconia"/></picture>
+                  <div class="good-card__content">
+                    <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
+                    <div class="good-card__price">
+                      <div class="good-card__price-new">6264 грн</div>
+                      <div class="good-card__price-old">8764 грн</div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="goods-list__col">
+                <article class="good-card goods-list__card">
+                  <picture class="good-card__picture"><img src="images/good-card-1.jpg" alt="Silver earrings with cubic zirconia"/></picture>
+                  <div class="good-card__content">
+                    <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
+                    <div class="good-card__price">
+                      <div class="good-card__price-new">6264 грн</div>
+                      <div class="good-card__price-old">8764 грн</div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="goods-list__col">
+                <article class="good-card goods-list__card">
+                  <picture class="good-card__picture"><img src="images/good-card-2.jpg" alt="Silver earrings with cubic zirconia"/></picture>
+                  <div class="good-card__content">
+                    <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
+                    <div class="good-card__price">
+                      <div class="good-card__price-new">6264 грн</div>
+                      <div class="good-card__price-old">8764 грн</div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="goods-list__col">
+                <article class="good-card goods-list__card">
+                  <picture class="good-card__picture"><img src="images/good-card-3.jpg" alt="Silver earrings with cubic zirconia"/></picture>
+                  <div class="good-card__content">
+                    <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
+                    <div class="good-card__price">
+                      <div class="good-card__price-new">6264 грн</div>
+                      <div class="good-card__price-old">8764 грн</div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="goods-list__col">
+                <article class="good-card goods-list__card">
+                  <picture class="good-card__picture"><img src="images/good-card-1.jpg" alt="Silver earrings with cubic zirconia"/></picture>
+                  <div class="good-card__content">
+                    <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
+                    <div class="good-card__price">
+                      <div class="good-card__price-new">6264 грн</div>
+                      <div class="good-card__price-old">8764 грн</div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="goods-list__col">
+                <article class="good-card goods-list__card">
+                  <picture class="good-card__picture"><img src="images/good-card-2.jpg" alt="Silver earrings with cubic zirconia"/></picture>
+                  <div class="good-card__content">
+                    <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
+                    <div class="good-card__price">
+                      <div class="good-card__price-new">6264 грн</div>
+                      <div class="good-card__price-old">8764 грн</div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="info-screen">
+        <div class="container info-screen__container">
+          <div class="info-screen__list-wrap">
+            <div class="info-screen__list">
+              <div class="info-screen__col">
+                <article class="info-card info-screen__card">
+                  <picture class="info-card__picture"><img src="images/info-card-1.svg" alt="Free delivery"/></picture>
+                  <div class="info-card__content">
+                    <h3 class="title-size-5 info-card__title">Free delivery</h3>
+                  </div>
+                </article>
+              </div>
+              <div class="info-screen__col">
+                <article class="info-card info-screen__card">
+                  <picture class="info-card__picture"><img src="images/info-card-2.svg" alt="30 days return"/></picture>
+                  <div class="info-card__content">
+                    <h3 class="title-size-5 info-card__title">30 days return</h3>
+                  </div>
+                </article>
+              </div>
+              <div class="info-screen__col">
+                <article class="info-card info-screen__card">
+                  <picture class="info-card__picture"><img src="images/info-card-3.svg" alt="Free delivery"/></picture>
+                  <div class="info-card__content">
+                    <h3 class="title-size-5 info-card__title">Free delivery</h3>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="seo-screen">
+        <div class="container seo-screen__container">
+          <div class="content seo-screen__text">
+            <p>Luxury Life offers a wide selection of silver products with unique collections of diamond rings, earrings, pendants, necklaces made in the style of fashionable classics. In order for us to be closer to you at every moment and in every part of the world, the Luxury Life invites you to visit our online store.</p>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer__top">
+          <div class="container footer__top-container">
+            <button class="js-phone-btn phone-btn phone-btn--size-md footer__top-phone-btn" type="button">
+              <svg class="icon phone-btn__icon">
+                <use xlink:href="images/sprite.svg#phone-type-2"></use>
+              </svg>
+            </button>
+            <div class="row footer__top-row">
+              <div class="row__col--3 footer__top-col--logo">
+                <div class="footer__logo-wrap"><a class="footer__logo" href="/"><img src="images/logo-white.png" alt="Luxury Life"/></a>
+                  <div class="footer__payments"><img src="images/payments-method.svg" alt="payments method"/></div>
+                </div>
+              </div>
+              <div class="row__col--2 footer__top-col--nav">
+                <div class="footer__title">Pages</div>
+                <ul class="footer__nav">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Payment and delivery</a></li>
+                  <li><a href="#">Gift certificates</a></li>
+                </ul>
+              </div>
+              <div class="row__col--2 footer__top-col--nav">
+                <div class="footer__title">Category</div>
+                <ul class="footer__nav">
+                  <li><a href="#">Engagement ring</a></li>
+                  <li><a href="#">Earrings</a></li>
+                  <li><a href="#">Necklace</a></li>
+                  <li><a href="#">Chains</a></li>
+                  <li><a href="#">Set</a></li>
+                </ul>
+              </div>
+              <div class="d-sm-none row__col--2 footer__top-col--nav">
+                <div class="footer__title">Contact us</div>
+                <ul class="footer__nav">
+                  <li><a href="tel:0800200011">0 800 20-00-11</a></li>
+                  <li><a href="mailto:email@gmail.com">email@gmail.com</a></li>
+                  <li>Mon-Fri 9:00-18:00</li>
+                </ul>
+              </div>
+              <div class="row__col--3 footer__top-col--social">
+                <div class="d-sm-none footer__title">Social</div>
+                <div class="sc-block footer__sc-block">
+                  <ul class="sc-block__list">
+                    <li class="sc-block__item"><a class="sc-block__link" href="#">
+                        <svg class="icon sc-block__icon">
+                          <use xlink:href="images/sprite.svg#sc-facebook"></use>
+                        </svg></a></li>
+                    <li class="sc-block__item"><a class="sc-block__link" href="#">
+                        <svg class="icon sc-block__icon">
+                          <use xlink:href="images/sprite.svg#sc-instagram"></use>
+                        </svg></a></li>
+                    <li class="sc-block__item"><a class="sc-block__link" href="#">
+                        <svg class="icon sc-block__icon">
+                          <use xlink:href="images/sprite.svg#sc-viber"></use>
+                        </svg></a></li>
+                    <li class="sc-block__item"><a class="sc-block__link" href="#">
+                        <svg class="icon sc-block__icon">
+                          <use xlink:href="images/sprite.svg#sc-telegram"></use>
+                        </svg></a></li>
+                    <li class="sc-block__item"><a class="sc-block__link" href="#">
+                        <svg class="icon sc-block__icon">
+                          <use xlink:href="images/sprite.svg#sc-whatsapp"></use>
+                        </svg></a></li>
+                  </ul>
+                </div>
+                <div class="d-sm-block footer__contacts"><a class="footer__contacts-phone" href="tel:0800200011">0 800 20-00-11</a>
+                  <div class="footer__contacts-time">Mon-Fri 9:00-18:00</div><a class="footer__contacts-email" href="mailto:email@gmail.com">email@gmail.com</a>
+                </div>
+                <div class="footer__subscribe">
+                  <div class="footer__title">Subscribe</div>
+                  <form class="footer__subscribe-form" action="#">
+                    <input class="input-el footer__subscribe-input" type="text" name="email" placeholder="Email"/>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="container footer__bottom-container">
+            <p class="footer__bottom-copyright">Copyright © 2022</p>
+            <p class="footer__bottom-developer">Develop:&nbsp;<a href="#">designwork</a></p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
