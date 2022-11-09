@@ -1,4 +1,4 @@
-header.header
+header.js-header-sticky.header
   nav(role="navigation").header__menu
     ul.header__menu-list
       li.header__menu-item
@@ -36,9 +36,16 @@ header.header
       a(href="/").header__top-logo
         img(src="images/logo-black.png" alt="Luxury Life")
       .header__top-action
-        button(type="button").d-sm-none.action-btn.action-btn--size-md.header__top-action-item
+        form(action="#").search-form.header__nav-action-search
+          input(type="search" name="q" required placeholder="Search...").search-form__input
+          button(type="submit").action-btn.action-btn--size-md.search-form__btn
+            svg.icon.action-btn__icon
+              use(xlink:href="images/sprite.svg#search")
+        button(type="button").d-sm-none.js-header-search-toggle.action-btn.action-btn--size-md.header__top-action-item
           svg.icon.action-btn__icon
             use(xlink:href="images/sprite.svg#search")
+          svg.icon.action-btn__icon
+            use(xlink:href="images/sprite.svg#close")
         button(type="button").d-sm-none.action-btn.action-btn--size-md.header__top-action-item
           svg.icon.action-btn__icon
             use(xlink:href="images/sprite.svg#phone-type-1")
@@ -58,6 +65,39 @@ header.header
         ul.header-nav__list
           li.header-nav__item
             a(href="#").header-nav__link Catalog
+            .goods-rubric.header-nav__dropdown
+              .container
+                .goods-rubric__row
+                  .goods-rubric__col
+                    article.goods-rubric-card.goods-rubric__card
+                      picture.goods-rubric-card__picture
+                        img(src="images/goods-rubric-1.svg" alt="Engagement ring")
+                      h3.title-size-5.goods-rubric-card__title
+                        a(href="#").goods-rubric-card__link Engagement ring
+                  .goods-rubric__col
+                    article.goods-rubric-card.goods-rubric__card
+                      picture.goods-rubric-card__picture
+                        img(src="images/goods-rubric-2.svg" alt="Earrings")
+                      h3.title-size-5.goods-rubric-card__title
+                        a(href="#").goods-rubric-card__link Earrings
+                  .goods-rubric__col
+                    article.goods-rubric-card.goods-rubric__card
+                      picture.goods-rubric-card__picture
+                        img(src="images/goods-rubric-3.svg" alt="Necklace")
+                      h3.title-size-5.goods-rubric-card__title
+                        a(href="#").goods-rubric-card__link Necklace
+                  .goods-rubric__col
+                    article.goods-rubric-card.goods-rubric__card
+                      picture.goods-rubric-card__picture
+                        img(src="images/goods-rubric-4.svg" alt="Chains")
+                      h3.title-size-5.goods-rubric-card__title
+                        a(href="#").goods-rubric-card__link Chains
+                  .goods-rubric__col
+                    article.goods-rubric-card.goods-rubric__card
+                      picture.goods-rubric-card__picture
+                        img(src="images/goods-rubric-5.svg" alt="Set")
+                      h3.title-size-5.goods-rubric-card__title
+                        a(href="#").goods-rubric-card__link Set
           li.header-nav__item
             a(href="#").header-nav__link Contact
           li.header-nav__item
@@ -69,7 +109,7 @@ header.header
       .header__nav-action.d-sm-block
         form(action="#").search-form.header__nav-action-item
           input(type="search" name="q" required placeholder="Search...").search-form__input
-          button(type="button").action-btn.action-btn--size-md.search-form__btn
+          button(type="submit").action-btn.action-btn--size-md.search-form__btn
             svg.icon.action-btn__icon
               use(xlink:href="images/sprite.svg#search")
         button(type="button").action-btn.action-btn--size-md.header__nav-action-item

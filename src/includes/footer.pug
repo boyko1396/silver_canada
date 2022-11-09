@@ -77,6 +77,9 @@ footer.footer
             .footer__title Subscribe
             form(action="#").footer__subscribe-form
               input(type="text" name="email" placeholder="Email").input-el.footer__subscribe-input
+              button(type="submit").subscribe-btn.subscribe-btn--size-md.footer__subscribe-btn
+                svg.icon.subscribe-btn__icon
+                  use(xlink:href="images/sprite.svg#send")
   .footer__bottom
     .container.footer__bottom-container
       p.footer__bottom-copyright Copyright © 2022

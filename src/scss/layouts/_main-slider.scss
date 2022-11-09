@@ -9,6 +9,32 @@
         position: relative;
         z-index: 0;
     }
+    &__title,
+    &__text,
+    &__price,
+    &__btn-wrap {
+        transition: all .8s ease;
+    }
+    .slick-slide:not(.slick-active) &__title,
+    .slick-slide:not(.slick-active) &__text,
+    .slick-slide:not(.slick-active) &__price,
+    .slick-slide:not(.slick-active) &__btn-wrap {
+        transform: translateY(14px);
+        opacity: 0;
+        visibility: hidden;
+    }
+    &__title {
+        transition-delay: .3s;
+    }
+    &__text {
+        transition-delay: .5s;
+    }
+    &__price {
+        transition-delay: .7s;
+    }
+    &__btn-wrap {
+        transition-delay: .9s;
+    }
     &__picture {
         width: 100%;
         height: 100%;

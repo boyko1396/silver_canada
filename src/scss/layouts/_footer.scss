@@ -12,10 +12,16 @@
             position: relative;
         }
         &-phone-btn {
-            margin: 0 0 110px 80px;
-            position: absolute;
-            bottom: 100%;
-            left: 100%;
+            position: fixed;
+            right: 50px;
+            bottom: 360px;
+            transition: all .4s;
+            z-index: 4;
+            &:not(.is-show) {
+                transform: translateX(160px);
+                opacity: 0;
+                visibility: hidden;
+            }
             @media (max-width: $lg) {
                 display: none;
             }
@@ -154,13 +160,17 @@
             text-align: center;
         }
         &-form {
+            position: relative;
         }
         &-input {
             width: 100%;
-            max-width: 216px;
-            @media (max-width: $sm) {
-                max-width: 100%;
-            }
+            padding-right: 50px;
+        }
+        &-btn {
+            position: absolute;
+            top: 50%;
+            right: 14px;
+            transform: translateY(-50%);
         }
     }
     &__bottom {

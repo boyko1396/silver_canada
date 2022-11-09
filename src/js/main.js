@@ -1,9 +1,67 @@
 $(document).ready(function() {
+    // header sticky
+    var previousScroll = 0,
+        menuOffset = 120,
+        hideShowOffset = 0;
+
+    function headerScroll() {
+      $(window).scroll(function() {
+        if (!$('.js-header-sticky').hasClass('expanded')) {
+          var currentScroll = $(this).scrollTop(),
+              scrollDifference = Math.abs(currentScroll - previousScroll);
+          if (currentScroll > menuOffset) {
+            if (scrollDifference >= hideShowOffset) {
+              if (currentScroll > previousScroll) {
+                if (!$('.js-header-sticky').hasClass('is-sticky'))
+                  $('.js-header-sticky').addClass('is-sticky');
+              } else {
+                if ($('.js-header-sticky').hasClass('is-sticky'))
+                  $('.js-header-sticky').removeClass('is-sticky');
+              }
+            }
+          } else {
+            if (currentScroll <= 0){
+              $('.js-header-scroll').removeClass('is-sticky');
+            }
+          }
+          previousScroll = currentScroll;
+        }
+      });
+    }
+
+    headerScroll();
+
     // header menu toggle
     $('.js-header-nav-toggle').on('click', function (e) {
         $('body').toggleClass('is-menu-opened');
         $(this).toggleClass('is-active');
         $('.header__menu').toggleClass('is-show');
+        e.preventDefault();
+    });
+
+    // header search toggle
+    $('.js-header-search-toggle').on('click', function (e) {
+        $(this).toggleClass('is-search-active');
+        $('.header__nav-action-search').toggleClass('is-show');
+        e.preventDefault();
+    });
+
+    // show phone btn scroll
+    var header = $('.js-phone-btn');
+    var scrollChange = 340;
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= scrollChange) {
+            header.addClass('is-show');
+        } else {
+            header.removeClass("is-show");
+        }
+    });
+
+    // good card favorites
+    $('.js-good-card-favorites').on('click', function (e) {
+        $(this).toggleClass('is-favorites-active');
         e.preventDefault();
     });
 
@@ -65,6 +123,7 @@ $(document).ready(function() {
     }
 
     goodsSliderMobileInit();
+
     function goodsSliderMobileInit() {
         if ($('.js-goods-slider-mobile-init')[0]){
             $(window).on('load resize orientationchange', function() {

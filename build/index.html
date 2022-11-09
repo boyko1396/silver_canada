@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
-    <title>Финансовый тест</title><link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <title>Silver Canada</title><link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
 <link rel="manifest" href="/images/favicon/site.webmanifest">
@@ -15,7 +15,7 @@
   </head>
   <body>
     <div id="root">
-      <header class="header">
+      <header class="js-header-sticky header">
         <nav class="header__menu" role="navigation">
           <ul class="header__menu-list">
             <li class="header__menu-item"><a class="header__menu-link" href="#">Earrings</a></li>
@@ -40,9 +40,20 @@
               <button class="js-header-nav-toggle header__top-toggle" type="button"><span></span><span></span><span></span></button>
             </div><a class="header__top-logo" href="/"><img src="images/logo-black.png" alt="Luxury Life"/></a>
             <div class="header__top-action">
-              <button class="d-sm-none action-btn action-btn--size-md header__top-action-item" type="button">
+              <form class="search-form header__nav-action-search" action="#">
+                <input class="search-form__input" type="search" name="q" required="required" placeholder="Search..."/>
+                <button class="action-btn action-btn--size-md search-form__btn" type="submit">
+                  <svg class="icon action-btn__icon">
+                    <use xlink:href="images/sprite.svg#search"></use>
+                  </svg>
+                </button>
+              </form>
+              <button class="d-sm-none js-header-search-toggle action-btn action-btn--size-md header__top-action-item" type="button">
                 <svg class="icon action-btn__icon">
                   <use xlink:href="images/sprite.svg#search"></use>
+                </svg>
+                <svg class="icon action-btn__icon">
+                  <use xlink:href="images/sprite.svg#close"></use>
                 </svg>
               </button>
               <button class="d-sm-none action-btn action-btn--size-md header__top-action-item" type="button">
@@ -72,7 +83,44 @@
           <div class="container header__nav-container">
             <nav class="d-sm-none header-nav header__nav-el">
               <ul class="header-nav__list">
-                <li class="header-nav__item"><a class="header-nav__link" href="#">Catalog</a></li>
+                <li class="header-nav__item"><a class="header-nav__link" href="#">Catalog</a>
+                  <div class="goods-rubric header-nav__dropdown">
+                    <div class="container">
+                      <div class="goods-rubric__row">
+                        <div class="goods-rubric__col">
+                          <article class="goods-rubric-card goods-rubric__card">
+                            <picture class="goods-rubric-card__picture"><img src="images/goods-rubric-1.svg" alt="Engagement ring"/></picture>
+                            <h3 class="title-size-5 goods-rubric-card__title"><a class="goods-rubric-card__link" href="#">Engagement ring</a></h3>
+                          </article>
+                        </div>
+                        <div class="goods-rubric__col">
+                          <article class="goods-rubric-card goods-rubric__card">
+                            <picture class="goods-rubric-card__picture"><img src="images/goods-rubric-2.svg" alt="Earrings"/></picture>
+                            <h3 class="title-size-5 goods-rubric-card__title"><a class="goods-rubric-card__link" href="#">Earrings</a></h3>
+                          </article>
+                        </div>
+                        <div class="goods-rubric__col">
+                          <article class="goods-rubric-card goods-rubric__card">
+                            <picture class="goods-rubric-card__picture"><img src="images/goods-rubric-3.svg" alt="Necklace"/></picture>
+                            <h3 class="title-size-5 goods-rubric-card__title"><a class="goods-rubric-card__link" href="#">Necklace</a></h3>
+                          </article>
+                        </div>
+                        <div class="goods-rubric__col">
+                          <article class="goods-rubric-card goods-rubric__card">
+                            <picture class="goods-rubric-card__picture"><img src="images/goods-rubric-4.svg" alt="Chains"/></picture>
+                            <h3 class="title-size-5 goods-rubric-card__title"><a class="goods-rubric-card__link" href="#">Chains</a></h3>
+                          </article>
+                        </div>
+                        <div class="goods-rubric__col">
+                          <article class="goods-rubric-card goods-rubric__card">
+                            <picture class="goods-rubric-card__picture"><img src="images/goods-rubric-5.svg" alt="Set"/></picture>
+                            <h3 class="title-size-5 goods-rubric-card__title"><a class="goods-rubric-card__link" href="#">Set</a></h3>
+                          </article>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
                 <li class="header-nav__item"><a class="header-nav__link" href="#">Contact</a></li>
                 <li class="header-nav__item"><a class="header-nav__link" href="#">About</a></li>
                 <li class="header-nav__item"><a class="header-nav__link" href="#">Sale</a></li>
@@ -82,7 +130,7 @@
             <div class="header__nav-action d-sm-block">
               <form class="search-form header__nav-action-item" action="#">
                 <input class="search-form__input" type="search" name="q" required="required" placeholder="Search..."/>
-                <button class="action-btn action-btn--size-md search-form__btn" type="button">
+                <button class="action-btn action-btn--size-md search-form__btn" type="submit">
                   <svg class="icon action-btn__icon">
                     <use xlink:href="images/sprite.svg#search"></use>
                   </svg>
@@ -117,10 +165,11 @@
                 <div class="content main-slider__text">
                   <p>14 karat red gold ring with cubic zirkonia</p>
                 </div>
-                <div class="main-slider__price"><span class="main-slider__price-new">3472$</span><span class="main-slider__price-old">5472$</span></div><a class="btn btn--size-md btn--theme-dark main-slider__btn" href="#"><span class="btn__inner"><span class="btn__title">See details</span>
-                    <svg class="icon btn__icon btn__icon--ltr">
-                      <use xlink:href="images/sprite.svg#arrow-type-1"></use>
-                    </svg></span></a>
+                <div class="main-slider__price"><span class="main-slider__price-new">3472$</span><span class="main-slider__price-old">5472$</span></div>
+                <div class="main-slider__btn-wrap"><a class="btn btn--size-md btn--theme-dark main-slider__btn" href="#"><span class="btn__inner"><span class="btn__title">See details</span>
+                      <svg class="icon btn__icon btn__icon--ltr">
+                        <use xlink:href="images/sprite.svg#arrow-type-1"></use>
+                      </svg></span></a></div>
               </div>
             </div>
           </div>
@@ -132,10 +181,11 @@
                 <div class="content main-slider__text">
                   <p>14 karat red gold ring with cubic zirkonia</p>
                 </div>
-                <div class="main-slider__price"><span class="main-slider__price-new">3472$</span><span class="main-slider__price-old">5472$</span></div><a class="btn btn--size-md btn--theme-dark main-slider__btn" href="#"><span class="btn__inner"><span class="btn__title">See details</span>
-                    <svg class="icon btn__icon btn__icon--ltr">
-                      <use xlink:href="images/sprite.svg#arrow-type-1"></use>
-                    </svg></span></a>
+                <div class="main-slider__price"><span class="main-slider__price-new">3472$</span><span class="main-slider__price-old">5472$</span></div>
+                <div class="main-slider__btn-wrap"><a class="btn btn--size-md btn--theme-dark main-slider__btn" href="#"><span class="btn__inner"><span class="btn__title">See details</span>
+                      <svg class="icon btn__icon btn__icon--ltr">
+                        <use xlink:href="images/sprite.svg#arrow-type-1"></use>
+                      </svg></span></a></div>
               </div>
             </div>
           </div>
@@ -147,10 +197,11 @@
                 <div class="content main-slider__text">
                   <p>14 karat red gold ring with cubic zirkonia</p>
                 </div>
-                <div class="main-slider__price"><span class="main-slider__price-new">3472$</span><span class="main-slider__price-old">5472$</span></div><a class="btn btn--size-md btn--theme-dark main-slider__btn" href="#"><span class="btn__inner"><span class="btn__title">See details</span>
-                    <svg class="icon btn__icon btn__icon--ltr">
-                      <use xlink:href="images/sprite.svg#arrow-type-1"></use>
-                    </svg></span></a>
+                <div class="main-slider__price"><span class="main-slider__price-new">3472$</span><span class="main-slider__price-old">5472$</span></div>
+                <div class="main-slider__btn-wrap"><a class="btn btn--size-md btn--theme-dark main-slider__btn" href="#"><span class="btn__inner"><span class="btn__title">See details</span>
+                      <svg class="icon btn__icon btn__icon--ltr">
+                        <use xlink:href="images/sprite.svg#arrow-type-1"></use>
+                      </svg></span></a></div>
               </div>
             </div>
           </div>
@@ -162,10 +213,11 @@
                 <div class="content main-slider__text">
                   <p>14 karat red gold ring with cubic zirkonia</p>
                 </div>
-                <div class="main-slider__price"><span class="main-slider__price-new">3472$</span><span class="main-slider__price-old">5472$</span></div><a class="btn btn--size-md btn--theme-dark main-slider__btn" href="#"><span class="btn__inner"><span class="btn__title">See details</span>
-                    <svg class="icon btn__icon btn__icon--ltr">
-                      <use xlink:href="images/sprite.svg#arrow-type-1"></use>
-                    </svg></span></a>
+                <div class="main-slider__price"><span class="main-slider__price-new">3472$</span><span class="main-slider__price-old">5472$</span></div>
+                <div class="main-slider__btn-wrap"><a class="btn btn--size-md btn--theme-dark main-slider__btn" href="#"><span class="btn__inner"><span class="btn__title">See details</span>
+                      <svg class="icon btn__icon btn__icon--ltr">
+                        <use xlink:href="images/sprite.svg#arrow-type-1"></use>
+                      </svg></span></a></div>
               </div>
             </div>
           </div>
@@ -177,10 +229,11 @@
                 <div class="content main-slider__text">
                   <p>14 karat red gold ring with cubic zirkonia</p>
                 </div>
-                <div class="main-slider__price"><span class="main-slider__price-new">3472$</span><span class="main-slider__price-old">5472$</span></div><a class="btn btn--size-md btn--theme-dark main-slider__btn" href="#"><span class="btn__inner"><span class="btn__title">See details</span>
-                    <svg class="icon btn__icon btn__icon--ltr">
-                      <use xlink:href="images/sprite.svg#arrow-type-1"></use>
-                    </svg></span></a>
+                <div class="main-slider__price"><span class="main-slider__price-new">3472$</span><span class="main-slider__price-old">5472$</span></div>
+                <div class="main-slider__btn-wrap"><a class="btn btn--size-md btn--theme-dark main-slider__btn" href="#"><span class="btn__inner"><span class="btn__title">See details</span>
+                      <svg class="icon btn__icon btn__icon--ltr">
+                        <use xlink:href="images/sprite.svg#arrow-type-1"></use>
+                      </svg></span></a></div>
               </div>
             </div>
           </div>
@@ -228,6 +281,14 @@
             <div class="js-goods-slider-mobile-init goods-list__row">
               <div class="goods-list__col">
                 <article class="good-card goods-list__card">
+                  <button class="js-good-card-favorites action-btn action-btn--size-md good-card__btn-favorites" type="button">
+                    <svg class="icon action-btn__icon">
+                      <use xlink:href="images/sprite.svg#like-outline"></use>
+                    </svg>
+                    <svg class="icon action-btn__icon">
+                      <use xlink:href="images/sprite.svg#like-fill"></use>
+                    </svg>
+                  </button>
                   <picture class="good-card__picture"><img src="images/good-card-1.jpg" alt="Silver earrings with cubic zirconia"/></picture>
                   <div class="good-card__content">
                     <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
@@ -240,6 +301,14 @@
               </div>
               <div class="goods-list__col">
                 <article class="good-card goods-list__card">
+                  <button class="js-good-card-favorites action-btn action-btn--size-md good-card__btn-favorites" type="button">
+                    <svg class="icon action-btn__icon">
+                      <use xlink:href="images/sprite.svg#like-outline"></use>
+                    </svg>
+                    <svg class="icon action-btn__icon">
+                      <use xlink:href="images/sprite.svg#like-fill"></use>
+                    </svg>
+                  </button>
                   <picture class="good-card__picture"><img src="images/good-card-2.jpg" alt="Silver earrings with cubic zirconia"/></picture>
                   <div class="good-card__content">
                     <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
@@ -252,6 +321,14 @@
               </div>
               <div class="goods-list__col">
                 <article class="good-card goods-list__card">
+                  <button class="js-good-card-favorites action-btn action-btn--size-md good-card__btn-favorites" type="button">
+                    <svg class="icon action-btn__icon">
+                      <use xlink:href="images/sprite.svg#like-outline"></use>
+                    </svg>
+                    <svg class="icon action-btn__icon">
+                      <use xlink:href="images/sprite.svg#like-fill"></use>
+                    </svg>
+                  </button>
                   <picture class="good-card__picture"><img src="images/good-card-3.jpg" alt="Silver earrings with cubic zirconia"/></picture>
                   <div class="good-card__content">
                     <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
@@ -264,6 +341,14 @@
               </div>
               <div class="goods-list__col">
                 <article class="good-card goods-list__card">
+                  <button class="js-good-card-favorites action-btn action-btn--size-md good-card__btn-favorites" type="button">
+                    <svg class="icon action-btn__icon">
+                      <use xlink:href="images/sprite.svg#like-outline"></use>
+                    </svg>
+                    <svg class="icon action-btn__icon">
+                      <use xlink:href="images/sprite.svg#like-fill"></use>
+                    </svg>
+                  </button>
                   <picture class="good-card__picture"><img src="images/good-card-1.jpg" alt="Silver earrings with cubic zirconia"/></picture>
                   <div class="good-card__content">
                     <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
@@ -276,6 +361,14 @@
               </div>
               <div class="goods-list__col">
                 <article class="good-card goods-list__card">
+                  <button class="js-good-card-favorites action-btn action-btn--size-md good-card__btn-favorites" type="button">
+                    <svg class="icon action-btn__icon">
+                      <use xlink:href="images/sprite.svg#like-outline"></use>
+                    </svg>
+                    <svg class="icon action-btn__icon">
+                      <use xlink:href="images/sprite.svg#like-fill"></use>
+                    </svg>
+                  </button>
                   <picture class="good-card__picture"><img src="images/good-card-2.jpg" alt="Silver earrings with cubic zirconia"/></picture>
                   <div class="good-card__content">
                     <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
@@ -288,6 +381,14 @@
               </div>
               <div class="goods-list__col">
                 <article class="good-card goods-list__card">
+                  <button class="js-good-card-favorites action-btn action-btn--size-md good-card__btn-favorites" type="button">
+                    <svg class="icon action-btn__icon">
+                      <use xlink:href="images/sprite.svg#like-outline"></use>
+                    </svg>
+                    <svg class="icon action-btn__icon">
+                      <use xlink:href="images/sprite.svg#like-fill"></use>
+                    </svg>
+                  </button>
                   <picture class="good-card__picture"><img src="images/good-card-3.jpg" alt="Silver earrings with cubic zirconia"/></picture>
                   <div class="good-card__content">
                     <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
@@ -300,6 +401,14 @@
               </div>
               <div class="goods-list__col">
                 <article class="good-card goods-list__card">
+                  <button class="js-good-card-favorites action-btn action-btn--size-md good-card__btn-favorites" type="button">
+                    <svg class="icon action-btn__icon">
+                      <use xlink:href="images/sprite.svg#like-outline"></use>
+                    </svg>
+                    <svg class="icon action-btn__icon">
+                      <use xlink:href="images/sprite.svg#like-fill"></use>
+                    </svg>
+                  </button>
                   <picture class="good-card__picture"><img src="images/good-card-1.jpg" alt="Silver earrings with cubic zirconia"/></picture>
                   <div class="good-card__content">
                     <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
@@ -312,6 +421,14 @@
               </div>
               <div class="goods-list__col">
                 <article class="good-card goods-list__card">
+                  <button class="js-good-card-favorites action-btn action-btn--size-md good-card__btn-favorites" type="button">
+                    <svg class="icon action-btn__icon">
+                      <use xlink:href="images/sprite.svg#like-outline"></use>
+                    </svg>
+                    <svg class="icon action-btn__icon">
+                      <use xlink:href="images/sprite.svg#like-fill"></use>
+                    </svg>
+                  </button>
                   <picture class="good-card__picture"><img src="images/good-card-2.jpg" alt="Silver earrings with cubic zirconia"/></picture>
                   <div class="good-card__content">
                     <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
@@ -330,26 +447,14 @@
         <div class="container promotions-section__container">
           <h2 class="visually-hidden promotions-section__title">Promotions and discounts</h2>
           <div class="js-promotions-slider-init promotions-section__slider">
-            <div class="promotions-section__slider-slide">
-              <div class="promotions-card promotions-card--banner promotions-section__slider-card">
-                <picture class="promotions-card__banner"><img src="images/promotions-card-1.jpg" alt="Gift certificates"/></picture>
-              </div>
-            </div>
-            <div class="promotions-section__slider-slide">
-              <div class="promotions-card promotions-card--banner promotions-section__slider-card">
-                <picture class="promotions-card__banner"><img src="images/promotions-card-2.jpg" alt="Rings engagement"/></picture>
-              </div>
-            </div>
-            <div class="promotions-section__slider-slide">
-              <div class="promotions-card promotions-card--banner promotions-section__slider-card">
-                <picture class="promotions-card__banner"><img src="images/promotions-card-1.jpg" alt="Gift certificates"/></picture>
-              </div>
-            </div>
-            <div class="promotions-section__slider-slide">
-              <div class="promotions-card promotions-card--banner promotions-section__slider-card">
-                <picture class="promotions-card__banner"><img src="images/promotions-card-2.jpg" alt="Rings engagement"/></picture>
-              </div>
-            </div>
+            <div class="promotions-section__slider-slide"><a class="promotions-card promotions-card--banner promotions-section__slider-card" href="#">
+                <picture class="promotions-card__banner"><img src="images/promotions-card-1.jpg" alt="Gift certificates"/></picture></a></div>
+            <div class="promotions-section__slider-slide"><a class="promotions-card promotions-card--banner promotions-section__slider-card" href="#">
+                <picture class="promotions-card__banner"><img src="images/promotions-card-2.jpg" alt="Rings engagement"/></picture></a></div>
+            <div class="promotions-section__slider-slide"><a class="promotions-card promotions-card--banner promotions-section__slider-card" href="#">
+                <picture class="promotions-card__banner"><img src="images/promotions-card-1.jpg" alt="Gift certificates"/></picture></a></div>
+            <div class="promotions-section__slider-slide"><a class="promotions-card promotions-card--banner promotions-section__slider-card" href="#">
+                <picture class="promotions-card__banner"><img src="images/promotions-card-2.jpg" alt="Rings engagement"/></picture></a></div>
           </div>
         </div>
       </section>
@@ -367,6 +472,14 @@
                   <div class="js-goods-slider-init goods-slider__init">
                     <div class="goods-slider__slide">
                       <article class="good-card goods-slider__slide-card">
+                        <button class="js-good-card-favorites action-btn action-btn--size-md good-card__btn-favorites" type="button">
+                          <svg class="icon action-btn__icon">
+                            <use xlink:href="images/sprite.svg#like-outline"></use>
+                          </svg>
+                          <svg class="icon action-btn__icon">
+                            <use xlink:href="images/sprite.svg#like-fill"></use>
+                          </svg>
+                        </button>
                         <picture class="good-card__picture"><img src="images/good-card-1.jpg" alt="Silver earrings with cubic zirconia"/></picture>
                         <div class="good-card__content">
                           <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
@@ -379,6 +492,14 @@
                     </div>
                     <div class="goods-slider__slide">
                       <article class="good-card goods-slider__slide-card">
+                        <button class="js-good-card-favorites action-btn action-btn--size-md good-card__btn-favorites" type="button">
+                          <svg class="icon action-btn__icon">
+                            <use xlink:href="images/sprite.svg#like-outline"></use>
+                          </svg>
+                          <svg class="icon action-btn__icon">
+                            <use xlink:href="images/sprite.svg#like-fill"></use>
+                          </svg>
+                        </button>
                         <picture class="good-card__picture"><img src="images/good-card-1.jpg" alt="Silver earrings with cubic zirconia"/></picture>
                         <div class="good-card__content">
                           <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
@@ -391,6 +512,14 @@
                     </div>
                     <div class="goods-slider__slide">
                       <article class="good-card goods-slider__slide-card">
+                        <button class="js-good-card-favorites action-btn action-btn--size-md good-card__btn-favorites" type="button">
+                          <svg class="icon action-btn__icon">
+                            <use xlink:href="images/sprite.svg#like-outline"></use>
+                          </svg>
+                          <svg class="icon action-btn__icon">
+                            <use xlink:href="images/sprite.svg#like-fill"></use>
+                          </svg>
+                        </button>
                         <picture class="good-card__picture"><img src="images/good-card-1.jpg" alt="Silver earrings with cubic zirconia"/></picture>
                         <div class="good-card__content">
                           <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
@@ -403,6 +532,14 @@
                     </div>
                     <div class="goods-slider__slide">
                       <article class="good-card goods-slider__slide-card">
+                        <button class="js-good-card-favorites action-btn action-btn--size-md good-card__btn-favorites" type="button">
+                          <svg class="icon action-btn__icon">
+                            <use xlink:href="images/sprite.svg#like-outline"></use>
+                          </svg>
+                          <svg class="icon action-btn__icon">
+                            <use xlink:href="images/sprite.svg#like-fill"></use>
+                          </svg>
+                        </button>
                         <picture class="good-card__picture"><img src="images/good-card-1.jpg" alt="Silver earrings with cubic zirconia"/></picture>
                         <div class="good-card__content">
                           <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
@@ -427,6 +564,14 @@
             <div class="js-goods-slider-mobile-init goods-list__row">
               <div class="goods-list__col">
                 <article class="good-card goods-list__card">
+                  <button class="js-good-card-favorites action-btn action-btn--size-md good-card__btn-favorites" type="button">
+                    <svg class="icon action-btn__icon">
+                      <use xlink:href="images/sprite.svg#like-outline"></use>
+                    </svg>
+                    <svg class="icon action-btn__icon">
+                      <use xlink:href="images/sprite.svg#like-fill"></use>
+                    </svg>
+                  </button>
                   <picture class="good-card__picture"><img src="images/good-card-1.jpg" alt="Silver earrings with cubic zirconia"/></picture>
                   <div class="good-card__content">
                     <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
@@ -439,6 +584,14 @@
               </div>
               <div class="goods-list__col">
                 <article class="good-card goods-list__card">
+                  <button class="js-good-card-favorites action-btn action-btn--size-md good-card__btn-favorites" type="button">
+                    <svg class="icon action-btn__icon">
+                      <use xlink:href="images/sprite.svg#like-outline"></use>
+                    </svg>
+                    <svg class="icon action-btn__icon">
+                      <use xlink:href="images/sprite.svg#like-fill"></use>
+                    </svg>
+                  </button>
                   <picture class="good-card__picture"><img src="images/good-card-2.jpg" alt="Silver earrings with cubic zirconia"/></picture>
                   <div class="good-card__content">
                     <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
@@ -451,6 +604,14 @@
               </div>
               <div class="goods-list__col">
                 <article class="good-card goods-list__card">
+                  <button class="js-good-card-favorites action-btn action-btn--size-md good-card__btn-favorites" type="button">
+                    <svg class="icon action-btn__icon">
+                      <use xlink:href="images/sprite.svg#like-outline"></use>
+                    </svg>
+                    <svg class="icon action-btn__icon">
+                      <use xlink:href="images/sprite.svg#like-fill"></use>
+                    </svg>
+                  </button>
                   <picture class="good-card__picture"><img src="images/good-card-3.jpg" alt="Silver earrings with cubic zirconia"/></picture>
                   <div class="good-card__content">
                     <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
@@ -463,6 +624,14 @@
               </div>
               <div class="goods-list__col">
                 <article class="good-card goods-list__card">
+                  <button class="js-good-card-favorites action-btn action-btn--size-md good-card__btn-favorites" type="button">
+                    <svg class="icon action-btn__icon">
+                      <use xlink:href="images/sprite.svg#like-outline"></use>
+                    </svg>
+                    <svg class="icon action-btn__icon">
+                      <use xlink:href="images/sprite.svg#like-fill"></use>
+                    </svg>
+                  </button>
                   <picture class="good-card__picture"><img src="images/good-card-1.jpg" alt="Silver earrings with cubic zirconia"/></picture>
                   <div class="good-card__content">
                     <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
@@ -475,6 +644,14 @@
               </div>
               <div class="goods-list__col">
                 <article class="good-card goods-list__card">
+                  <button class="js-good-card-favorites action-btn action-btn--size-md good-card__btn-favorites" type="button">
+                    <svg class="icon action-btn__icon">
+                      <use xlink:href="images/sprite.svg#like-outline"></use>
+                    </svg>
+                    <svg class="icon action-btn__icon">
+                      <use xlink:href="images/sprite.svg#like-fill"></use>
+                    </svg>
+                  </button>
                   <picture class="good-card__picture"><img src="images/good-card-2.jpg" alt="Silver earrings with cubic zirconia"/></picture>
                   <div class="good-card__content">
                     <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
@@ -487,6 +664,14 @@
               </div>
               <div class="goods-list__col">
                 <article class="good-card goods-list__card">
+                  <button class="js-good-card-favorites action-btn action-btn--size-md good-card__btn-favorites" type="button">
+                    <svg class="icon action-btn__icon">
+                      <use xlink:href="images/sprite.svg#like-outline"></use>
+                    </svg>
+                    <svg class="icon action-btn__icon">
+                      <use xlink:href="images/sprite.svg#like-fill"></use>
+                    </svg>
+                  </button>
                   <picture class="good-card__picture"><img src="images/good-card-3.jpg" alt="Silver earrings with cubic zirconia"/></picture>
                   <div class="good-card__content">
                     <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
@@ -499,6 +684,14 @@
               </div>
               <div class="goods-list__col">
                 <article class="good-card goods-list__card">
+                  <button class="js-good-card-favorites action-btn action-btn--size-md good-card__btn-favorites" type="button">
+                    <svg class="icon action-btn__icon">
+                      <use xlink:href="images/sprite.svg#like-outline"></use>
+                    </svg>
+                    <svg class="icon action-btn__icon">
+                      <use xlink:href="images/sprite.svg#like-fill"></use>
+                    </svg>
+                  </button>
                   <picture class="good-card__picture"><img src="images/good-card-1.jpg" alt="Silver earrings with cubic zirconia"/></picture>
                   <div class="good-card__content">
                     <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
@@ -511,6 +704,14 @@
               </div>
               <div class="goods-list__col">
                 <article class="good-card goods-list__card">
+                  <button class="js-good-card-favorites action-btn action-btn--size-md good-card__btn-favorites" type="button">
+                    <svg class="icon action-btn__icon">
+                      <use xlink:href="images/sprite.svg#like-outline"></use>
+                    </svg>
+                    <svg class="icon action-btn__icon">
+                      <use xlink:href="images/sprite.svg#like-fill"></use>
+                    </svg>
+                  </button>
                   <picture class="good-card__picture"><img src="images/good-card-2.jpg" alt="Silver earrings with cubic zirconia"/></picture>
                   <div class="good-card__content">
                     <h3 class="title-size-5 good-card__title"><a class="good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
@@ -639,6 +840,11 @@
                   <div class="footer__title">Subscribe</div>
                   <form class="footer__subscribe-form" action="#">
                     <input class="input-el footer__subscribe-input" type="text" name="email" placeholder="Email"/>
+                    <button class="subscribe-btn subscribe-btn--size-md footer__subscribe-btn" type="submit">
+                      <svg class="icon subscribe-btn__icon">
+                        <use xlink:href="images/sprite.svg#send"></use>
+                      </svg>
+                    </button>
                   </form>
                 </div>
               </div>

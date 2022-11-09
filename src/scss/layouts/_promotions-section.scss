@@ -1,8 +1,17 @@
 .promotions-card {
     padding-bottom: 64.184397163%;
+    display: block;
     border-radius: 10px;
+    transition: all .4s;
+    transition-property: opacity;
     position: relative;
     overflow: hidden;
+    &:hover {
+        text-decoration: none;
+        @media (min-width: $lg-mf) {
+            opacity: .6;
+        }
+    }
     &--banner {
     }
     &__banner {

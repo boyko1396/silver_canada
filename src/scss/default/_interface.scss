@@ -105,8 +105,12 @@ b {
 
 #root {
     min-height: 100vh;
+    padding-top: 190px;
     display: flex;
     flex-direction: column;
     position: relative;
     overflow: clip;
+    @media (max-width: $sm) {
+        padding-top: 158px;
+    }
 }
