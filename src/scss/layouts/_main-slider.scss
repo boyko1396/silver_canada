@@ -23,6 +23,18 @@
         opacity: 0;
         visibility: hidden;
     }
+    .slick-slide:not(.slick-active) &__title {
+        transform: translateY(44px);
+    }
+    .slick-slide:not(.slick-active) &__text {
+        transform: translateY(34px);
+    }
+    .slick-slide:not(.slick-active) &__price {
+        transform: translateY(24px);
+    }
+    .slick-slide:not(.slick-active) &__btn-wrap {
+        transform: translateY(14px);
+    }
     &__title {
         transition-delay: .3s;
     }

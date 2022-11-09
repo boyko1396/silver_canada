@@ -1738,6 +1738,7 @@ svg,
   visibility: hidden;
 }
 .header.is-sticky .header__nav {
+  margin-bottom: -60px;
   -webkit-transform: translateY(-130px);
   transform: translateY(-130px);
 }
@@ -1770,6 +1771,22 @@ svg,
   transform: translateY(14px);
   opacity: 0;
   visibility: hidden;
+}
+.slick-slide:not(.slick-active) .main-slider__title {
+  -webkit-transform: translateY(44px);
+  transform: translateY(44px);
+}
+.slick-slide:not(.slick-active) .main-slider__text {
+  -webkit-transform: translateY(34px);
+  transform: translateY(34px);
+}
+.slick-slide:not(.slick-active) .main-slider__price {
+  -webkit-transform: translateY(24px);
+  transform: translateY(24px);
+}
+.slick-slide:not(.slick-active) .main-slider__btn-wrap {
+  -webkit-transform: translateY(14px);
+  transform: translateY(14px);
 }
 .main-slider__title {
   transition-delay: 0.3s;
