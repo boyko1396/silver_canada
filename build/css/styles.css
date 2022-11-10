@@ -1326,6 +1326,10 @@ svg,
   }
 }
 
+.search-form > input.search-form__input {
+  border-radius: 0 !important;
+}
+
 .sc-contacts {
   transition: all 0.4s;
 }
