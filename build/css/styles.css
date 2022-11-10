@@ -1216,6 +1216,7 @@ svg,
 }
 
 .search-form {
+  background: #fff;
   position: relative;
 }
 .search-form__input {
