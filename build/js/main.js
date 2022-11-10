@@ -180,10 +180,10 @@ $(document).ready(function() {
 
     // input label
     $('.js-input-label').blur(function() {
-      if ($(this).val() != '') {
-        $(this).next('label').addClass('is-active');
-      } else {
-        $(this).next('label').removeClass('is-active');
-      }
+        if ($(this).val() != '') {
+            $(this).next('label').addClass('is-active');
+        } else {
+            $(this).next('label').removeClass('is-active');
+        }
     });
 });

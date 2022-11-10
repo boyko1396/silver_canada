@@ -634,7 +634,21 @@ svg,
 
 .search-form {
     background: $color-white-1;
+    border: 1px solid $color-gray-11;
+    transition: all .4s;
+    transition-property: border-color, box-shadow;
     position: relative;
+    &:hover {
+        @media (min-width: $lg-mf) {
+            border-color: $color-gray-2;
+        }
+    }
+    &:focus-within {
+        box-shadow: 0 0 0 2px rgba($color-white-1, .5);
+        @media (min-width: $lg-mf) {
+            border-color: $color-black-1;
+        }
+    }
     &__input {
         background: $color-white-1;
         width: 100%;
@@ -646,7 +660,7 @@ svg,
         line-height: 1.3;
         color: $color-black-1;
         letter-spacing: .02em;
-        border: 1px solid $color-gray-11;
+        border: none;
         border-radius: 0 !important;
         outline: none;
         transition: all .4s;
@@ -665,17 +679,6 @@ svg,
         }
         &:focus::placeholder {
             color: transparent;
-        }
-        &:hover {
-            @media (min-width: $lg-mf) {
-                border-color: $color-gray-2;
-            }
-        }
-        &:focus {
-            box-shadow: 0 0 0 2px rgba($color-white-1, .5);
-            @media (min-width: $lg-mf) {
-                border-color: $color-black-1;
-            }
         }
         &::-ms-clear,
         &::-ms-reveal {

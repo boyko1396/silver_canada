@@ -1217,7 +1217,23 @@ svg,
 
 .search-form {
   background: #fff;
+  border: 1px solid #F5F7F9;
+  transition: all 0.4s;
+  transition-property: border-color, box-shadow;
   position: relative;
+}
+@media (min-width: 1200px) {
+  .search-form:hover {
+    border-color: #B4B3C2;
+  }
+}
+.search-form:focus-within {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+@media (min-width: 1200px) {
+  .search-form:focus-within {
+    border-color: #2D2C38;
+  }
 }
 .search-form__input {
   background: #fff;
@@ -1230,7 +1246,7 @@ svg,
   line-height: 1.3;
   color: #2D2C38;
   letter-spacing: 0.02em;
-  border: 1px solid #F5F7F9;
+  border: none;
   border-radius: 0 !important;
   outline: none;
   transition: all 0.4s;
@@ -1290,19 +1306,6 @@ svg,
 }
 .search-form__input:focus::placeholder {
   color: transparent;
-}
-@media (min-width: 1200px) {
-  .search-form__input:hover {
-    border-color: #B4B3C2;
-  }
-}
-.search-form__input:focus {
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
-}
-@media (min-width: 1200px) {
-  .search-form__input:focus {
-    border-color: #2D2C38;
-  }
 }
 .search-form__input::-ms-clear, .search-form__input::-ms-reveal {
   width: 0;
