@@ -266,8 +266,7 @@ svg,
 }
 
 .goods-rubric-card {
-    width: 200px;
-    padding: 30px;
+    padding: 20px;
     text-align: center;
     border-radius: 10px;
     transition: all .4s;
@@ -275,9 +274,8 @@ svg,
     &:hover {
         text-decoration: none;
         @media (min-width: $lg-mf) {
-            background: $color-white-1;
             transform: translateY(-3px);
-            box-shadow: 0 4px 10px rgba(0,0,0,.05);
+            opacity: .6;
         }
     }
     &__picture {
@@ -298,7 +296,7 @@ svg,
         font-weight: 300;
     }
     &__link {
-        display: block;
+        box-shadow: 0 1px 0 transparent;
         @extend .link-cover;
         &:hover {
             text-decoration: none;
@@ -311,16 +309,18 @@ svg,
         margin: 0 -10px;
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
         @media (max-width: $lg) {
             justify-content: center;
+            flex-wrap: wrap;
         }
         @media (max-width: $sm) {
             margin-top: -25px;
         }
     }
     &__col {
+        max-width: 220px;
         padding: 0 10px;
+        flex: 1;
         @media (max-width: $lg) {
             max-width: 33.3333333%;
             flex: 0 0 33.3333333%;
@@ -433,11 +433,11 @@ svg,
             flex-wrap: wrap;
         }
         @media (max-width: $md) {
-            margin: 0 calc(2 * var(--gap-));
+            margin: 0 calc(-8px + var(--gap-));
         }
         .slick-list {
             @media (max-width: $md) {
-                padding-left: 22px;
+                padding: 0 var(--gap);
             }
         }
     }
@@ -454,17 +454,6 @@ svg,
         }
     }
     &__card {
-    }
-}
-
-.goods-slider {
-    &__init {
-    }
-    &__slide {
-        &-card {
-        }
-    }
-    &__dots {
     }
 }
 
@@ -657,10 +646,10 @@ svg,
         color: $color-black-1;
         letter-spacing: .02em;
         border: 1px solid $color-gray-11;
-        border-radius: 0;
+        border-radius: 0 !important;
         outline: none;
         transition: all .4s;
-        @media (max-width: $sm) {
+        @media (max-width: $md) {
             min-height: 38px;
             padding: 7px 34px 5px 7px;
             font-size: 15px;
@@ -669,7 +658,7 @@ svg,
         &::placeholder {
             transition: all .4s;
             transition-property: color;
-            @media (max-width: $sm) {
+            @media (max-width: $md) {
                 color: $color-gray-10;
             }
         }
@@ -707,28 +696,53 @@ svg,
         right: 14px;
         transform: translateY(-50%);
         z-index: 1;
-        @media (max-width: $sm) {
+        @media (max-width: $md) {
             right: 4px;
         }
     }
 }
 
-.phone-btn {
-    background: $color-black-1;
+.sc-contacts {
+    &__el {
+    }
+    &__dropdown {
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        transition: all .34s;
+        transition-property: visibility, opacity;
+        &-item {
+            margin: 0 0 20px;
+        }
+    }
+    &:not(:hover) &__dropdown {
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+.sc-btn {
     width: var(--size-btn);
     height: var(--size-btn);
     display: flex;
     align-items: center;
     justify-content: center;
     color: $color-white-1;
+    border: 1px solid $color-gray-7;
     border-radius: 50%;
     transition: all .4s;
     cursor: pointer;
     @extend .btn-reset;
     &:hover {
         text-decoration: none;
-        @media (min-width: $lg-mf) {
-            box-shadow: 0 4px 8px 2px rgba($color-black-1, .4);
+    }
+    &--theme-accent {
+        background: $color-black-1;
+        &:hover {
+            @media (min-width: $lg-mf) {
+                box-shadow: 0 4px 8px 2px rgba($color-black-1, .4);
+            }
         }
     }
     &--size-md {

@@ -8,7 +8,7 @@ html {
 }
 
 body {
-    background: $color-gray-4;
+    background: $color-gray-12;
     font-style: normal;
     font-weight: normal;
     font-size: var(--fs-default);
@@ -109,8 +109,8 @@ b {
     display: flex;
     flex-direction: column;
     position: relative;
-    overflow: clip;
-    @media (max-width: $sm) {
+    overflow: hidden;
+    @media (max-width: $md) {
         padding-top: 158px;
     }
 }

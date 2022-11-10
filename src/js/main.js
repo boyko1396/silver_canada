@@ -47,7 +47,7 @@ $(document).ready(function() {
     });
 
     // show phone btn scroll
-    var header = $('.js-phone-btn');
+    var header = $('.js-sc-contacts');
     var scrollChange = 340;
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
@@ -90,14 +90,16 @@ $(document).ready(function() {
                 {
                     breakpoint: 1200,
                     settings: {
-                        dots: true
+                        dots: true,
+                        slidesToScroll: 2
                     }
                 },
                 {
                     breakpoint: 577,
                     settings: {
+                        dots: true,
                         slidesToShow: 1,
-                        dots: true
+                        slidesToScroll: 1
                     }
                 }
             ]
@@ -115,7 +117,9 @@ $(document).ready(function() {
                 {
                     breakpoint: 1200,
                     settings: {
-                        slidesToShow: 2
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        dots: false
                     }
                 }
             ]
@@ -144,15 +148,27 @@ $(document).ready(function() {
                                 slidesToScroll: 1,
                                 responsive: [
                                     {
+                                        breakpoint: 1199,
+                                        settings: {
+                                            slidesToShow: 4,
+                                            slidesToScroll: 4,
+                                            dots: false
+                                        }
+                                    },
+                                    {
                                         breakpoint: 767,
                                         settings: {
-                                            slidesToShow: 3
+                                            slidesToShow: 3,
+                                            slidesToScroll: 3,
+                                            dots: false
                                         }
                                     },
                                     {
                                         breakpoint: 576,
                                         settings: {
-                                            slidesToShow: 2
+                                            slidesToShow: 2,
+                                            slidesToScroll: 2,
+                                            dots: false
                                         }
                                     }
                                 ]

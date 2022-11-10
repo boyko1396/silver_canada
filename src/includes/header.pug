@@ -36,23 +36,23 @@ header.js-header-sticky.header
       a(href="/").header__top-logo
         img(src="images/logo-black.png" alt="Luxury Life")
       .header__top-action
-        form(action="#").search-form.header__nav-action-search
+        form(action="#").d-md-none.search-form.header__nav-action-search
           input(type="search" name="q" required placeholder="Search...").search-form__input
           button(type="submit").action-btn.action-btn--size-md.search-form__btn
             svg.icon.action-btn__icon
               use(xlink:href="images/sprite.svg#search")
-        button(type="button").d-sm-none.js-header-search-toggle.action-btn.action-btn--size-md.header__top-action-item
+        button(type="button").d-md-none.js-header-search-toggle.action-btn.action-btn--size-md.header__top-action-item
           svg.icon.action-btn__icon
             use(xlink:href="images/sprite.svg#search")
           svg.icon.action-btn__icon
             use(xlink:href="images/sprite.svg#close")
-        button(type="button").d-sm-none.action-btn.action-btn--size-md.header__top-action-item
+        button(type="button").d-md-none.action-btn.action-btn--size-md.header__top-action-item
           svg.icon.action-btn__icon
             use(xlink:href="images/sprite.svg#phone-type-1")
-        button(type="button").d-sm-none.action-btn.action-btn--size-md.header__top-action-item
+        button(type="button").d-md-none.action-btn.action-btn--size-md.header__top-action-item
           svg.icon.action-btn__icon
             use(xlink:href="images/sprite.svg#user")
-        button(type="button").d-sm-none.action-btn.action-btn--size-md.header__top-action-item
+        button(type="button").d-md-none.action-btn.action-btn--size-md.header__top-action-item
           svg.icon.action-btn__icon
             use(xlink:href="images/sprite.svg#favorites")
         button(type="button").action-btn.action-btn--size-md.header__top-action-item
@@ -61,7 +61,7 @@ header.js-header-sticky.header
           span.action-btn__badge 2
   .header__nav
     .container.header__nav-container
-      nav.d-sm-none.header-nav.header__nav-el
+      nav.d-md-none.header-nav.header__nav-el
         ul.header-nav__list
           li.header-nav__item
             a(href="#").header-nav__link Catalog
@@ -95,6 +95,12 @@ header.js-header-sticky.header
                   .goods-rubric__col
                     article.goods-rubric-card.goods-rubric__card
                       picture.goods-rubric-card__picture
+                        img(src="images/goods-rubric-4.svg" alt="Chains")
+                      h3.title-size-5.goods-rubric-card__title
+                        a(href="#").goods-rubric-card__link Chains
+                  .goods-rubric__col
+                    article.goods-rubric-card.goods-rubric__card
+                      picture.goods-rubric-card__picture
                         img(src="images/goods-rubric-5.svg" alt="Set")
                       h3.title-size-5.goods-rubric-card__title
                         a(href="#").goods-rubric-card__link Set
@@ -106,7 +112,7 @@ header.js-header-sticky.header
             a(href="#").header-nav__link Sale
           li.header-nav__item
             a(href="#").header-nav__link Gift certificates
-      .header__nav-action.d-sm-block
+      .header__nav-action.d-md-block
         form(action="#").search-form.header__nav-action-item
           input(type="search" name="q" required placeholder="Search...").search-form__input
           button(type="submit").action-btn.action-btn--size-md.search-form__btn

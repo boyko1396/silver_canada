@@ -130,7 +130,7 @@
         box-shadow: 0 1px 1px transparent;
         position: relative;
         transition: all .28s;
-        @media (max-width: $sm) {
+        @media (max-width: $md) {
             height: 100px;
         }
         &-container {
@@ -202,7 +202,7 @@
             text-decoration: none;
             position: relative;
             transition: all .28s;
-            @media (max-width: $sm) {
+            @media (max-width: $lg) {
                 width: 82px;
                 flex-basis: 82px;
                 z-index: 10;
@@ -244,20 +244,19 @@
     &.is-sticky &__top {
         height: 80px;
         box-shadow: 0 1px 1px rgba(0,0,0,.05);
-        @media (max-width: $sm) {
-            height: 80px;
-        }
     }
-    &.is-sticky &__top-logo {
-        width: 70px;
-        flex-basis: 70px;
+    @media (min-width: $lg-mf) {
+        &.is-sticky &__top-logo {
+            width: 70px;
+            flex-basis: 70px;
+        }
     }
     &__nav {
         color: $color-white-1;
         transition: all .4s;
         position: relative;
         z-index: -1;
-        @media (max-width: $sm) {
+        @media (max-width: $md) {
             padding: 10px 0;
         }
         &:before {
@@ -291,6 +290,9 @@
                 flex-grow: 1;
                 transition: all .4s;
                 transition-property: opacity, visibility;
+                @media (max-width: $md) {
+                    display: none !important;
+                }
             }
             &-search:not(.is-show) {
                 pointer-events: none;

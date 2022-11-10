@@ -40,7 +40,7 @@
               <button class="js-header-nav-toggle header__top-toggle" type="button"><span></span><span></span><span></span></button>
             </div><a class="header__top-logo" href="/"><img src="images/logo-black.png" alt="Luxury Life"/></a>
             <div class="header__top-action">
-              <form class="search-form header__nav-action-search" action="#">
+              <form class="d-md-none search-form header__nav-action-search" action="#">
                 <input class="search-form__input" type="search" name="q" required="required" placeholder="Search..."/>
                 <button class="action-btn action-btn--size-md search-form__btn" type="submit">
                   <svg class="icon action-btn__icon">
@@ -48,7 +48,7 @@
                   </svg>
                 </button>
               </form>
-              <button class="d-sm-none js-header-search-toggle action-btn action-btn--size-md header__top-action-item" type="button">
+              <button class="d-md-none js-header-search-toggle action-btn action-btn--size-md header__top-action-item" type="button">
                 <svg class="icon action-btn__icon">
                   <use xlink:href="images/sprite.svg#search"></use>
                 </svg>
@@ -56,17 +56,17 @@
                   <use xlink:href="images/sprite.svg#close"></use>
                 </svg>
               </button>
-              <button class="d-sm-none action-btn action-btn--size-md header__top-action-item" type="button">
+              <button class="d-md-none action-btn action-btn--size-md header__top-action-item" type="button">
                 <svg class="icon action-btn__icon">
                   <use xlink:href="images/sprite.svg#phone-type-1"></use>
                 </svg>
               </button>
-              <button class="d-sm-none action-btn action-btn--size-md header__top-action-item" type="button">
+              <button class="d-md-none action-btn action-btn--size-md header__top-action-item" type="button">
                 <svg class="icon action-btn__icon">
                   <use xlink:href="images/sprite.svg#user"></use>
                 </svg>
               </button>
-              <button class="d-sm-none action-btn action-btn--size-md header__top-action-item" type="button">
+              <button class="d-md-none action-btn action-btn--size-md header__top-action-item" type="button">
                 <svg class="icon action-btn__icon">
                   <use xlink:href="images/sprite.svg#favorites"></use>
                 </svg>
@@ -81,7 +81,7 @@
         </div>
         <div class="header__nav">
           <div class="container header__nav-container">
-            <nav class="d-sm-none header-nav header__nav-el">
+            <nav class="d-md-none header-nav header__nav-el">
               <ul class="header-nav__list">
                 <li class="header-nav__item"><a class="header-nav__link" href="#">Catalog</a>
                   <div class="goods-rubric header-nav__dropdown">
@@ -113,6 +113,12 @@
                         </div>
                         <div class="goods-rubric__col">
                           <article class="goods-rubric-card goods-rubric__card">
+                            <picture class="goods-rubric-card__picture"><img src="images/goods-rubric-4.svg" alt="Chains"/></picture>
+                            <h3 class="title-size-5 goods-rubric-card__title"><a class="goods-rubric-card__link" href="#">Chains</a></h3>
+                          </article>
+                        </div>
+                        <div class="goods-rubric__col">
+                          <article class="goods-rubric-card goods-rubric__card">
                             <picture class="goods-rubric-card__picture"><img src="images/goods-rubric-5.svg" alt="Set"/></picture>
                             <h3 class="title-size-5 goods-rubric-card__title"><a class="goods-rubric-card__link" href="#">Set</a></h3>
                           </article>
@@ -127,7 +133,7 @@
                 <li class="header-nav__item"><a class="header-nav__link" href="#">Gift certificates</a></li>
               </ul>
             </nav>
-            <div class="header__nav-action d-sm-block">
+            <div class="header__nav-action d-md-block">
               <form class="search-form header__nav-action-item" action="#">
                 <input class="search-form__input" type="search" name="q" required="required" placeholder="Search..."/>
                 <button class="action-btn action-btn--size-md search-form__btn" type="submit">
@@ -260,6 +266,12 @@
                 <article class="goods-rubric-card goods-rubric__card">
                   <picture class="goods-rubric-card__picture"><img src="images/goods-rubric-3.svg" alt="Necklace"/></picture>
                   <h3 class="title-size-5 goods-rubric-card__title"><a class="goods-rubric-card__link" href="#">Necklace</a></h3>
+                </article>
+              </div>
+              <div class="goods-rubric__col">
+                <article class="goods-rubric-card goods-rubric__card">
+                  <picture class="goods-rubric-card__picture"><img src="images/goods-rubric-4.svg" alt="Chains"/></picture>
+                  <h3 class="title-size-5 goods-rubric-card__title"><a class="goods-rubric-card__link" href="#">Chains</a></h3>
                 </article>
               </div>
               <div class="goods-rubric__col">
@@ -466,7 +478,7 @@
             </div>
             <div class="row__col--7 engagement-section__col--slider">
               <div class="engagement-section__content">
-                <h2 class="title-size-2 engagement-section__title">Advertising engagement rings and&nbsp;engagement rings</h2>
+                <h2 class="title-size-2 engagement-section__title">10%&nbsp;Off weddings rings</h2>
                 <picture class="d-sm-block engagement-section__picture"><img src="images/engagement-section-1.jpg" alt="Advertising engagement rings and engagement rings"/></picture>
                 <div class="goods-slider engagement-section__goods-slider">
                   <div class="js-goods-slider-init goods-slider__init">
@@ -768,11 +780,25 @@
       <footer class="footer">
         <div class="footer__top">
           <div class="container footer__top-container">
-            <button class="js-phone-btn phone-btn phone-btn--size-md footer__top-phone-btn" type="button">
-              <svg class="icon phone-btn__icon">
-                <use xlink:href="images/sprite.svg#phone-type-2"></use>
-              </svg>
-            </button>
+            <div class="js-sc-contacts sc-contacts footer__top-sc-btn">
+              <button class="sc-btn sc-btn--theme-accent sc-btn--size-md sc-contacts__el" type="button">
+                <svg class="icon sc-btn__icon">
+                  <use xlink:href="images/sprite.svg#phone-type-2"></use>
+                </svg>
+              </button>
+              <div class="sc-contacts__dropdown">
+                <button class="sc-btn sc-btn--theme-accent sc-btn--size-md sc-contacts__dropdown-item" type="button">
+                  <svg class="icon sc-btn__icon">
+                    <use xlink:href="images/sprite.svg#phone-type-2"></use>
+                  </svg>
+                </button>
+                <button class="sc-btn sc-btn--theme-accent sc-btn--size-md sc-contacts__dropdown-item" type="button">
+                  <svg class="icon sc-btn__icon">
+                    <use xlink:href="images/sprite.svg#phone-type-2"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
             <div class="row footer__top-row">
               <div class="row__col--3 footer__top-col--logo">
                 <div class="footer__logo-wrap"><a class="footer__logo" href="/"><img src="images/logo-white.png" alt="Luxury Life"/></a>

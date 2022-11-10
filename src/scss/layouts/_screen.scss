@@ -15,9 +15,8 @@
     &__title {
     	margin: 0 0 13px;
     	text-align: center;
-        @media (max-width: $sm) {
-            margin-bottom: 15px;
-            text-align: left;
+        @media (max-width: $md) {
+            font-size: 36px;
         }
     }
     &__goods-list {

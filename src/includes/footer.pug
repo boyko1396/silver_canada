@@ -1,9 +1,17 @@
 footer.footer
   .footer__top
     .container.footer__top-container
-      button(type="button").js-phone-btn.phone-btn.phone-btn--size-md.footer__top-phone-btn
-        svg.icon.phone-btn__icon
-          use(xlink:href="images/sprite.svg#phone-type-2")
+      .js-sc-contacts.sc-contacts.footer__top-sc-btn
+        button(type="button").sc-btn.sc-btn--theme-accent.sc-btn--size-md.sc-contacts__el
+          svg.icon.sc-btn__icon
+            use(xlink:href="images/sprite.svg#phone-type-2")
+        .sc-contacts__dropdown
+          button(type="button").sc-btn.sc-btn--theme-accent.sc-btn--size-md.sc-contacts__dropdown-item
+            svg.icon.sc-btn__icon
+              use(xlink:href="images/sprite.svg#phone-type-2")
+          button(type="button").sc-btn.sc-btn--theme-accent.sc-btn--size-md.sc-contacts__dropdown-item
+            svg.icon.sc-btn__icon
+              use(xlink:href="images/sprite.svg#phone-type-2")
       .row.footer__top-row
         .row__col--3.footer__top-col--logo
           .footer__logo-wrap

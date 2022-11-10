@@ -232,7 +232,7 @@ html {
 }
 
 body {
-  background: #F8F6F5;
+  background: #F8F8F8;
   font-style: normal;
   font-weight: normal;
   font-size: var(--fs-default);
@@ -338,9 +338,9 @@ b {
   -ms-flex-direction: column;
   flex-direction: column;
   position: relative;
-  overflow: clip;
+  overflow: hidden;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   #root {
     padding-top: 158px;
   }
@@ -550,7 +550,7 @@ svg,
   left: 0;
 }
 
-.btn-reset, .header__top-toggle, .subscribe-btn, .phone-btn, .action-btn {
+.btn-reset, .header__top-toggle, .subscribe-btn, .sc-btn, .action-btn {
   background: transparent;
   margin: 0;
   padding: 0;
@@ -769,8 +769,7 @@ svg,
 }
 
 .goods-rubric-card {
-  width: 200px;
-  padding: 30px;
+  padding: 20px;
   text-align: center;
   border-radius: 10px;
   transition: all 0.4s;
@@ -781,10 +780,9 @@ svg,
 }
 @media (min-width: 1200px) {
   .goods-rubric-card:hover {
-    background: #fff;
     -webkit-transform: translateY(-3px);
     transform: translateY(-3px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    opacity: 0.6;
   }
 }
 .goods-rubric-card__picture {
@@ -808,7 +806,7 @@ svg,
   font-weight: 300;
 }
 .goods-rubric-card__link {
-  display: block;
+  box-shadow: 0 1px 0 transparent;
 }
 .goods-rubric-card__link:hover {
   text-decoration: none;
@@ -820,13 +818,13 @@ svg,
   display: flex;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 @media (max-width: 1199px) {
   .goods-rubric__row {
     -ms-flex-pack: center;
     justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 }
 @media (max-width: 767px) {
@@ -835,7 +833,10 @@ svg,
   }
 }
 .goods-rubric__col {
+  max-width: 220px;
   padding: 0 10px;
+  -ms-flex: 1;
+  flex: 1;
 }
 @media (max-width: 1199px) {
   .goods-rubric__col {
@@ -964,12 +965,12 @@ svg,
 }
 @media (max-width: 991px) {
   .goods-list__row {
-    margin: 0 calc(2 * var(--gap-));
+    margin: 0 calc(-8px + var(--gap-));
   }
 }
 @media (max-width: 991px) {
   .goods-list__row .slick-list {
-    padding-left: 22px;
+    padding: 0 var(--gap);
   }
 }
 .goods-list__col {
@@ -1229,11 +1230,11 @@ svg,
   color: #2D2C38;
   letter-spacing: 0.02em;
   border: 1px solid #F5F7F9;
-  border-radius: 0;
+  border-radius: 0 !important;
   outline: none;
   transition: all 0.4s;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .search-form__input {
     min-height: 38px;
     padding: 7px 34px 5px 7px;
@@ -1263,7 +1264,7 @@ svg,
   transition: all 0.4s;
   transition-property: color;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .search-form__input::-webkit-input-placeholder {
     color: #9AA0A1;
   }
@@ -1319,14 +1320,29 @@ svg,
   transform: translateY(-50%);
   z-index: 1;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .search-form__btn {
     right: 4px;
   }
 }
 
-.phone-btn {
-  background: #2D2C38;
+.sc-contacts__dropdown {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  transition: all 0.34s;
+  transition-property: visibility, opacity;
+}
+.sc-contacts__dropdown-item {
+  margin: 0 0 20px;
+}
+.sc-contacts:not(:hover) .sc-contacts__dropdown {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sc-btn {
   width: var(--size-btn);
   height: var(--size-btn);
   display: -ms-flexbox;
@@ -1336,22 +1352,26 @@ svg,
   -ms-flex-pack: center;
   justify-content: center;
   color: #fff;
+  border: 1px solid #4B4A52;
   border-radius: 50%;
   transition: all 0.4s;
   cursor: pointer;
 }
-.phone-btn:hover {
+.sc-btn:hover {
   text-decoration: none;
 }
+.sc-btn--theme-accent {
+  background: #2D2C38;
+}
 @media (min-width: 1200px) {
-  .phone-btn:hover {
+  .sc-btn--theme-accent:hover {
     box-shadow: 0 4px 8px 2px rgba(45, 44, 56, 0.4);
   }
 }
-.phone-btn--size-md {
+.sc-btn--size-md {
   --size-btn: 60px;
 }
-.phone-btn__icon {
+.sc-btn__icon {
   width: 26px;
   height: 26px;
 }
@@ -1533,7 +1553,7 @@ svg,
   position: relative;
   transition: all 0.28s;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .header__top {
     height: 100px;
   }
@@ -1622,7 +1642,7 @@ svg,
   position: relative;
   transition: all 0.28s;
 }
-@media (max-width: 767px) {
+@media (max-width: 1199px) {
   .header__top-logo {
     width: 82px;
     -ms-flex-preferred-size: 82px;
@@ -1679,15 +1699,12 @@ svg,
   height: 80px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
-@media (max-width: 767px) {
-  .header.is-sticky .header__top {
-    height: 80px;
+@media (min-width: 1200px) {
+  .header.is-sticky .header__top-logo {
+    width: 70px;
+    -ms-flex-preferred-size: 70px;
+    flex-basis: 70px;
   }
-}
-.header.is-sticky .header__top-logo {
-  width: 70px;
-  -ms-flex-preferred-size: 70px;
-  flex-basis: 70px;
 }
 .header__nav {
   color: #fff;
@@ -1695,7 +1712,7 @@ svg,
   position: relative;
   z-index: -1;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .header__nav {
     padding: 10px 0;
   }
@@ -1731,6 +1748,11 @@ svg,
   flex-grow: 1;
   transition: all 0.4s;
   transition-property: opacity, visibility;
+}
+@media (max-width: 991px) {
+  .header__nav-action-search {
+    display: none !important;
+  }
 }
 .header__nav-action-search:not(.is-show) {
   pointer-events: none;
@@ -1926,23 +1948,17 @@ svg,
 .footer__top-container {
   position: relative;
 }
-.footer__top-phone-btn {
+.footer__top-sc-btn {
   position: fixed;
-  right: 50px;
-  bottom: 360px;
-  transition: all 0.4s;
+  right: 35px;
+  bottom: 120px;
   z-index: 4;
 }
-.footer__top-phone-btn:not(.is-show) {
+.footer__top-sc-btn:not(.is-show) {
   -webkit-transform: translateX(160px);
   transform: translateX(160px);
   opacity: 0;
   visibility: hidden;
-}
-@media (max-width: 1199px) {
-  .footer__top-phone-btn {
-    display: none;
-  }
 }
 @media (max-width: 767px) {
   .footer__top-row {
@@ -2210,10 +2226,9 @@ svg,
   margin: 0 0 13px;
   text-align: center;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .screen__title {
-    margin-bottom: 15px;
-    text-align: left;
+    font-size: 36px;
   }
 }
 .promotions-card {
@@ -2338,9 +2353,15 @@ svg,
   margin: 0 0 36px;
   line-height: 0.92;
 }
+@media (max-width: 991px) {
+  .engagement-section__title {
+    font-size: 36px;
+  }
+}
 @media (max-width: 767px) {
   .engagement-section__title {
     margin-bottom: 20px;
+    text-align: center;
   }
 }
 .info-card {

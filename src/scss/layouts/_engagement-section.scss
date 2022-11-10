@@ -60,8 +60,12 @@
     &__title {
         margin: 0 0 36px;
         line-height: .92;
+        @media (max-width: $md) {
+            font-size: 36px;
+        }
         @media (max-width: $sm) {
             margin-bottom: 20px;
+            text-align: center;
         }
     }
     &__goods-slider {

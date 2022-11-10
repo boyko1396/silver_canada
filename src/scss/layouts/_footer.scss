@@ -11,19 +11,15 @@
         &-container {
             position: relative;
         }
-        &-phone-btn {
+        &-sc-btn {
             position: fixed;
-            right: 50px;
-            bottom: 360px;
-            transition: all .4s;
+            right: 35px;
+            bottom: 120px;
             z-index: 4;
             &:not(.is-show) {
                 transform: translateX(160px);
                 opacity: 0;
                 visibility: hidden;
-            }
-            @media (max-width: $lg) {
-                display: none;
             }
         }
         &-row {
