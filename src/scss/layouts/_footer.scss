@@ -164,7 +164,7 @@
             padding-right: 50px;
             &:hover,
             &:focus,
-            &:valid {
+            &:invalid {
                 padding-top: 20px;
                 padding-bottom: 6px;
             }
@@ -183,7 +183,7 @@
             transition: all .34s;
             pointer-events: none;
         }
-        &-input:valid ~ &-label,
+        &-label.is-active,
         &-input:hover ~ &-label,
         &-input:focus ~ &-label {
             font-size: 12px;

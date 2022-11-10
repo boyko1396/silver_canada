@@ -2129,7 +2129,7 @@ svg,
   width: 100%;
   padding-right: 50px;
 }
-.footer__subscribe-input:hover, .footer__subscribe-input:focus, .footer__subscribe-input:valid {
+.footer__subscribe-input:hover, .footer__subscribe-input:focus, .footer__subscribe-input:invalid {
   padding-top: 20px;
   padding-bottom: 6px;
 }
@@ -2149,7 +2149,7 @@ svg,
   transition: all 0.34s;
   pointer-events: none;
 }
-.footer__subscribe-input:valid ~ .footer__subscribe-label, .footer__subscribe-input:hover ~ .footer__subscribe-label, .footer__subscribe-input:focus ~ .footer__subscribe-label {
+.footer__subscribe-label.is-active, .footer__subscribe-input:hover ~ .footer__subscribe-label, .footer__subscribe-input:focus ~ .footer__subscribe-label {
   font-size: 12px;
   color: #9AA0A1;
   -webkit-transform: translateY(-12px);
