@@ -90,14 +90,12 @@ $(document).ready(function() {
                 {
                     breakpoint: 1200,
                     settings: {
-                        dots: true,
                         slidesToScroll: 2
                     }
                 },
                 {
                     breakpoint: 577,
                     settings: {
-                        dots: true,
                         slidesToShow: 1,
                         slidesToScroll: 1
                     }
