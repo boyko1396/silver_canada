@@ -1,0 +1,115 @@
+.goods-grid {
+    &__inner {
+        margin: 0 var(--gap-) -30px;
+        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        flex-wrap: wrap;
+    }
+    &__col {
+        margin-bottom: 30px;
+        padding: 0 var(--gap);
+        flex-shrink: 0;
+        flex-basis: auto;
+        &--size-4 {
+            flex-grow: 3.33333;
+        }
+        &--size-lg {
+            grid-row: span 2;
+            grid-column: span 2;
+            flex-grow: 66.6666;
+        }
+    }
+    &__card {
+        height: 100%;
+    }
+}
+
+.layout {
+    padding: 20px 0;
+    &__container {
+    }
+    &__breadcrumbs {
+        margin: 0 0 40px;
+    }
+    &__catalog {
+        &-col--header {
+        }
+        &-col--aside {
+            @media (min-width: $lg-mf) {
+                padding-top: 110px;
+                padding-bottom: 110px;
+                align-self: flex-start;
+                position: sticky;
+                top: 110px;
+                transition: all .34s;
+                transition-property: padding-top;
+            }
+            @media (max-width: $lg) {
+                max-width: 100%;
+                flex-basis: 100%;
+            }
+        }
+        &-col--main {
+            @media (max-width: $lg) {
+                max-width: 100%;
+                flex-basis: 100%;
+            }
+        }
+        &-header {
+            margin: 0 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @media (max-width: $lg) {
+                margin-bottom: 40px;
+                flex-wrap: wrap;
+            }
+            &-title {
+                margin: 0 30px 0 0;
+                line-height: 1;
+                @media (max-width: $lg) {
+                    max-width: 100%;
+                    margin-right: 0;
+                    margin-bottom: 30px;
+                    flex-basis: 100%;
+                }
+            }
+            &-filter-btn {
+                margin-right: auto;
+            }
+            &-sort-btn {
+                margin-left: auto;
+            }
+        }
+        &-aside {
+            @media (max-width: $lg) {
+                background: $color-white-1;
+                padding: var(--gap);
+                display: none;
+                position: fixed;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 998;
+            }
+            &-filter {
+            }
+            &-subtitle {
+                margin: 0 0 10px;
+            }
+        }
+        &-main {
+            &-goods-list {
+                margin-bottom: 50px;
+            }
+            &-pagination {
+            }
+        }
+    }
+}
+
+.header.is-sticky ~ .main .layout__catalog-col--aside {
+    padding-top: 0;
+}

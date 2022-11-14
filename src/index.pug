@@ -6,6 +6,7 @@ html(lang='en')
 
     #root
 
+      include includes/preloader.pug
       include includes/header.pug
       include includes/main-slider.pug
       section.screen
@@ -51,7 +52,7 @@ html(lang='en')
           h2.title-size-2.screen__title We recommend
           .goods-list.screen__goods-list
             .js-goods-slider-mobile-init.goods-list__row
-              .goods-list__col
+              .goods-list__col.goods-list__col--slider
                 article.good-card.goods-list__card
                   button(type="button").js-good-card-favorites.action-btn.action-btn--size-md.good-card__btn-favorites
                     svg.icon.action-btn__icon
@@ -66,7 +67,7 @@ html(lang='en')
                     .good-card__price
                       .good-card__price-new 6264 грн
                       .good-card__price-old 8764 грн
-              .goods-list__col
+              .goods-list__col.goods-list__col--slider
                 article.good-card.goods-list__card
                   button(type="button").js-good-card-favorites.action-btn.action-btn--size-md.good-card__btn-favorites
                     svg.icon.action-btn__icon
@@ -81,7 +82,7 @@ html(lang='en')
                     .good-card__price
                       .good-card__price-new 6264 грн
                       .good-card__price-old 8764 грн
-              .goods-list__col
+              .goods-list__col.goods-list__col--slider
                 article.good-card.goods-list__card
                   button(type="button").js-good-card-favorites.action-btn.action-btn--size-md.good-card__btn-favorites
                     svg.icon.action-btn__icon
@@ -96,7 +97,7 @@ html(lang='en')
                     .good-card__price
                       .good-card__price-new 6264 грн
                       .good-card__price-old 8764 грн
-              .goods-list__col
+              .goods-list__col.goods-list__col--slider
                 article.good-card.goods-list__card
                   button(type="button").js-good-card-favorites.action-btn.action-btn--size-md.good-card__btn-favorites
                     svg.icon.action-btn__icon
@@ -111,7 +112,7 @@ html(lang='en')
                     .good-card__price
                       .good-card__price-new 6264 грн
                       .good-card__price-old 8764 грн
-              .goods-list__col
+              .goods-list__col.goods-list__col--slider
                 article.good-card.goods-list__card
                   button(type="button").js-good-card-favorites.action-btn.action-btn--size-md.good-card__btn-favorites
                     svg.icon.action-btn__icon
@@ -126,7 +127,7 @@ html(lang='en')
                     .good-card__price
                       .good-card__price-new 6264 грн
                       .good-card__price-old 8764 грн
-              .goods-list__col
+              .goods-list__col.goods-list__col--slider
                 article.good-card.goods-list__card
                   button(type="button").js-good-card-favorites.action-btn.action-btn--size-md.good-card__btn-favorites
                     svg.icon.action-btn__icon
@@ -141,7 +142,7 @@ html(lang='en')
                     .good-card__price
                       .good-card__price-new 6264 грн
                       .good-card__price-old 8764 грн
-              .goods-list__col
+              .goods-list__col.goods-list__col--slider
                 article.good-card.goods-list__card
                   button(type="button").js-good-card-favorites.action-btn.action-btn--size-md.good-card__btn-favorites
                     svg.icon.action-btn__icon
@@ -156,7 +157,7 @@ html(lang='en')
                     .good-card__price
                       .good-card__price-new 6264 грн
                       .good-card__price-old 8764 грн
-              .goods-list__col
+              .goods-list__col.goods-list__col--slider
                 article.good-card.goods-list__card
                   button(type="button").js-good-card-favorites.action-btn.action-btn--size-md.good-card__btn-favorites
                     svg.icon.action-btn__icon
@@ -178,7 +179,7 @@ html(lang='en')
           h2.title-size-2.screen__title New items
           .goods-list.screen__goods-list
             .js-goods-slider-mobile-init.goods-list__row
-              .goods-list__col
+              .goods-list__col.goods-list__col--slider
                 article.good-card.goods-list__card
                   button(type="button").js-good-card-favorites.action-btn.action-btn--size-md.good-card__btn-favorites
                     svg.icon.action-btn__icon
@@ -193,7 +194,7 @@ html(lang='en')
                     .good-card__price
                       .good-card__price-new 6264 грн
                       .good-card__price-old 8764 грн
-              .goods-list__col
+              .goods-list__col.goods-list__col--slider
                 article.good-card.goods-list__card
                   button(type="button").js-good-card-favorites.action-btn.action-btn--size-md.good-card__btn-favorites
                     svg.icon.action-btn__icon
@@ -208,7 +209,7 @@ html(lang='en')
                     .good-card__price
                       .good-card__price-new 6264 грн
                       .good-card__price-old 8764 грн
-              .goods-list__col
+              .goods-list__col.goods-list__col--slider
                 article.good-card.goods-list__card
                   button(type="button").js-good-card-favorites.action-btn.action-btn--size-md.good-card__btn-favorites
                     svg.icon.action-btn__icon
@@ -223,7 +224,7 @@ html(lang='en')
                     .good-card__price
                       .good-card__price-new 6264 грн
                       .good-card__price-old 8764 грн
-              .goods-list__col
+              .goods-list__col.goods-list__col--slider
                 article.good-card.goods-list__card
                   button(type="button").js-good-card-favorites.action-btn.action-btn--size-md.good-card__btn-favorites
                     svg.icon.action-btn__icon
@@ -238,7 +239,7 @@ html(lang='en')
                     .good-card__price
                       .good-card__price-new 6264 грн
                       .good-card__price-old 8764 грн
-              .goods-list__col
+              .goods-list__col.goods-list__col--slider
                 article.good-card.goods-list__card
                   button(type="button").js-good-card-favorites.action-btn.action-btn--size-md.good-card__btn-favorites
                     svg.icon.action-btn__icon
@@ -253,7 +254,7 @@ html(lang='en')
                     .good-card__price
                       .good-card__price-new 6264 грн
                       .good-card__price-old 8764 грн
-              .goods-list__col
+              .goods-list__col.goods-list__col--slider
                 article.good-card.goods-list__card
                   button(type="button").js-good-card-favorites.action-btn.action-btn--size-md.good-card__btn-favorites
                     svg.icon.action-btn__icon
@@ -268,7 +269,7 @@ html(lang='en')
                     .good-card__price
                       .good-card__price-new 6264 грн
                       .good-card__price-old 8764 грн
-              .goods-list__col
+              .goods-list__col.goods-list__col--slider
                 article.good-card.goods-list__card
                   button(type="button").js-good-card-favorites.action-btn.action-btn--size-md.good-card__btn-favorites
                     svg.icon.action-btn__icon
@@ -283,7 +284,7 @@ html(lang='en')
                     .good-card__price
                       .good-card__price-new 6264 грн
                       .good-card__price-old 8764 грн
-              .goods-list__col
+              .goods-list__col.goods-list__col--slider
                 article.good-card.goods-list__card
                   button(type="button").js-good-card-favorites.action-btn.action-btn--size-md.good-card__btn-favorites
                     svg.icon.action-btn__icon

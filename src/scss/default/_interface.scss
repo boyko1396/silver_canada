@@ -109,8 +109,8 @@ b {
     display: flex;
     flex-direction: column;
     position: relative;
-    overflow: hidden;
+    overflow: clip;
     @media (max-width: $md) {
-        padding-top: 158px;
+        padding-top: 160px;
     }
 }

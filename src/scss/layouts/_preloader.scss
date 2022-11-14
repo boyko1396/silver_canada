@@ -1,0 +1,40 @@
+.preloader {
+    background: $color-white-1;
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 9999;
+    &__inner {
+        width: 100%;
+        height: 100%;
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow-y: auto;
+    }
+    &__logo-wrap {
+        width: 179px;
+        animation: rotateplane 1.2s infinite ease-in-out;
+    }
+    &__logo {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: contain;
+    }
+}
+
+@keyframes rotateplane{
+    0%,
+    100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(.8);
+    }
+}

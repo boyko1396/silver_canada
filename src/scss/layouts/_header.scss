@@ -130,6 +130,7 @@
         box-shadow: 0 1px 1px transparent;
         position: relative;
         transition: all .28s;
+        z-index: 20;
         @media (max-width: $md) {
             height: 100px;
         }
@@ -202,7 +203,7 @@
             text-decoration: none;
             position: relative;
             transition: all .28s;
-            @media (max-width: $lg) {
+            @media (max-width: $md) {
                 width: 82px;
                 flex-basis: 82px;
                 z-index: 10;
@@ -245,7 +246,7 @@
         height: 80px;
         box-shadow: 0 1px 1px rgba(0,0,0,.05);
     }
-    @media (min-width: $lg-mf) {
+    @media (min-width: $md-mf) {
         &.is-sticky &__top-logo {
             width: 70px;
             flex-basis: 70px;
@@ -288,8 +289,6 @@
             }
             &-search {
                 flex-grow: 1;
-                transition: all .4s;
-                transition-property: opacity, visibility;
                 @media (max-width: $md) {
                     display: none !important;
                 }

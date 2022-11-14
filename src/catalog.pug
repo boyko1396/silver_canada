@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+html(lang='en')
+  include includes/head.pug
+
+  body
+
+    #root
+
+      include includes/preloader.pug
+      include includes/header.pug
+      main(role="main").main
+        .page-poster
+          picture.img-cover.page-poster__media
+            img(src="images/page-poster-1.jpg" alt="Earrings")
+        .layout
+          .container.layout__container
+            .layout__breadcrumbs
+              include includes/breadcrumbs.pug
+            .row.layout__catalog
+              .row__col--12.layout__catalog-col--header
+                header.layout__catalog-header
+                  h1.title-size-1.layout__catalog-header-title Earrings
+                  button(type="button").js-filter-btn.d-lg-block.filter-btn.layout__catalog-header-filter-btn
+                    span.filter-btn__inner
+                      span.filter-btn__icon-wrap
+                        svg.icon.filter-btn__icon
+                          use(xlink:href="images/sprite.svg#filter-type-1")
+                      span.filter-btn__text
+                        span.filter-btn__title Filter
+                  button(type="button").js-sort-btn.sort-btn.layout__catalog-header-sort-btn.is-active-1
+                    span.sort-btn__inner
+                      span.sort-btn__text
+                        span.sort-btn__title Sort
+                      span.sort-btn__icon-wrap
+                        svg.icon.sort-btn__icon
+                          use(xlink:href="images/sprite.svg#sort-type-1")
+                        svg.icon.sort-btn__icon
+                          use(xlink:href="images/sprite.svg#sort-type-3")
+                        svg.icon.sort-btn__icon
+                          use(xlink:href="images/sprite.svg#sort-type-2")
+              .row__col--3.layout__catalog-col--aside
+                aside.layout__catalog-aside
+                  .filter-dropdown.layout__catalog-aside-filter
+                    form(action="#").filter-dropdown__form
+                      .filter-dropdown__price
+                        p.layout__catalog-aside-subtitle Price
+                        .slider-el.filter-dropdown__price-slider
+                          .js-range-init.slider-el__body
+                        .filter-dropdown__price-footer
+                          input(type="text" name="filterPriceMin" placeholder="0").js-input-amount-min.input-amount.filter-dropdown__price-input
+                          input(type="text" name="filterPriceMax" placeholder="3000").js-input-amount-max.input-amount.filter-dropdown__price-input
+                      .filter-dropdown__group
+                        .filter-dropdown__group-item
+                          p.layout__catalog-aside-subtitle Metal color
+                          .checkbox-list.filter-dropdown__checkbox-list
+                            label.checkbox-el.filter-dropdown__checkbox-item
+                              input(type="checkbox" name="filterColor[]" checked value="White").checkbox-el__control
+                              span.checkbox-el__inner
+                                span.checkbox-el__icon
+                                span.checkbox-el__title White
+                            label.checkbox-el.filter-dropdown__checkbox-item
+                              input(type="checkbox" name="filterColor[]" value="Gold").checkbox-el__control
+                              span.checkbox-el__inner
+                                span.checkbox-el__icon
+                                span.checkbox-el__title Gold
+                        .filter-dropdown__group-item
+                          p.layout__catalog-aside-subtitle Size
+                          .checkbox-list.filter-dropdown__checkbox-list
+                            label.checkbox-el.filter-dropdown__checkbox-item
+                              input(type="checkbox" name="filterSize[]" checked value="15.5").checkbox-el__control
+                              span.checkbox-el__inner
+                                span.checkbox-el__icon
+                                span.checkbox-el__title 15.5
+                            label.checkbox-el.filter-dropdown__checkbox-item
+                              input(type="checkbox" name="filterSize[]" value="16").checkbox-el__control
+                              span.checkbox-el__inner
+                                span.checkbox-el__icon
+                                span.checkbox-el__title 16
+                            label.checkbox-el.filter-dropdown__checkbox-item
+                              input(type="checkbox" name="filterSize[]" value="16.5").checkbox-el__control
+                              span.checkbox-el__inner
+                                span.checkbox-el__icon
+                                span.checkbox-el__title 16.5
+                            label.checkbox-el.filter-dropdown__checkbox-item
+                              input(type="checkbox" name="filterSize[]" value="17").checkbox-el__control
+                              span.checkbox-el__inner
+                                span.checkbox-el__icon
+                                span.checkbox-el__title 17
+                            label.checkbox-el.filter-dropdown__checkbox-item
+                              input(type="checkbox" name="filterSize[]" value="17.5").checkbox-el__control
+                              span.checkbox-el__inner
+                                span.checkbox-el__icon
+                                span.checkbox-el__title 17.5
+              .row__col--9.layout__catalog-col--main
+                .layout__catalog-main
+                  .goods-grid.layout__catalog-main-goods-list
+                    .goods-grid__inner
+                      .goods-grid__col.goods-grid__col--size-4
+                        article.good-card.goods-grid__card
+                          button(type="button").js-good-card-favorites.action-btn.action-btn--size-md.good-card__btn-favorites
+                            svg.icon.action-btn__icon
+                              use(xlink:href="images/sprite.svg#like-outline")
+                            svg.icon.action-btn__icon
+                              use(xlink:href="images/sprite.svg#like-fill")
+                          picture.good-card__picture
+                            img(src="images/good-card-1.jpg" alt="Silver earrings with cubic zirconia")
+                          .good-card__content
+                            h3.title-size-5.good-card__title
+                              a(href="#").good-card__link Silver earrings with cubic zirconia
+                            .good-card__price
+                              .good-card__price-new 6264 грн
+                              .good-card__price-old 8764 грн
+                      .goods-grid__col.goods-grid__col--size-4
+                        article.good-card.goods-grid__card
+                          button(type="button").js-good-card-favorites.action-btn.action-btn--size-md.good-card__btn-favorites
+                            svg.icon.action-btn__icon
+                              use(xlink:href="images/sprite.svg#like-outline")
+                            svg.icon.action-btn__icon
+                              use(xlink:href="images/sprite.svg#like-fill")
+                          picture.good-card__picture
+                            img(src="images/good-card-1.jpg" alt="Silver earrings with cubic zirconia")
+                          .good-card__content
+                            h3.title-size-5.good-card__title
+                              a(href="#").good-card__link Silver earrings with cubic zirconia
+                            .good-card__price
+                              .good-card__price-new 6264 грн
+                              .good-card__price-old 8764 грн
+                      .goods-grid__col.goods-grid__col--size-4
+                        article.good-card.goods-grid__card
+                          button(type="button").js-good-card-favorites.action-btn.action-btn--size-md.good-card__btn-favorites
+                            svg.icon.action-btn__icon
+                              use(xlink:href="images/sprite.svg#like-outline")
+                            svg.icon.action-btn__icon
+                              use(xlink:href="images/sprite.svg#like-fill")
+                          picture.good-card__picture
+                            img(src="images/good-card-1.jpg" alt="Silver earrings with cubic zirconia")
+                          .good-card__content
+                            h3.title-size-5.good-card__title
+                              a(href="#").good-card__link Silver earrings with cubic zirconia
+                            .good-card__price
+                              .good-card__price-new 6264 грн
+                              .good-card__price-old 8764 грн
+                      .goods-grid__col.goods-grid__col--size-4
+                        article.good-card.goods-grid__card
+                          button(type="button").js-good-card-favorites.action-btn.action-btn--size-md.good-card__btn-favorites
+                            svg.icon.action-btn__icon
+                              use(xlink:href="images/sprite.svg#like-outline")
+                            svg.icon.action-btn__icon
+                              use(xlink:href="images/sprite.svg#like-fill")
+                          picture.good-card__picture
+                            img(src="images/good-card-1.jpg" alt="Silver earrings with cubic zirconia")
+                          .good-card__content
+                            h3.title-size-5.good-card__title
+                              a(href="#").good-card__link Silver earrings with cubic zirconia
+                            .good-card__price
+                              .good-card__price-new 6264 грн
+                              .good-card__price-old 8764 грн
+                      .goods-grid__col.goods-grid__col--size-lg
+                        article.good-card.goods-grid__card
+                          button(type="button").js-good-card-favorites.action-btn.action-btn--size-md.good-card__btn-favorites
+                            svg.icon.action-btn__icon
+                              use(xlink:href="images/sprite.svg#like-outline")
+                            svg.icon.action-btn__icon
+                              use(xlink:href="images/sprite.svg#like-fill")
+                          picture.good-card__picture
+                            img(src="images/good-card-4.jpg" alt="Silver earrings with cubic zirconia")
+                          .good-card__content
+                            h3.title-size-5.good-card__title
+                              a(href="#").good-card__link Silver earrings with cubic zirconia
+                            .good-card__price
+                              .good-card__price-new 6264 грн
+                              .good-card__price-old 8764 грн
+                      .goods-grid__col.goods-grid__col--size-4
+                        article.good-card.goods-grid__card
+                          button(type="button").js-good-card-favorites.action-btn.action-btn--size-md.good-card__btn-favorites
+                            svg.icon.action-btn__icon
+                              use(xlink:href="images/sprite.svg#like-outline")
+                            svg.icon.action-btn__icon
+                              use(xlink:href="images/sprite.svg#like-fill")
+                          picture.good-card__picture
+                            img(src="images/good-card-1.jpg" alt="Silver earrings with cubic zirconia")
+                          .good-card__content
+                            h3.title-size-5.good-card__title
+                              a(href="#").good-card__link Silver earrings with cubic zirconia
+                            .good-card__price
+                              .good-card__price-new 6264 грн
+                              .good-card__price-old 8764 грн
+                      .goods-grid__col.goods-grid__col--size-4
+                        article.good-card.goods-grid__card
+                          button(type="button").js-good-card-favorites.action-btn.action-btn--size-md.good-card__btn-favorites
+                            svg.icon.action-btn__icon
+                              use(xlink:href="images/sprite.svg#like-outline")
+                            svg.icon.action-btn__icon
+                              use(xlink:href="images/sprite.svg#like-fill")
+                          picture.good-card__picture
+                            img(src="images/good-card-1.jpg" alt="Silver earrings with cubic zirconia")
+                          .good-card__content
+                            h3.title-size-5.good-card__title
+                              a(href="#").good-card__link Silver earrings with cubic zirconia
+                            .good-card__price
+                              .good-card__price-new 6264 грн
+                              .good-card__price-old 8764 грн
+                      .goods-grid__col.goods-grid__col--size-4
+                        article.good-card.goods-grid__card
+                          button(type="button").js-good-card-favorites.action-btn.action-btn--size-md.good-card__btn-favorites
+                            svg.icon.action-btn__icon
+                              use(xlink:href="images/sprite.svg#like-outline")
+                            svg.icon.action-btn__icon
+                              use(xlink:href="images/sprite.svg#like-fill")
+                          picture.good-card__picture
+                            img(src="images/good-card-1.jpg" alt="Silver earrings with cubic zirconia")
+                          .good-card__content
+                            h3.title-size-5.good-card__title
+                              a(href="#").good-card__link Silver earrings with cubic zirconia
+                            .good-card__price
+                              .good-card__price-new 6264 грн
+                              .good-card__price-old 8764 грн
+                      .goods-grid__col.goods-grid__col--size-4
+                        article.good-card.goods-grid__card
+                          button(type="button").js-good-card-favorites.action-btn.action-btn--size-md.good-card__btn-favorites
+                            svg.icon.action-btn__icon
+                              use(xlink:href="images/sprite.svg#like-outline")
+                            svg.icon.action-btn__icon
+                              use(xlink:href="images/sprite.svg#like-fill")
+                          picture.good-card__picture
+                            img(src="images/good-card-1.jpg" alt="Silver earrings with cubic zirconia")
+                          .good-card__content
+                            h3.title-size-5.good-card__title
+                              a(href="#").good-card__link Silver earrings with cubic zirconia
+                            .good-card__price
+                              .good-card__price-new 6264 грн
+                              .good-card__price-old 8764 грн
+                  .layout__catalog-main-pagination
+                    include includes/pagination.pug
+      include includes/promotions-section.pug
+      include includes/info-screen.pug
+      include includes/seo-screen.pug
+
+      include includes/footer.pug
+
+    include includes/foot.pug

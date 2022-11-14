@@ -1,0 +1,32 @@
+.breadcrumbs-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    color: $color-gray-10;
+    li {
+        margin: -5px;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        &:not(:last-child):after {
+            margin: 0 .5em;
+            content: '\007C';
+            flex-shrink: 0;
+        }
+    }
+    a {
+        display: block;
+        color: $color-black-1;
+        transition: all .4s;
+        &:hover {
+            text-decoration: none;
+            @media (min-width: $lg-mf) {
+                color: $color-gray-10;
+            }
+        }
+    }
+    span {
+    }
+}

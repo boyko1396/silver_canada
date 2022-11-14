@@ -1,0 +1,33 @@
+.filter-dropdown {
+    &__form {
+    }
+    &__price {
+        margin: 0 0 40px;
+        &-slider {
+            margin: 0 0 30px;
+        }
+        &-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &-input {
+            max-width: calc(50% - 30px);
+            flex: 1 0 auto;
+        }
+    }
+    &__group {
+        &-item {
+            &:not(:last-child) {
+                margin-bottom: 25px;
+            }
+        }
+    }
+    &__checkbox-list {
+    }
+    &__checkbox-item {
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+}

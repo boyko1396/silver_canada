@@ -45,7 +45,7 @@ exports.buildLoad = buildLoad;
 
 // scss to css
 const createCss = () => {
-	return gulp.src("src/scss/**/*.+(sass|scss)")
+	return gulp.src("src/scss/**/*")
 		.pipe(plumber(function (err) {
 			console.log("Styles Task Error");
 			console.log(err);
@@ -63,14 +63,6 @@ const createCss = () => {
 		.pipe(sync.stream());
 }
 exports.createCss = createCss;
-
-// css libs
-const moveCss = () => {
-	return gulp.src("src/scss/libs/*.css")
-		.pipe(sourcemap.init())
-		.pipe(gulp.dest("build/css/"));
-}
-exports.moveCss = moveCss;
 
 // img
 const images = () => {
@@ -128,8 +120,7 @@ const watch = () => {
 	gulp.watch('src/images/*', gulp.series("images"));
 	gulp.watch('src/fonts/*', gulp.series("fonts"));
 	gulp.watch('src/media/**', gulp.series("media"));
-	gulp.watch('src/scss/**/*.+(sass|scss)', gulp.series("createCss"));
-	gulp.watch('src/scss/libs/*.css)', gulp.series("moveCss"));
+	gulp.watch('src/scss/**/*', gulp.series("createCss"));
 	gulp.watch('src/**/*.pug', gulp.series("buildTemplate"));
 	gulp.watch('src/load/*.pug', gulp.series("buildLoad"));
 }
@@ -139,7 +130,7 @@ exports.watch = watch;
 
 // gulp build/default
 exports.default = gulp.series(
-	buildTemplate, buildLoad, createCss, moveCss, media, scripts, images, fonts, server, watch
+	buildTemplate, buildLoad, createCss, media, scripts, images, fonts, server, watch
 );
 // gulp develop
 exports.dev = gulp.series(
