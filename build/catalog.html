@@ -186,7 +186,7 @@
               <div class="row__col--12 layout__catalog-col--header">
                 <header class="layout__catalog-header">
                   <h1 class="title-size-1 layout__catalog-header-title">Earrings</h1>
-                  <button class="js-filter-btn d-lg-block filter-btn layout__catalog-header-filter-btn" type="button"><span class="filter-btn__inner"><span class="filter-btn__icon-wrap">
+                  <button class="js-filter-dropdown-main-init d-lg-block filter-btn layout__catalog-header-filter-btn" type="button"><span class="filter-btn__inner"><span class="filter-btn__icon-wrap">
                         <svg class="icon filter-btn__icon">
                           <use xlink:href="images/sprite.svg#filter-type-1"></use>
                         </svg></span><span class="filter-btn__text"><span class="filter-btn__title">Filter</span></span></span></button>
@@ -204,52 +204,62 @@
               </div>
               <div class="row__col--3 layout__catalog-col--aside">
                 <aside class="layout__catalog-aside">
-                  <div class="filter-dropdown layout__catalog-aside-filter">
-                    <form class="filter-dropdown__form" action="#">
-                      <div class="filter-dropdown__price">
-                        <p class="layout__catalog-aside-subtitle">Price</p>
-                        <div class="slider-el filter-dropdown__price-slider">
-                          <div class="js-range-init slider-el__body"></div>
-                        </div>
-                        <div class="filter-dropdown__price-footer">
-                          <input class="js-input-amount-min input-amount filter-dropdown__price-input" type="text" name="filterPriceMin" placeholder="0"/>
-                          <input class="js-input-amount-max input-amount filter-dropdown__price-input" type="text" name="filterPriceMax" placeholder="3000"/>
-                        </div>
-                      </div>
-                      <div class="filter-dropdown__group">
-                        <div class="filter-dropdown__group-item">
-                          <p class="layout__catalog-aside-subtitle">Metal color</p>
-                          <div class="checkbox-list filter-dropdown__checkbox-list">
-                            <label class="checkbox-el filter-dropdown__checkbox-item">
-                              <input class="checkbox-el__control" type="checkbox" name="filterColor[]" checked="checked" value="White"/><span class="checkbox-el__inner"><span class="checkbox-el__icon"></span><span class="checkbox-el__title">White</span></span>
-                            </label>
-                            <label class="checkbox-el filter-dropdown__checkbox-item">
-                              <input class="checkbox-el__control" type="checkbox" name="filterColor[]" value="Gold"/><span class="checkbox-el__inner"><span class="checkbox-el__icon"></span><span class="checkbox-el__title">Gold</span></span>
-                            </label>
+                  <div class="filter-dropdown--main filter-dropdown layout__catalog-aside-filter">
+                    <div class="filter-dropdown__inner">
+                      <header class="modal-header filter-dropdown__header">
+                        <p class="modal-header__title">Filter</p>
+                        <button class="js-filter-dropdown-close btn-close btn-close--size-md modal-header__btn-close" type="button">
+                          <svg class="icon btn-close__icon">
+                            <use xlink:href="images/sprite.svg#close"></use>
+                          </svg>
+                        </button>
+                      </header>
+                      <form class="filter-dropdown__form" action="#">
+                        <div class="filter-dropdown__price">
+                          <p class="layout__catalog-aside-subtitle">Price</p>
+                          <div class="slider-el filter-dropdown__price-slider">
+                            <div class="js-range-init slider-el__body"></div>
+                          </div>
+                          <div class="filter-dropdown__price-footer">
+                            <input class="js-input-amount-min input-amount filter-dropdown__price-input" type="text" name="filterPriceMin" value="0"/>
+                            <input class="js-input-amount-max input-amount filter-dropdown__price-input" type="text" name="filterPriceMax" value="3000"/>
                           </div>
                         </div>
-                        <div class="filter-dropdown__group-item">
-                          <p class="layout__catalog-aside-subtitle">Size</p>
-                          <div class="checkbox-list filter-dropdown__checkbox-list">
-                            <label class="checkbox-el filter-dropdown__checkbox-item">
-                              <input class="checkbox-el__control" type="checkbox" name="filterSize[]" checked="checked" value="15.5"/><span class="checkbox-el__inner"><span class="checkbox-el__icon"></span><span class="checkbox-el__title">15.5</span></span>
-                            </label>
-                            <label class="checkbox-el filter-dropdown__checkbox-item">
-                              <input class="checkbox-el__control" type="checkbox" name="filterSize[]" value="16"/><span class="checkbox-el__inner"><span class="checkbox-el__icon"></span><span class="checkbox-el__title">16</span></span>
-                            </label>
-                            <label class="checkbox-el filter-dropdown__checkbox-item">
-                              <input class="checkbox-el__control" type="checkbox" name="filterSize[]" value="16.5"/><span class="checkbox-el__inner"><span class="checkbox-el__icon"></span><span class="checkbox-el__title">16.5</span></span>
-                            </label>
-                            <label class="checkbox-el filter-dropdown__checkbox-item">
-                              <input class="checkbox-el__control" type="checkbox" name="filterSize[]" value="17"/><span class="checkbox-el__inner"><span class="checkbox-el__icon"></span><span class="checkbox-el__title">17</span></span>
-                            </label>
-                            <label class="checkbox-el filter-dropdown__checkbox-item">
-                              <input class="checkbox-el__control" type="checkbox" name="filterSize[]" value="17.5"/><span class="checkbox-el__inner"><span class="checkbox-el__icon"></span><span class="checkbox-el__title">17.5</span></span>
-                            </label>
+                        <div class="filter-dropdown__group">
+                          <div class="filter-dropdown__group-item">
+                            <p class="layout__catalog-aside-subtitle">Metal color</p>
+                            <div class="checkbox-list filter-dropdown__checkbox-list">
+                              <label class="checkbox-el filter-dropdown__checkbox-item">
+                                <input class="checkbox-el__control" type="checkbox" name="filterColor[]" checked="checked" value="White"/><span class="checkbox-el__inner"><span class="checkbox-el__icon"></span><span class="checkbox-el__title">White</span></span>
+                              </label>
+                              <label class="checkbox-el filter-dropdown__checkbox-item">
+                                <input class="checkbox-el__control" type="checkbox" name="filterColor[]" value="Gold"/><span class="checkbox-el__inner"><span class="checkbox-el__icon"></span><span class="checkbox-el__title">Gold</span></span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="filter-dropdown__group-item">
+                            <p class="layout__catalog-aside-subtitle">Size</p>
+                            <div class="checkbox-list filter-dropdown__checkbox-list">
+                              <label class="checkbox-el filter-dropdown__checkbox-item">
+                                <input class="checkbox-el__control" type="checkbox" name="filterSize[]" checked="checked" value="15.5"/><span class="checkbox-el__inner"><span class="checkbox-el__icon"></span><span class="checkbox-el__title">15.5</span></span>
+                              </label>
+                              <label class="checkbox-el filter-dropdown__checkbox-item">
+                                <input class="checkbox-el__control" type="checkbox" name="filterSize[]" value="16"/><span class="checkbox-el__inner"><span class="checkbox-el__icon"></span><span class="checkbox-el__title">16</span></span>
+                              </label>
+                              <label class="checkbox-el filter-dropdown__checkbox-item">
+                                <input class="checkbox-el__control" type="checkbox" name="filterSize[]" value="16.5"/><span class="checkbox-el__inner"><span class="checkbox-el__icon"></span><span class="checkbox-el__title">16.5</span></span>
+                              </label>
+                              <label class="checkbox-el filter-dropdown__checkbox-item">
+                                <input class="checkbox-el__control" type="checkbox" name="filterSize[]" value="17"/><span class="checkbox-el__inner"><span class="checkbox-el__icon"></span><span class="checkbox-el__title">17</span></span>
+                              </label>
+                              <label class="checkbox-el filter-dropdown__checkbox-item">
+                                <input class="checkbox-el__control" type="checkbox" name="filterSize[]" value="17.5"/><span class="checkbox-el__inner"><span class="checkbox-el__icon"></span><span class="checkbox-el__title">17.5</span></span>
+                              </label>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </form>
+                      </form>
+                    </div>
                   </div>
                 </aside>
               </div>

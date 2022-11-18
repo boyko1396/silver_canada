@@ -94,8 +94,9 @@
 .noUi-horizontal .noUi-handle{
     width:10px;
     height:10px;
+    margin-top:-5px;
     right:-5px;
-    top:-5px;
+    top:50%;
 }
 .noUi-vertical{
     width:18px;
@@ -112,6 +113,7 @@
 }
 .noUi-target{
     background:#FAFAFA;
+    padding: 0 5px;
     border-radius:2px;
 }
 .noUi-connects{

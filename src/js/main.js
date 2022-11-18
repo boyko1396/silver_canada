@@ -1,54 +1,7 @@
-if ($('.js-range-init').length > 0) {
-    var $slider = $('.js-range-init').get(0);
-    var $min = $('.js-input-amount-min');
-    var $max = $('.js-input-amount-max');
-    var minVal = 0;
-    var maxVal = 3000;
-    var gap = 5;
-
-    noUiSlider.create($slider, {
-        start: [ minVal - gap, maxVal + gap ],
-        connect: true,
-        step: gap,
-        range: {
-            'min': minVal - gap,
-            'max': maxVal + gap
-        }
-    });
-
-    $slider.noUiSlider.on('update', function( values, handle ) {
-
-        var value = Math.floor(values[handle]);
-
-        if ( handle ) {
-            $max.get(0).value = value;
-        } else {
-            $min.get(0).value = value;
-        }
-
-        $('.noUi-value-large').text(minVal);
-        $('.noUi-value-large:last-child').text(maxVal);
-
-        if ( $min.get(0).value <= minVal || $min.get(0).value > maxVal ){
-            $min.val('');
-        }
-        if ( $max.get(0).value <= minVal || $max.get(0).value > maxVal ){
-            $max.val('');
-        }
-
-    });
-
-    $min.get(0).addEventListener('change', function(){
-        $slider.noUiSlider.set([this.value, null]);
-    });
-
-    $max.get(0).addEventListener('change', function(){
-        $slider.noUiSlider.set([null, this.value]);
-    });
-}
-
 $(document).ready(function() {
     sortCatalogBtn();
+    filterPopupInit();
+    rangeSliderInit();
 
     // header sticky
     var previousScroll = 0,
@@ -129,6 +82,67 @@ $(document).ready(function() {
                 currentClass = 0;
             }
             $(this).addClass(classes[currentClass]);
+            e.preventDefault();
+        });
+    }
+
+    function rangeSliderInit() {
+        if ($('.js-range-init').length > 0) {
+            var $slider = $('.js-range-init').get(0);
+            var $min = $('.js-input-amount-min');
+            var $max = $('.js-input-amount-max');
+            var minVal = 0;
+            var maxVal = 3000;
+            var gap = 5;
+
+            noUiSlider.create($slider, {
+                start: [minVal - gap, maxVal + gap],
+                connect: true,
+                step: gap,
+                range: {
+                    'min': minVal - gap,
+                    'max': maxVal + gap
+                }
+            });
+
+            $slider.noUiSlider.on('update', function( values, handle ) {
+
+                var value = Math.floor(values[handle]);
+
+                if (handle) {
+                    $max.get(0).value = value;
+                } else {
+                    $min.get(0).value = value;
+                }
+
+                $('.noUi-value-large').text(minVal);
+                $('.noUi-value-large:last-child').text(maxVal);
+
+                if ($min.get(0).value <= minVal || $min.get(0).value > maxVal){
+                    $min.val(minVal);
+                }
+                if ($max.get(0).value <= minVal || $max.get(0).value > maxVal){
+                    $max.val(maxVal);
+                }
+
+            });
+
+            $min.get(0).addEventListener('change', function(){
+                $slider.noUiSlider.set([this.value, null]);
+            });
+
+            $max.get(0).addEventListener('change', function(){
+                $slider.noUiSlider.set([null, this.value]);
+            });
+        }
+    }
+
+    // filter popup init
+    function filterPopupInit() {
+        $('.js-filter-dropdown-main-init, .js-filter-dropdown-close').on('click', function (e) {
+            $(this).toggleClass('is-active');
+            $('body').toggleClass('is-filter-dropdown-opened');
+            $('.filter-dropdown--main').toggleClass('is-show');
             e.preventDefault();
         });
     }

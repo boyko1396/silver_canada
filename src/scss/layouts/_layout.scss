@@ -5,19 +5,34 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         flex-wrap: wrap;
+        @media (max-width: $lg) {
+            margin-right: -8px;
+            margin-bottom: -18px;
+            margin-left: -8px;
+        }
+        @media (max-width: $sm) {
+            margin-right: -4px;
+            margin-left: -4px;
+            grid-template-columns: 1fr 1fr;
+        }
     }
     &__col {
         margin-bottom: 30px;
         padding: 0 var(--gap);
-        flex-shrink: 0;
-        flex-basis: auto;
+        @media (max-width: $lg) {
+            margin-bottom: 18px;
+            padding-right: 8px;
+            padding-left: 8px;
+        }
+        @media (max-width: $sm) {
+            padding-right: 4px;
+            padding-left: 4px;
+        }
         &--size-4 {
-            flex-grow: 3.33333;
         }
         &--size-lg {
             grid-row: span 2;
             grid-column: span 2;
-            flex-grow: 66.6666;
         }
     }
     &__card {
@@ -27,10 +42,18 @@
 
 .layout {
     padding: 20px 0;
+    @media (max-width: $lg) {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
     &__container {
     }
     &__breadcrumbs {
         margin: 0 0 40px;
+        @media (max-width: $lg) {
+            margin-bottom: 20px;
+            font-size: 12px;
+        }
     }
     &__catalog {
         &-col--header {
@@ -62,7 +85,7 @@
             justify-content: space-between;
             align-items: center;
             @media (max-width: $lg) {
-                margin-bottom: 40px;
+                margin-bottom: 30px;
                 flex-wrap: wrap;
             }
             &-title {
@@ -73,6 +96,7 @@
                     margin-right: 0;
                     margin-bottom: 30px;
                     flex-basis: 100%;
+                    font-size: 32px;
                 }
             }
             &-filter-btn {
@@ -84,15 +108,6 @@
         }
         &-aside {
             @media (max-width: $lg) {
-                background: $color-white-1;
-                padding: var(--gap);
-                display: none;
-                position: fixed;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                z-index: 998;
             }
             &-filter {
             }
@@ -102,9 +117,10 @@
         }
         &-main {
             &-goods-list {
-                margin-bottom: 50px;
+                margin-bottom: 90px;
             }
             &-pagination {
+                margin: 0 0 20px;
             }
         }
     }

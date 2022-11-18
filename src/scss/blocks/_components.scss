@@ -808,6 +808,11 @@ svg,
     border: 1px solid currentColor;
     border-radius: 25px;
     outline: none;
+    transition: all .4s;
+    &:hover,
+    &:focus {
+        background: $color-white-1;
+    }
 }
 
 .sort-btn {
@@ -818,6 +823,9 @@ svg,
     cursor: pointer;
     white-space: nowrap;
     @extend .area-click, .btn-reset;
+    @media (max-width: $lg) {
+        font-size: 13px;
+    }
     &:hover {
         &:hover {
             text-decoration: none;
@@ -883,11 +891,9 @@ svg,
     white-space: nowrap;
     @extend .area-click, .btn-reset;
     &:hover {
-        &:hover {
-            text-decoration: none;
-            @media (min-width: $lg-mf) {
-                color: $color-gray-2;
-            }
+        text-decoration: none;
+        @media (min-width: $lg-mf) {
+            color: $color-gray-2;
         }
     }
     &__inner {
@@ -917,5 +923,54 @@ svg,
         position: absolute;
         top: 0;
         left: 0;
+    }
+}
+
+.btn-close {
+    display: block;
+    font-size: inherit;
+    transition: all .4s;
+    cursor: pointer;
+    @extend .area-click, .btn-reset;
+    &:hover {
+        text-decoration: none;
+        @media (min-width: $lg-mf) {
+            color: $color-black-1;
+        }
+    }
+    &--size-md {
+        font-size: 26px;
+    }
+    &__icon {
+        display: block;
+    }
+}
+
+.modal-header {
+    background: $color-white-1;
+    padding: 24px 20px 21px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    &:before {
+        background: $color-gray-11;
+        width: 100vw;
+        height: 1px;
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &__title {
+        margin: 0 80px 0 0;
+        font-weight: normal;
+        font-size: 28px;
+    }
+    &__btn-close {
+        color: $color-gray-9;
+        position: absolute;
+        top: 30px;
+        right: 22px;
     }
 }

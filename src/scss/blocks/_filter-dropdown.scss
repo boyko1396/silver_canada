@@ -1,10 +1,49 @@
 .filter-dropdown {
+    @media (max-width: $lg) {
+        background: $color-white-1;
+        transform-origin: center top;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transition: all .4s;
+        transition-property: transform, opacity, visibility;
+        z-index: 998;
+    }
+    &:not(.is-show) {
+        @media (max-width: $lg) {
+            transform: scaleY(1.2);
+            pointer-events: none;
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+    &--main {
+    }
+    &__inner {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    &__header {
+        margin: 0 0 20px;
+        display: none;
+        @media (max-width: $lg) {
+            display: block;
+        }
+    }
     &__form {
+        @media (max-width: $lg) {
+            padding: 20px;
+        }
     }
     &__price {
-        margin: 0 0 40px;
+        margin: 0 0 25px;
         &-slider {
-            margin: 0 0 30px;
+            margin: 0 0 15px;
         }
         &-footer {
             display: flex;
@@ -27,7 +66,7 @@
     }
     &__checkbox-item {
         &:not(:last-child) {
-            margin-bottom: 16px;
+            margin-bottom: 15px;
         }
     }
 }
