@@ -1,0 +1,72 @@
+.account-aside {
+    &__nav {
+        background: $color-black-1;
+        margin: 0 0 20px;
+        padding: 25px 30px;
+        display: flex;
+        align-items: center;
+        color: $color-white-1;
+        border-radius: 5px;
+        &-list {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        &-item {
+            margin: 0;
+            padding: 0;
+            & + & {
+                margin-top: 10px;
+            }
+        }
+        &-link {
+            display: inline-block;
+            font-weight: 300;
+            line-height: 1;
+            white-space: nowrap;
+            transition: all .4s;
+            transition-property: box-shadow;
+            @extend .area-click;
+            &.is-active {
+                font-weight: normal;
+                pointer-events: none;
+                cursor: default;
+                box-shadow: inset 0 -1px 0 currentColor;
+            }
+            &:hover {
+                text-decoration: none;
+                @media (min-width: $lg-mf) {
+                    box-shadow: inset 0 -1px 0 currentColor;
+                }
+            }
+        }
+    }
+    &__cashback {
+        background: $color-black-1;
+        padding: 15px 20px;
+        display: flex;
+        align-items: center;
+        color: $color-white-1;
+        border-radius: 5px;
+        &-icon {
+            width: 28px;
+            height: 28px;
+            margin-right: 8px;
+            flex: 0 0 28px;
+        }
+        &-title {
+            padding-right: 15px;
+            font-weight: bold;
+            font-size: 13px;
+        }
+        &-amount {
+            margin-left: auto;
+            flex-shrink: 0;
+            font-weight: 900;
+            font-size: 16px;
+            font-family: $ff-accent;
+            color: $color-green-1;
+            white-space: nowrap;
+        }
+    }
+}

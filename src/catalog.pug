@@ -42,61 +42,62 @@ html(lang='en')
                   aside.layout__catalog-aside
                     .filter-dropdown--main.filter-dropdown.layout__catalog-aside-filter
                       .filter-dropdown__inner
-                        header.modal-header.filter-dropdown__header
+                        header.d-lg-block.modal-header.filter-dropdown__header
                           p.modal-header__title Filter
                           button(type="button").js-filter-dropdown-close.btn-close.btn-close--size-md.modal-header__btn-close
                             svg.icon.btn-close__icon
                               use(xlink:href="images/sprite.svg#close")
-                        form(action="#").filter-dropdown__form
-                          .filter-dropdown__price
-                            p.layout__catalog-aside-subtitle Price
-                            .slider-el.filter-dropdown__price-slider
-                              .js-range-init.slider-el__body
-                            .filter-dropdown__price-footer
-                              input(type="text" name="filterPriceMin" value="0").js-input-amount-min.input-amount.filter-dropdown__price-input
-                              input(type="text" name="filterPriceMax" value="3000").js-input-amount-max.input-amount.filter-dropdown__price-input
-                          .filter-dropdown__group
-                            .filter-dropdown__group-item
-                              p.layout__catalog-aside-subtitle Metal color
-                              .checkbox-list.filter-dropdown__checkbox-list
-                                label.checkbox-el.filter-dropdown__checkbox-item
-                                  input(type="checkbox" name="filterColor[]" checked value="White").checkbox-el__control
-                                  span.checkbox-el__inner
-                                    span.checkbox-el__icon
-                                    span.checkbox-el__title White
-                                label.checkbox-el.filter-dropdown__checkbox-item
-                                  input(type="checkbox" name="filterColor[]" value="Gold").checkbox-el__control
-                                  span.checkbox-el__inner
-                                    span.checkbox-el__icon
-                                    span.checkbox-el__title Gold
-                            .filter-dropdown__group-item
-                              p.layout__catalog-aside-subtitle Size
-                              .checkbox-list.filter-dropdown__checkbox-list
-                                label.checkbox-el.filter-dropdown__checkbox-item
-                                  input(type="checkbox" name="filterSize[]" checked value="15.5").checkbox-el__control
-                                  span.checkbox-el__inner
-                                    span.checkbox-el__icon
-                                    span.checkbox-el__title 15.5
-                                label.checkbox-el.filter-dropdown__checkbox-item
-                                  input(type="checkbox" name="filterSize[]" value="16").checkbox-el__control
-                                  span.checkbox-el__inner
-                                    span.checkbox-el__icon
-                                    span.checkbox-el__title 16
-                                label.checkbox-el.filter-dropdown__checkbox-item
-                                  input(type="checkbox" name="filterSize[]" value="16.5").checkbox-el__control
-                                  span.checkbox-el__inner
-                                    span.checkbox-el__icon
-                                    span.checkbox-el__title 16.5
-                                label.checkbox-el.filter-dropdown__checkbox-item
-                                  input(type="checkbox" name="filterSize[]" value="17").checkbox-el__control
-                                  span.checkbox-el__inner
-                                    span.checkbox-el__icon
-                                    span.checkbox-el__title 17
-                                label.checkbox-el.filter-dropdown__checkbox-item
-                                  input(type="checkbox" name="filterSize[]" value="17.5").checkbox-el__control
-                                  span.checkbox-el__inner
-                                    span.checkbox-el__icon
-                                    span.checkbox-el__title 17.5
+                        .filter-dropdown__body
+                          form(action="#").filter-dropdown__form
+                            .filter-dropdown__price
+                              p.layout__catalog-aside-subtitle Price
+                              .slider-el.filter-dropdown__price-slider
+                                .js-range-init.slider-el__body
+                              .filter-dropdown__price-footer
+                                input(type="text" name="filterPriceMin" value="0").js-input-amount-min.input-amount.filter-dropdown__price-input
+                                input(type="text" name="filterPriceMax" value="3000").js-input-amount-max.input-amount.filter-dropdown__price-input
+                            .filter-dropdown__group
+                              .filter-dropdown__group-item
+                                p.layout__catalog-aside-subtitle Metal color
+                                .checkbox-list.filter-dropdown__checkbox-list
+                                  label.checkbox-el.filter-dropdown__checkbox-item
+                                    input(type="checkbox" name="filterColor[]" checked value="White").checkbox-el__control
+                                    span.checkbox-el__inner
+                                      span.checkbox-el__icon
+                                      span.checkbox-el__title White
+                                  label.checkbox-el.filter-dropdown__checkbox-item
+                                    input(type="checkbox" name="filterColor[]" value="Gold").checkbox-el__control
+                                    span.checkbox-el__inner
+                                      span.checkbox-el__icon
+                                      span.checkbox-el__title Gold
+                              .filter-dropdown__group-item
+                                p.layout__catalog-aside-subtitle Size
+                                .checkbox-list.filter-dropdown__checkbox-list
+                                  label.checkbox-el.filter-dropdown__checkbox-item
+                                    input(type="checkbox" name="filterSize[]" checked value="15.5").checkbox-el__control
+                                    span.checkbox-el__inner
+                                      span.checkbox-el__icon
+                                      span.checkbox-el__title 15.5
+                                  label.checkbox-el.filter-dropdown__checkbox-item
+                                    input(type="checkbox" name="filterSize[]" value="16").checkbox-el__control
+                                    span.checkbox-el__inner
+                                      span.checkbox-el__icon
+                                      span.checkbox-el__title 16
+                                  label.checkbox-el.filter-dropdown__checkbox-item
+                                    input(type="checkbox" name="filterSize[]" value="16.5").checkbox-el__control
+                                    span.checkbox-el__inner
+                                      span.checkbox-el__icon
+                                      span.checkbox-el__title 16.5
+                                  label.checkbox-el.filter-dropdown__checkbox-item
+                                    input(type="checkbox" name="filterSize[]" value="17").checkbox-el__control
+                                    span.checkbox-el__inner
+                                      span.checkbox-el__icon
+                                      span.checkbox-el__title 17
+                                  label.checkbox-el.filter-dropdown__checkbox-item
+                                    input(type="checkbox" name="filterSize[]" value="17.5").checkbox-el__control
+                                    span.checkbox-el__inner
+                                      span.checkbox-el__icon
+                                      span.checkbox-el__title 17.5
               .row__col--9.layout__catalog-col--main
                 .layout__catalog-main
                   .goods-grid.layout__catalog-main-goods-list

@@ -842,7 +842,7 @@
               </div>
               <div class="row__col--3 footer__top-col--social">
                 <div class="d-sm-none footer__title">Social</div>
-                <div class="sc-block footer__sc-block">
+                <div class="sc-block sc-block--theme-light sc-block--size-md footer__sc-block">
                   <ul class="sc-block__list">
                     <li class="sc-block__item"><a class="sc-block__link" href="#">
                         <svg class="icon sc-block__icon">
@@ -872,8 +872,10 @@
                 <div class="footer__subscribe">
                   <div class="footer__title">Subscribe</div>
                   <form class="footer__subscribe-form" action="#">
-                    <input class="js-input-label input-el footer__subscribe-input" type="email" name="email" required="required" placeholder="" id="subscribe-email"/>
-                    <label class="footer__subscribe-label" for="subscribe-email">Email</label>
+                    <div class="input-area-el footer__subscribe-form-el">
+                      <input class="js-input-label input-el input-el--type-input input-el--size-md input-el--theme-dark input-area-el__input" type="email" name="email" required="required" placeholder="" id="subscribe-email"/>
+                      <label class="input-area-el__label input-area-el__label" for="subscribe-email">E-mail</label>
+                    </div>
                     <button class="subscribe-btn subscribe-btn--size-md footer__subscribe-btn" type="submit">
                       <svg class="icon subscribe-btn__icon">
                         <use xlink:href="images/sprite.svg#send"></use>

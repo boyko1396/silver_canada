@@ -55,7 +55,7 @@ footer.footer
             li Mon-Fri 9:00-18:00
         .row__col--3.footer__top-col--social
           .d-sm-none.footer__title Social
-          .sc-block.footer__sc-block
+          .sc-block.sc-block--theme-light.sc-block--size-md.footer__sc-block
             ul.sc-block__list
               li.sc-block__item
                 a(href="#").sc-block__link
@@ -84,8 +84,9 @@ footer.footer
           .footer__subscribe
             .footer__title Subscribe
             form(action="#").footer__subscribe-form
-              input(type="email" name="email" required placeholder="")#subscribe-email.js-input-label.input-el.footer__subscribe-input
-              label(for="subscribe-email").footer__subscribe-label Email
+              .input-area-el.footer__subscribe-form-el
+                input(type="email" name="email" required placeholder="")#subscribe-email.js-input-label.input-el.input-el--type-input.input-el--size-md.input-el--theme-dark.input-area-el__input
+                label(for="subscribe-email").input-area-el__label.input-area-el__label E-mail
               button(type="submit").subscribe-btn.subscribe-btn--size-md.footer__subscribe-btn
                 svg.icon.subscribe-btn__icon
                   use(xlink:href="images/sprite.svg#send")

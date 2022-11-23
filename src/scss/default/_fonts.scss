@@ -57,3 +57,15 @@
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Mont';
+    src: url('../fonts/Mont-HeavyDEMO.eot');
+    src: url('../fonts/Mont-HeavyDEMO.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Mont-HeavyDEMO.woff2') format('woff2'),
+         url('../fonts/Mont-HeavyDEMO.woff') format('woff'),
+         url('../fonts/Mont-HeavyDEMO.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}

@@ -2,6 +2,7 @@ $(document).ready(function() {
     sortCatalogBtn();
     filterPopupInit();
     rangeSliderInit();
+    faqCardCollapse()
 
     // header sticky
     var previousScroll = 0,
@@ -86,6 +87,7 @@ $(document).ready(function() {
         });
     }
 
+    // range slider init
     function rangeSliderInit() {
         if ($('.js-range-init').length > 0) {
             var $slider = $('.js-range-init').get(0);
@@ -135,6 +137,14 @@ $(document).ready(function() {
                 $slider.noUiSlider.set([null, this.value]);
             });
         }
+    }
+
+    // faq card collapse
+    function faqCardCollapse() {
+        $('.js-faq-collapse').on('click', function (e) {
+            $(this).parents().toggleClass('is-active');
+            e.preventDefault();
+        });
     }
 
     // filter popup init

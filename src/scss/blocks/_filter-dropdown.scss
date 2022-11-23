@@ -29,16 +29,13 @@
         overflow-y: auto;
     }
     &__header {
-        margin: 0 0 20px;
-        display: none;
-        @media (max-width: $lg) {
-            display: block;
-        }
     }
-    &__form {
+    &__body {
         @media (max-width: $lg) {
             padding: 20px;
         }
+    }
+    &__form {
     }
     &__price {
         margin: 0 0 25px;
@@ -51,8 +48,8 @@
             align-items: center;
         }
         &-input {
-            max-width: calc(50% - 30px);
-            flex: 1 0 auto;
+            max-width: 100px;
+            flex: 1 0 calc(50% - 30px);
         }
     }
     &__group {

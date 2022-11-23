@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+html(lang='en')
+  include includes/head.pug
+
+  body
+
+    #root
+
+      include includes/preloader.pug
+      include includes/header.pug
+      main(role="main").main
+        .layout
+          .container.layout__container
+            header.layout__header
+              .layout__breadcrumbs
+                include includes/breadcrumbs.pug
+              h1.title-size-1.layout__title Contact
+            .layout__contacts
+              .layout__contacts-inner
+                .layout__contacts-map
+                .contacts-aside.layout__contacts-form
+                  form(action="#").form-block.contacts-aside__form
+                    .title-size-2.form-block__title Contact us
+                    .input-area-el.form-block__line
+                      input(type="text" name="name" placeholder="")#contacts-name.js-input-label.input-el.input-el--type-input.input-el--size-lg.input-el--theme-light.input-area-el__input
+                      label(for="contacts-name").input-area-el__label Name
+                    .input-area-el.form-block__line
+                      input(type="email" name="email" required placeholder="")#contacts-email.js-input-label.input-el.input-el--type-input.input-el--size-lg.input-el--theme-light.input-area-el__input
+                      label(for="contacts-email").input-area-el__label E-mail
+                    .input-area-el.form-block__line
+                      textarea(name="comment" cols="" rows="" placeholder="")#contacts-text.js-input-label.input-el.input-el--type-textarea.input-el--type-input.input-el--size-lg.input-el--theme-light.input-area-el__input
+                      label(for="contacts-text").input-area-el__label Comment
+                    button(type="submit").btn.btn--w-100.btn--size-sm.btn--theme-accent.form-block__btn
+                      span.btn__inner
+                        span.btn__title Send
+                  .contacts-aside__links
+                    a(href="tel:+0800200011" target="_blank").contacts-aside__link 0 800 20-00-11
+                    a(href="mailto:email@gmail.com" target="_blank").contacts-aside__link email@gmail.com
+                  .sc-block.sc-block--theme-dark.sc-block--size-md.contacts-aside__sc-block
+                    ul.sc-block__list
+                      li.sc-block__item
+                        a(href="#").sc-block__link
+                          svg.icon.sc-block__icon
+                            use(xlink:href="images/sprite.svg#sc-facebook")
+                      li.sc-block__item
+                        a(href="#").sc-block__link
+                          svg.icon.sc-block__icon
+                            use(xlink:href="images/sprite.svg#sc-instagram")
+                      li.sc-block__item
+                        a(href="#").sc-block__link
+                          svg.icon.sc-block__icon
+                            use(xlink:href="images/sprite.svg#sc-viber")
+                      li.sc-block__item
+                        a(href="#").sc-block__link
+                          svg.icon.sc-block__icon
+                            use(xlink:href="images/sprite.svg#sc-telegram")
+                      li.sc-block__item
+                        a(href="#").sc-block__link
+                          svg.icon.sc-block__icon
+                            use(xlink:href="images/sprite.svg#sc-whatsapp")
+
+      include includes/footer.pug
+
+    include includes/foot.pug

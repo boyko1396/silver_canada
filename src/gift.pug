@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+html(lang='en')
+  include includes/head.pug
+
+  body
+
+    #root
+
+      include includes/preloader.pug
+      include includes/header.pug
+      main(role="main").main
+        .page-poster
+          picture.img-cover.page-poster__media
+            img(src="images/page-poster-4.jpg" alt="Gift certificates")
+        .layout
+          .container.layout__container
+            header.layout__header
+              .layout__breadcrumbs
+                include includes/breadcrumbs.pug
+              h1.title-size-1.layout__title Gift certificates
+            .gift-list.layout__gift-list
+              .row.gift-list__row
+                .row__col--6.gift-list__col
+                  article.gift-card.gift-list__card
+                    picture.img-cover.gift-card__picture
+                      img(src="images/gift-img-1.jpg" alt="Gift voucher $500")
+                    .gift-card__content
+                      .gift-card__data
+                        h3.title-size-5.gift-card__title
+                          a(href="#").gift-card__link Gift voucher $500
+                        p.gift-card__price $100
+                      a(href="#").btn.btn--size-sm.btn--theme-accent.gift-card__btn
+                        span.btn__inner
+                          span.btn__title Add to Bag
+                .row__col--6.gift-list__col
+                  article.gift-card.gift-list__card
+                    picture.img-cover.gift-card__picture
+                      img(src="images/gift-img-1.jpg" alt="Gift voucher $500")
+                    .gift-card__content
+                      .gift-card__data
+                        h3.title-size-5.gift-card__title
+                          a(href="#").gift-card__link Gift voucher $500
+                        p.gift-card__price $100
+                      a(href="#").btn.btn--size-sm.btn--theme-accent.gift-card__btn
+                        span.btn__inner
+                          span.btn__title Add to Bag
+                .row__col--6.gift-list__col
+                  article.gift-card.gift-list__card
+                    picture.img-cover.gift-card__picture
+                      img(src="images/gift-img-1.jpg" alt="Gift voucher $500")
+                    .gift-card__content
+                      .gift-card__data
+                        h3.title-size-5.gift-card__title
+                          a(href="#").gift-card__link Gift voucher $500
+                        p.gift-card__price $100
+                      a(href="#").btn.btn--size-sm.btn--theme-accent.gift-card__btn
+                        span.btn__inner
+                          span.btn__title Add to Bag
+                .row__col--6.gift-list__col
+                  article.gift-card.gift-list__card
+                    picture.img-cover.gift-card__picture
+                      img(src="images/gift-img-1.jpg" alt="Gift voucher $500")
+                    .gift-card__content
+                      .gift-card__data
+                        h3.title-size-5.gift-card__title
+                          a(href="#").gift-card__link Gift voucher $500
+                        p.gift-card__price $100
+                      a(href="#").btn.btn--size-sm.btn--theme-accent.gift-card__btn
+                        span.btn__inner
+                          span.btn__title Add to Bag
+            .content.layout__footer-text
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor imperdiet cursus tellus pulvinar fames purus. Ultricies pellentesque enim lorem in pharetra, sociis mauris. Dignissim malesuada risus, volutpat fringilla arcu ut. Amet quis ut in nunc. Consectetur quisque natoque malesuada mi blandit facilisis tortor eleifend urna. Donec faucibus velit ipsum suspendisse nunc felis convallis arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor imperdiet cursus tellus pulvinar fames purus.
+
+      include includes/footer.pug
+
+    include includes/foot.pug
