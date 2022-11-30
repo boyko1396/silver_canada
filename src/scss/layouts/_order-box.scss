@@ -81,4 +81,42 @@
             font-size: 15px;
         }
     }
+    &__price {
+        margin: 0 0 18px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 300;
+        font-size: 18px;
+        &-title {
+            padding-right: 5px;
+        }
+        &-count {
+            flex-shrink: 0;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        &-amount {
+            font-weight: bold;
+            font-size: 26px;
+        }
+    }
+    &__btn {
+        font-size: 15px;
+    }
+    &__footer {
+        margin: 12px 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 18px;
+    }
+    &__cashback-use-checkbox {
+    }
+    &__cashback-use-amount {
+        padding: .2em 0 0 6px;
+        flex-shrink: 0;
+        font-weight: 500;
+        white-space: nowrap;
+    }
 }

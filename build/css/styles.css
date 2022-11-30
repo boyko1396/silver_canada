@@ -5341,6 +5341,50 @@ svg,
   margin: 8px 0 0;
   font-size: 15px;
 }
+.order-box__price {
+  margin: 0 0 18px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 300;
+  font-size: 18px;
+}
+.order-box__price-title {
+  padding-right: 5px;
+}
+.order-box__price-count {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.order-box__price-amount {
+  font-weight: bold;
+  font-size: 26px;
+}
+.order-box__btn {
+  font-size: 15px;
+}
+.order-box__footer {
+  margin: 12px 0 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 18px;
+}
+.order-box__cashback-use-amount {
+  padding: 0.2em 0 0 6px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  font-weight: 500;
+  white-space: nowrap;
+}
 
 @media (min-width: 576px) {
   .d-xs-block {
