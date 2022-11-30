@@ -11,7 +11,10 @@
 @import "blocks/grid";
 @import "blocks/breadcrumbs-list";
 @import "blocks/components";
+@import "blocks/select2.min";
+@import "blocks/select";
 @import "blocks/checkbox-el";
+@import "blocks/radio-el";
 @import "blocks/page-poster";
 @import "blocks/filter-dropdown";
 @import "blocks/pagination";
@@ -28,5 +31,11 @@
 @import "layouts/layout";
 @import "layouts/contacts-aside";
 @import "layouts/account-aside";
+@import "layouts/account-settings";
+@import "layouts/account-history";
+@import "layouts/account-favorites";
+@import "layouts/order-date";
+@import "layouts/order-date";
+@import "layouts/order-box";
 
 @import "media";

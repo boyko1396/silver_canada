@@ -167,9 +167,6 @@
         </div>
       </header>
       <main class="main" role="main">
-        <div class="page-poster">
-          <picture class="img-cover page-poster__media"><img src="images/page-poster-3.jpg" alt="Some title"/></picture>
-        </div>
         <div class="layout">
           <div class="container layout__container">
             <header class="layout__header">
@@ -183,48 +180,183 @@
                   </li>
                 </ol>
               </div>
-              <h1 class="title-size-1 layout__title">Some title</h1>
+              <h1 class="title-size-1 layout__title">Order Summary</h1>
             </header>
-            <div class="content layout__footer-text">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor imperdiet cursus tellus pulvinar fames purus. Ultricies pellentesque enim lorem in pharetra, sociis mauris. Dignissim malesuada risus, volutpat fringilla arcu ut. Amet quis ut in nunc. Consectetur quisque natoque malesuada mi blandit facilisis tortor eleifend urna. Donec faucibus velit ipsum suspendisse nunc felis convallis arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor imperdiet cursus tellus pulvinar fames purus.</p>
-              <p>Ultricies pellentesque enim lorem in pharetra, sociis mauris. Dignissim malesuada risus, volutpat fringilla arcu ut. Amet quis ut in nunc. Consectetur quisque natoque malesuada mi blandit facilisis tortor eleifend urna. Donec faucibus velit ipsum suspendisse nunc felis convallis arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor imperdiet cursus tellus pulvinar fames purus. Ultricies pellentesque enim lorem in pharetra, sociis mauris. Dignissim malesuada risus, volutpat fringilla arcu ut. Amet quis ut in nunc. Consectetur quisque natoque malesuada mi blandit facilisis tortor eleifend urna. Donec faucibus velit ipsum suspendisse nunc felis convallis arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor imperdiet cursus tellus pulvinar fames purus.</p>
-              <p>Ultricies pellentesque enim lorem in pharetra, sociis mauris. Dignissim malesuada risus, volutpat fringilla arcu ut. Amet quis ut in nunc. Consectetur quisque natoque malesuada mi blandit facilisis tortor eleifend urna. Donec faucibus velit ipsum suspendisse nunc felis convallis arcu</p>
-            </div>
-          </div>
-        </div>
-        <div class="layout__info-screen">
-          <section class="info-screen">
-            <div class="container info-screen__container">
-              <div class="info-screen__list-wrap">
-                <div class="info-screen__list">
-                  <div class="info-screen__col">
-                    <article class="info-card info-screen__card">
-                      <picture class="info-card__picture"><img src="images/info-card-1.svg" alt="Free delivery"/></picture>
-                      <div class="info-card__content">
-                        <h3 class="title-size-5 info-card__title">Free delivery</h3>
+            <form class="layout__order" action="#">
+              <div class="row layout__order-row">
+                <div class="row__col layout__order-row--col-aside">
+                  <div class="order-date">
+                    <div class="nav-choose order-date__customer-nav">
+                      <ul class="nav-choose__list">
+                        <li class="nav-choose__item"><a class="nav-choose__link is-active" href="#">New customer</a></li>
+                        <li class="nav-choose__item"><a class="nav-choose__link" href="#">Regular customer</a></li>
+                      </ul>
+                    </div>
+                    <div class="order-date__box">
+                      <div class="order-date__title">Shipping information</div>
+                      <div class="input-area-el order-date__line">
+                        <input class="js-input-label input-el input-el--type-input input-el--size-lg input-el--theme-light input-area-el__input" type="text" name="name" value="" id="order-name"/>
+                        <label class="input-area-el__label" for="order-name">First Name</label>
                       </div>
-                    </article>
+                      <div class="input-area-el order-date__line">
+                        <input class="js-input-label input-el input-el--type-input input-el--size-lg input-el--theme-light input-area-el__input" type="text" name="surname" value="" id="order-surname"/>
+                        <label class="input-area-el__label" for="order-surname">Last Name</label>
+                      </div>
+                      <div class="input-area-el order-date__line">
+                        <select class="js-select-init select select--size-lg" name="order-delivery">
+                          <option value="Delivery options">Delivery options</option>
+                          <option value="Purolator">Purolator</option>
+                          <option value="Fedex">Fedex</option>
+                          <option value="Ups">Ups</option>
+                        </select>
+                      </div>
+                      <div class="order-date__line">
+                        <select class="js-select-init select select--size-lg" name="order-country">
+                          <option value="Country">Country</option>
+                          <option value="Ukraine">Ukraine</option>
+                          <option value="Ukraine">Ukraine</option>
+                          <option value="Ukraine">Ukraine</option>
+                        </select>
+                      </div>
+                      <div class="order-date__line">
+                        <select class="js-select-init select select--size-lg" name="order-state">
+                          <option value="State">State</option>
+                          <option value="Tenopilska">Tenopilska</option>
+                          <option value="Tenopilska">Tenopilska</option>
+                          <option value="Tenopilska">Tenopilska</option>
+                        </select>
+                      </div>
+                      <div class="input-area-el order-date__line">
+                        <input class="js-input-label input-el input-el--type-input input-el--size-lg input-el--theme-light input-area-el__input" type="text" name="city" value="" id="order-city"/>
+                        <label class="input-area-el__label" for="order-city">City</label>
+                      </div>
+                      <div class="input-area-el order-date__line">
+                        <input class="js-input-label input-el input-el--type-input input-el--size-lg input-el--theme-light input-area-el__input" type="text" name="street" value="" id="order-street"/>
+                        <label class="input-area-el__label" for="order-street">Street Addres</label>
+                      </div>
+                      <div class="input-area-el order-date__line">
+                        <input class="js-input-label input-el input-el--type-input input-el--size-lg input-el--theme-light input-area-el__input" type="text" name="apt" value="" id="order-apt"/>
+                        <label class="input-area-el__label" for="order-apt">Apt/Suire</label>
+                      </div>
+                      <div class="input-area-el order-date__line">
+                        <input class="js-input-label input-el input-el--type-input input-el--size-lg input-el--theme-light input-area-el__input" type="text" name="postal-code" value="" id="order-postal-code"/>
+                        <label class="input-area-el__label" for="order-postal-code">Postal Code</label>
+                      </div>
+                      <label class="checkbox-el order-date__register-checkbox">
+                        <input class="checkbox-el__control" type="checkbox" name="registration" checked="checked" value="Yes"/><span class="checkbox-el__inner"><span class="checkbox-el__icon"></span><span class="checkbox-el__title">Registration me</span></span>
+                      </label>
+                    </div>
+                    <div class="order-date__box">
+                      <div class="order-date__title">Phone and email</div>
+                      <div class="input-area-el order-date__line">
+                        <input class="js-input-label input-el input-el--type-input input-el--size-lg input-el--theme-light input-area-el__input" type="text" name="phone" value="" id="order-phone"/>
+                        <label class="input-area-el__label" for="order-phone">*Phone number</label>
+                      </div>
+                      <div class="input-area-el order-date__line">
+                        <input class="js-input-label input-el input-el--type-input input-el--size-lg input-el--theme-light input-area-el__input" type="text" name="email" value="" id="order-email"/>
+                        <label class="input-area-el__label" for="order-email">*Email address</label>
+                      </div>
+                    </div>
+                    <div class="order-date__box">
+                      <div class="order-date__title">Payment</div>
+                      <label class="radio-el order-date__payment-method">
+                        <input class="radio-el__control" type="radio" name="paymentMethod[]" checked="checked" value="Visa and Mastercard"/><span class="radio-el__inner"><span class="radio-el__icon"></span><span class="radio-el__title">Visa and Mastercard</span></span>
+                      </label>
+                      <label class="radio-el order-date__payment-method">
+                        <input class="radio-el__control" type="radio" name="paymentMethod[]" value="PayPal"/><span class="radio-el__inner"><span class="radio-el__icon"></span><span class="radio-el__title">PayPal</span></span>
+                      </label>
+                    </div>
                   </div>
-                  <div class="info-screen__col">
-                    <article class="info-card info-screen__card">
-                      <picture class="info-card__picture"><img src="images/info-card-2.svg" alt="30 days return"/></picture>
-                      <div class="info-card__content">
-                        <h3 class="title-size-5 info-card__title">30 days return</h3>
+                </div>
+                <div class="row__col layout__order-row--col-main">
+                  <div class="order-box">
+                    <div class="order-box__inner">
+                      <div class="order-box__good-list">
+                        <article class="order-good-card order-box__good-list-item">
+                          <button class="order-good-card__remove" type="button">
+                            <svg class="icon order-good-card__remove-icon">
+                              <use xlink:href="images/sprite.svg#delete"></use>
+                            </svg>
+                          </button>
+                          <picture class="order-good-card__picture"><img src="images/good-card-2.jpg" alt=""/></picture>
+                          <div class="order-good-card__content">
+                            <h3 class="order-good-card__title"><a class="order-good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
+                            <footer class="order-good-card__footer">
+                              <div class="order-good-card__count">
+                                <button class="js-order-good-card-btn-count-minus btn-count btn-count--size-md btn-count--theme-gray order-good-card__count-btn order-good-card__count-btn--minus" type="button">
+                                  <svg class="icon btn-count__icon">
+                                    <use xlink:href="images/sprite.svg#icon-minus"></use>
+                                  </svg>
+                                </button><span class="order-good-card__count-amount">1</span>
+                                <button class="js-order-good-card-btn-count-plus btn-count btn-count--size-md btn-count--theme-gray order-good-card__count-btn order-good-card__count-btn--plus" type="button">
+                                  <svg class="icon btn-count__icon">
+                                    <use xlink:href="images/sprite.svg#icon-plus"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                              <div class="order-good-card__price">6264$</div>
+                            </footer>
+                          </div>
+                        </article>
+                        <article class="order-good-card order-box__good-list-item">
+                          <button class="order-good-card__remove" type="button">
+                            <svg class="icon order-good-card__remove-icon">
+                              <use xlink:href="images/sprite.svg#delete"></use>
+                            </svg>
+                          </button>
+                          <picture class="order-good-card__picture"><img src="images/good-card-2.jpg" alt=""/></picture>
+                          <div class="order-good-card__content">
+                            <h3 class="order-good-card__title"><a class="order-good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
+                            <footer class="order-good-card__footer">
+                              <div class="order-good-card__count">
+                                <button class="js-order-good-card-btn-count-minus btn-count btn-count--size-md btn-count--theme-gray order-good-card__count-btn order-good-card__count-btn--minus" type="button">
+                                  <svg class="icon btn-count__icon">
+                                    <use xlink:href="images/sprite.svg#icon-minus"></use>
+                                  </svg>
+                                </button><span class="order-good-card__count-amount">1</span>
+                                <button class="js-order-good-card-btn-count-plus btn-count btn-count--size-md btn-count--theme-gray order-good-card__count-btn order-good-card__count-btn--plus" type="button">
+                                  <svg class="icon btn-count__icon">
+                                    <use xlink:href="images/sprite.svg#icon-plus"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                              <div class="order-good-card__price">6264$</div>
+                            </footer>
+                          </div>
+                        </article>
+                        <article class="order-good-card order-box__good-list-item">
+                          <button class="order-good-card__remove" type="button">
+                            <svg class="icon order-good-card__remove-icon">
+                              <use xlink:href="images/sprite.svg#delete"></use>
+                            </svg>
+                          </button>
+                          <picture class="order-good-card__picture"><img src="images/good-card-2.jpg" alt=""/></picture>
+                          <div class="order-good-card__content">
+                            <h3 class="order-good-card__title"><a class="order-good-card__link" href="#">Silver earrings with cubic zirconia</a></h3>
+                            <footer class="order-good-card__footer">
+                              <div class="order-good-card__count">
+                                <button class="js-order-good-card-btn-count-minus btn-count btn-count--size-md btn-count--theme-gray order-good-card__count-btn order-good-card__count-btn--minus" type="button">
+                                  <svg class="icon btn-count__icon">
+                                    <use xlink:href="images/sprite.svg#icon-minus"></use>
+                                  </svg>
+                                </button><span class="order-good-card__count-amount">1</span>
+                                <button class="js-order-good-card-btn-count-plus btn-count btn-count--size-md btn-count--theme-gray order-good-card__count-btn order-good-card__count-btn--plus" type="button">
+                                  <svg class="icon btn-count__icon">
+                                    <use xlink:href="images/sprite.svg#icon-plus"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                              <div class="order-good-card__price">6264$</div>
+                            </footer>
+                          </div>
+                        </article>
                       </div>
-                    </article>
-                  </div>
-                  <div class="info-screen__col">
-                    <article class="info-card info-screen__card">
-                      <picture class="info-card__picture"><img src="images/info-card-3.svg" alt="Free delivery"/></picture>
-                      <div class="info-card__content">
-                        <h3 class="title-size-5 info-card__title">Free delivery</h3>
-                      </div>
-                    </article>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </section>
+            </form>
+          </div>
         </div>
       </main>
       <footer class="footer">

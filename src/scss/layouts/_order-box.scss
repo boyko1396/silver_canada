@@ -1,0 +1,17 @@
+.order-box {
+    background: $color-white-1;
+    border-radius: 10px;
+    &__inner {
+        padding: 20px;
+        &:not(:last-child) {
+            border-bottom: 1px solid $color-gray-11;
+        }
+    }
+    &__good-list {
+        &-item {
+            &:not(:last-child) {
+                margin-bottom: 14px;
+            }
+        }
+    }
+}

@@ -128,14 +128,19 @@ svg,
         }
     }
     &--size {
+        &-xs {
+            min-height: 40px;
+            padding: 8px 24px;
+            font-size: 14px;
+        }
         &-sm {
             min-height: 50px;
-            padding: 8px 25px;
+            padding: 8px 24px;
             font-size: 14px;
         }
         &-md {
             min-height: 60px;
-            padding: 12px 41px;
+            padding: 12px 36px;
             font-size: 16px;
         }
     }
@@ -698,6 +703,11 @@ svg,
             font-size: 14px;
             line-height: 1.286;
         }
+        &-xl {
+            padding: 22px 20px 8px;
+            font-size: 16px;
+            line-height: 1.286;
+        }
     }
     &--theme-dark {
         background: $color-black-3;
@@ -764,15 +774,33 @@ svg,
     &__label.is-active,
     &__input:hover ~ &__label,
     &__input:focus ~ &__label {
-        font-size: 12px;
         color: $color-gray-10;
         transform: translateY(-12px);
+    }
+    .input-el--size-md ~ &__label.is-active,
+    .input-el--size-md:hover ~ &__label,
+    .input-el--size-md:focus ~ &__label {
+        font-size: 12px;
+    }
+    .input-el--size-lg ~ &__label.is-active,
+    .input-el--size-lg:hover ~ &__label,
+    .input-el--size-lg:focus ~ &__label {
+        font-size: 12px;
+    }
+    .input-el--size-xl ~ &__label.is-active,
+    .input-el--size-xl:hover ~ &__label,
+    .input-el--size-xl:focus ~ &__label {
+        font-size: 12px;
     }
     .input-el--size-md ~ &__label {
         height: 50px;
         font-size: 13px;
     }
     .input-el--size-lg ~ &__label {
+        height: 50px;
+        font-size: 14px;
+    }
+    .input-el--size-xl ~ &__label {
         height: 50px;
         font-size: 14px;
     }
@@ -1316,5 +1344,233 @@ svg,
         margin: 0 0 10px;
     }
     &__btn {
+    }
+}
+
+.badge-info {
+    --size-box: 0;
+    background: currentColor;
+    width: var(--size-box);
+    height: var(--size-box);
+    display: block;
+    font-size: 0;
+    text-align: center;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    &--size {
+        &-md {
+            --size-box: 20px;
+        }
+    }
+    &--theme {
+        &-white {
+            background: $color-white-1;
+            border-color: $color-gray-9;
+            color: $color-gray-9;
+            box-shadow: 0 0 0 2px $color-white-1;
+        }
+    }
+    &:after,
+    &__icon {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    &:after {
+        width: 0;
+        height: 100%;
+        content: '';
+    }
+    &__icon {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+.tabs-content {
+    &__block {
+        &:not(.is-show) {
+            display: none;
+        }
+    }
+}
+
+.nav-choose {
+    &__list {
+        background: $color-white-1;
+        margin: 0;
+        padding: 0;
+        display: inline-flex;
+        list-style-type: none;
+        border-radius: 30px;
+    }
+    &__item {
+        margin: 0;
+        padding: 0;
+    }
+    &__link {
+        padding: 13px 28px 11px;
+        display: block;
+        font-weight: 500;
+        font-size: 14px;
+        border-radius: 30px;
+        white-space: nowrap;
+        transition: all .4s;
+        transition-property: background, color;
+        &.is-active {
+            background: $color-black-1;
+            color: $color-white-1;
+            pointer-events: none;
+            cursor: default;
+        }
+        &:hover {
+            text-decoration: none;
+            @media (min-width: $lg-mf) {
+                color: $color-gray-2;
+            }
+        }
+    }
+}
+
+.btn-count {
+    --size-el: 1em;
+    width: var(--size-el);
+    height: var(--size-el);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    cursor: pointer;
+    box-sizing: content-box;
+    transition: all .4s;
+    transition-property: background, color;
+    @extend .btn-reset;
+    &:hover {
+        text-decoration: none;
+        @media (min-width: $lg-mf) {
+        }
+    }
+    &--size {
+        &-md {
+            --size-el: 16px;
+        }
+    }
+    &--theme {
+        &-gray {
+            color: $color-black-1;
+            border-color: rgba($color-black-1, .15);
+            &:hover {
+                @media (min-width: $lg-mf) {
+                    background: $color-black-1;
+                    color: $color-white-1;
+                }
+            }
+        }
+    }
+    &__icon {
+        width: 62.5%;
+        height: 62.5%;
+        display: block;
+    }
+}
+
+.order-good-card {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    font-size: 16px;
+    border: 1px solid $color-gray-11;
+    border-radius: 10px;
+    position: relative;
+    &__remove {
+        font-size: 0;
+        color: $color-gray-10;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        transition: all .4s;
+        transition-property: color;
+        cursor: pointer;
+        z-index: 1;
+        @extend .area-click, .btn-reset;
+        &:hover {
+            text-decoration: none;
+            @media (min-width: $lg-mf) {
+                color: $color-red-1;
+            }
+        }
+        &-icon {
+            width: 26px;
+            height: 26px;
+        }
+    }
+    &__picture {
+        width: 90px;
+        height: 90px;
+        margin-right: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 90px;
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+        }
+    }
+    &__content {
+        flex-grow: 1;
+    }
+    &__title {
+        margin: 0;
+        font-weight: 300;
+        font-size: inherit;
+        line-height: 1.3125;
+    }
+    &__link {
+        box-shadow: inset 0 -1px 0 transparent;
+        transition: all .4s;
+        transition-property: box-shadow;
+        @extend .link-cover;
+        &:hover {
+            text-decoration: none;
+            @media (min-width: $lg-mf) {
+                box-shadow: inset 0 -1px 0 currentColor;
+            }
+        }
+    }
+    &__footer {
+        margin: 10px 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__count {
+        display: flex;
+        align-items: center;
+        &-btn {
+            flex-shrink: 0;
+            z-index: 1;
+            &--minus {
+            }
+            &--plus {
+            }
+        }
+        &-amount {
+            min-width: 20px;
+            margin: 0 4px;
+            padding: .2em 0 0;
+            font-size: inherit;
+            line-height: 1;
+            text-align: center;
+            white-space: nowrap;
+        }
+    }
+    &__price {
+        padding: .2em 6px 0 0;
+        font-weight: bold;
+        font-size: inherit;
+        white-space: nowrap;
     }
 }

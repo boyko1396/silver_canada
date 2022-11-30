@@ -1,0 +1,24 @@
+.order-date {
+    &__customer-nav {
+        margin: 0 0 40px;
+    }
+    &__box {
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+    &__title {
+        margin: 0 0 16px;
+        font-weight: 500;
+        font-size: 21px;
+    }
+    &__line {
+        margin: 0 0 16px;
+    }
+    &__register-checkbox {
+    }
+    &__payment-method {
+        margin: 0 0 16px;
+        font-size: 16px;
+    }
+}

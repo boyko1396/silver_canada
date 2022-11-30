@@ -2,7 +2,11 @@ $(document).ready(function() {
     sortCatalogBtn();
     filterPopupInit();
     rangeSliderInit();
-    faqCardCollapse()
+    faqCardCollapse();
+    select2Init();
+    inputLabel();
+    tabsAccount();
+    accountHistory();
 
     // header sticky
     var previousScroll = 0,
@@ -278,4 +282,51 @@ $(document).ready(function() {
             $(this).next('label').removeClass('is-active');
         }
     });
+
+    function inputLabel() {
+        if ($('.js-input-label')[0]){
+            $('.js-input-label').each(function (){
+                if ($(this).val() != '') {
+                    $(this).next('label').addClass('is-active');
+                } else {
+                    $(this).next('label').removeClass('is-active');
+                }
+            });
+        }
+    }
+
+    // select2 init
+    function select2Init() {
+        if ($('.js-select-init')[0]){
+            $('.js-select-init').select2({
+                minimumResultsForSearch: Infinity,
+                width: '100%'
+            });
+        }
+    }
+
+    // tabs account
+    function tabsAccount() {
+        $('.js-tabs-nav').click(function() {
+            if($(this).hasClass('is-active')) {
+                event.preventDefault();
+            }
+            else {
+                $('.js-tabs-nav').removeClass('is-active');
+                $(this).addClass('is-active');
+                $('.js-tabs-content > div').removeClass('is-show');
+                var activeTab = $(this).attr('href');
+                $(activeTab).addClass('is-show');
+                event.preventDefault();
+            }
+        });
+    }
+
+    // tabs account history
+    function accountHistory() {
+        $('.js-account-history-toggle').on('click', function (e) {
+            $(this).parent().toggleClass('is-active');
+            e.preventDefault();
+        });
+    }
 });

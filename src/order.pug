@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+html(lang='en')
+  include includes/head.pug
+
+  body
+
+    #root
+
+      include includes/preloader.pug
+      include includes/header.pug
+      main(role="main").main
+        .layout
+          .container.layout__container
+            header.layout__header
+              .layout__breadcrumbs
+                include includes/breadcrumbs.pug
+              h1.title-size-1.layout__title Order Summary
+            form(action="#").layout__order
+              .row.layout__order-row
+                .row__col.layout__order-row--col-aside
+                  .order-date
+                    .nav-choose.order-date__customer-nav
+                      ul.nav-choose__list
+                        li.nav-choose__item
+                          a(href="#").nav-choose__link.is-active New customer
+                        li.nav-choose__item
+                          a(href="#").nav-choose__link Regular customer
+                    .order-date__box
+                      .order-date__title Shipping information
+                      .input-area-el.order-date__line
+                        input(type="text" name="name" value="")#order-name.js-input-label.input-el.input-el--type-input.input-el--size-lg.input-el--theme-light.input-area-el__input
+                        label(for="order-name").input-area-el__label First Name
+                      .input-area-el.order-date__line
+                        input(type="text" name="surname" value="")#order-surname.js-input-label.input-el.input-el--type-input.input-el--size-lg.input-el--theme-light.input-area-el__input
+                        label(for="order-surname").input-area-el__label Last Name
+                      .input-area-el.order-date__line
+                        select(name="order-delivery").js-select-init.select.select--size-lg
+                          option(value="Delivery options") Delivery options
+                          option(value="Purolator") Purolator
+                          option(value="Fedex") Fedex
+                          option(value="Ups") Ups
+                      .order-date__line
+                        select(name="order-country").js-select-init.select.select--size-lg
+                          option(value="Country") Country
+                          option(value="Ukraine") Ukraine
+                          option(value="Ukraine") Ukraine
+                          option(value="Ukraine") Ukraine
+                      .order-date__line
+                        select(name="order-state").js-select-init.select.select--size-lg
+                          option(value="State") State
+                          option(value="Tenopilska") Tenopilska
+                          option(value="Tenopilska") Tenopilska
+                          option(value="Tenopilska") Tenopilska
+                      .input-area-el.order-date__line
+                        input(type="text" name="city" value="")#order-city.js-input-label.input-el.input-el--type-input.input-el--size-lg.input-el--theme-light.input-area-el__input
+                        label(for="order-city").input-area-el__label City
+                      .input-area-el.order-date__line
+                        input(type="text" name="street" value="")#order-street.js-input-label.input-el.input-el--type-input.input-el--size-lg.input-el--theme-light.input-area-el__input
+                        label(for="order-street").input-area-el__label Street Addres
+                      .input-area-el.order-date__line
+                        input(type="text" name="apt" value="")#order-apt.js-input-label.input-el.input-el--type-input.input-el--size-lg.input-el--theme-light.input-area-el__input
+                        label(for="order-apt").input-area-el__label Apt/Suire
+                      .input-area-el.order-date__line
+                        input(type="text" name="postal-code" value="")#order-postal-code.js-input-label.input-el.input-el--type-input.input-el--size-lg.input-el--theme-light.input-area-el__input
+                        label(for="order-postal-code").input-area-el__label Postal Code
+                      label.checkbox-el.order-date__register-checkbox
+                        input(type="checkbox" name="registration" checked value="Yes").checkbox-el__control
+                        span.checkbox-el__inner
+                          span.checkbox-el__icon
+                          span.checkbox-el__title Registration me
+                    .order-date__box
+                      .order-date__title Phone and email
+                      .input-area-el.order-date__line
+                        input(type="text" name="phone" value="")#order-phone.js-input-label.input-el.input-el--type-input.input-el--size-lg.input-el--theme-light.input-area-el__input
+                        label(for="order-phone").input-area-el__label *Phone number
+                      .input-area-el.order-date__line
+                        input(type="text" name="email" value="")#order-email.js-input-label.input-el.input-el--type-input.input-el--size-lg.input-el--theme-light.input-area-el__input
+                        label(for="order-email").input-area-el__label *Email address
+                    .order-date__box
+                      .order-date__title Payment
+                      label.radio-el.order-date__payment-method
+                        input(type="radio" name="paymentMethod[]" checked value="Visa and Mastercard").radio-el__control
+                        span.radio-el__inner
+                          span.radio-el__icon
+                          span.radio-el__title Visa and Mastercard
+                      label.radio-el.order-date__payment-method
+                        input(type="radio" name="paymentMethod[]" value="PayPal").radio-el__control
+                        span.radio-el__inner
+                          span.radio-el__icon
+                          span.radio-el__title PayPal
+                .row__col.layout__order-row--col-main
+                  .order-box
+                    .order-box__inner
+                      .order-box__good-list
+                        article.order-good-card.order-box__good-list-item
+                          button(type="button").order-good-card__remove
+                            svg.icon.order-good-card__remove-icon
+                              use(xlink:href="images/sprite.svg#delete")
+                          picture.order-good-card__picture
+                            img(src="images/good-card-2.jpg" alt="")
+                          .order-good-card__content
+                            h3.order-good-card__title
+                              a(href="#").order-good-card__link Silver earrings with cubic zirconia
+                            footer.order-good-card__footer
+                              .order-good-card__count
+                                button(type="button").js-order-good-card-btn-count-minus.btn-count.btn-count--size-md.btn-count--theme-gray.order-good-card__count-btn.order-good-card__count-btn--minus
+                                  svg.icon.btn-count__icon
+                                    use(xlink:href="images/sprite.svg#icon-minus")
+                                span.order-good-card__count-amount 1
+                                button(type="button").js-order-good-card-btn-count-plus.btn-count.btn-count--size-md.btn-count--theme-gray.order-good-card__count-btn.order-good-card__count-btn--plus
+                                  svg.icon.btn-count__icon
+                                    use(xlink:href="images/sprite.svg#icon-plus")
+                              .order-good-card__price 6264$
+                        article.order-good-card.order-box__good-list-item
+                          button(type="button").order-good-card__remove
+                            svg.icon.order-good-card__remove-icon
+                              use(xlink:href="images/sprite.svg#delete")
+                          picture.order-good-card__picture
+                            img(src="images/good-card-2.jpg" alt="")
+                          .order-good-card__content
+                            h3.order-good-card__title
+                              a(href="#").order-good-card__link Silver earrings with cubic zirconia
+                            footer.order-good-card__footer
+                              .order-good-card__count
+                                button(type="button").js-order-good-card-btn-count-minus.btn-count.btn-count--size-md.btn-count--theme-gray.order-good-card__count-btn.order-good-card__count-btn--minus
+                                  svg.icon.btn-count__icon
+                                    use(xlink:href="images/sprite.svg#icon-minus")
+                                span.order-good-card__count-amount 1
+                                button(type="button").js-order-good-card-btn-count-plus.btn-count.btn-count--size-md.btn-count--theme-gray.order-good-card__count-btn.order-good-card__count-btn--plus
+                                  svg.icon.btn-count__icon
+                                    use(xlink:href="images/sprite.svg#icon-plus")
+                              .order-good-card__price 6264$
+                        article.order-good-card.order-box__good-list-item
+                          button(type="button").order-good-card__remove
+                            svg.icon.order-good-card__remove-icon
+                              use(xlink:href="images/sprite.svg#delete")
+                          picture.order-good-card__picture
+                            img(src="images/good-card-2.jpg" alt="")
+                          .order-good-card__content
+                            h3.order-good-card__title
+                              a(href="#").order-good-card__link Silver earrings with cubic zirconia
+                            footer.order-good-card__footer
+                              .order-good-card__count
+                                button(type="button").js-order-good-card-btn-count-minus.btn-count.btn-count--size-md.btn-count--theme-gray.order-good-card__count-btn.order-good-card__count-btn--minus
+                                  svg.icon.btn-count__icon
+                                    use(xlink:href="images/sprite.svg#icon-minus")
+                                span.order-good-card__count-amount 1
+                                button(type="button").js-order-good-card-btn-count-plus.btn-count.btn-count--size-md.btn-count--theme-gray.order-good-card__count-btn.order-good-card__count-btn--plus
+                                  svg.icon.btn-count__icon
+                                    use(xlink:href="images/sprite.svg#icon-plus")
+                              .order-good-card__price 6264$
+
+      include includes/footer.pug
+
+    include includes/foot.pug

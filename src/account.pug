@@ -19,37 +19,283 @@ html(lang='en')
               .row.layout__account-row
                 .row__col--3.layout__account-row--col-aside
                   aside.account-aside
-                    nav.account-aside__nav
-                      ul.account-aside__nav-list
-                        li.account-aside__nav-item
-                          a(href="#").account-aside__nav-link.is-active Personal data
-                        li.account-aside__nav-item
-                          a(href="#").account-aside__nav-link Order history
-                        li.account-aside__nav-item
-                          a(href="#").account-aside__nav-link Favorites
-                    .account-aside__cashback
-                      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" class="account-aside__cashback-icon"><g fill="#69687A" clip-path="url(#a)"><path d="m23.327 15.528-4.18-6.554a1.86 1.86 0 0 0 .997-1.647c0-.782-.486-1.452-1.17-1.727l1.266-4.428a.547.547 0 0 0-.14-.537 2.163 2.163 0 0 0-3.055 0 1.06 1.06 0 0 1-.755.313 1.06 1.06 0 0 1-.755-.314L15.532.63a2.165 2.165 0 0 0-3.05-.005l-.016.016a1.069 1.069 0 0 1-1.507-.003l-.004-.004a2.163 2.163 0 0 0-3.056 0 .547.547 0 0 0-.139.538l1.27 4.426a1.862 1.862 0 0 0-1.174 1.728c0 .714.406 1.335.998 1.647l-4.18 6.554c-1.618 2.535-1.72 5.623-.275 8.26C5.845 26.426 8.503 28 11.511 28h4.978c3.008 0 5.666-1.574 7.112-4.212 1.446-2.637 1.343-5.725-.274-8.26ZM10.182 1.408l.004.005c.84.84 2.208.841 3.05.005l.016-.016a1.07 1.07 0 0 1 1.508.004l.002.003a2.163 2.163 0 0 0 3.056 0 1.069 1.069 0 0 1 1.268-.181l-1.212 4.24H10.13l-1.216-4.24a1.069 1.069 0 0 1 1.268.18Zm12.46 21.855c-1.25 2.281-3.551 3.643-6.153 3.643h-4.978c-2.602 0-4.902-1.362-6.153-3.643-1.25-2.282-1.162-4.954.237-7.147l4.42-6.93h1.524a.547.547 0 1 0 0-1.093H9.716a.767.767 0 0 1 0-1.532H18.284a.767.767 0 0 1 0 1.532h-1.823a.547.547 0 0 0 0 1.093h1.523l4.42 6.93c1.4 2.193 1.489 4.865.238 7.147Z"/><path d="M14.964 17.86a23.426 23.426 0 0 1-.417-.15v-2.48c.37.11.618.287.629.294a.547.547 0 0 0 .658-.873 3.34 3.34 0 0 0-1.287-.545v-.544a.547.547 0 1 0-1.094 0v.54a2.84 2.84 0 0 0-.282.069c-.77.231-1.345.89-1.501 1.718-.143.756.1 1.486.632 1.904.29.226.65.434 1.151.654v3.171c-.43-.027-.719-.125-1.199-.44a.547.547 0 1 0-.599.916c.7.458 1.175.588 1.798.619v.565a.547.547 0 1 0 1.094 0v-.622c1.171-.256 1.856-1.234 2.01-2.148.2-1.195-.424-2.234-1.593-2.647Zm-1.987-.928c-.21-.165-.299-.487-.232-.84.061-.325.28-.717.708-.862v2.003a3.277 3.277 0 0 1-.476-.301Zm2.501 3.395c-.079.468-.395.965-.931 1.184v-2.638l.053.02c.98.346.92 1.185.878 1.434ZM14 9.186a.551.551 0 0 0 .547-.547.551.551 0 0 0-.547-.546.55.55 0 0 0-.547.546.55.55 0 0 0 .547.547Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h28v28H0z"/></clipPath></defs></svg>
-                      .account-aside__cashback-title Cashback
-                      .account-aside__cashback-amount 54$
+                    .account-aside__box.account-aside__box--nav
+                      nav.account-aside__nav
+                        ul.account-aside__nav-list
+                          li.account-aside__nav-item
+                            a(href="#account-personal-data").js-tabs-nav.account-aside__nav-link.is-active Personal data
+                          li.account-aside__nav-item
+                            a(href="#account-order-history").js-tabs-nav.account-aside__nav-link Order history
+                          li.account-aside__nav-item
+                            a(href="#account-favorites").js-tabs-nav.account-aside__nav-link Favorites
+                    .account-aside__box.account-aside__box--cashback
+                      .account-aside__cashback
+                        .badge-info.badge-info--size-md.badge-info--theme-white.account-aside__cashback-badge-info
+                          svg.icon.badge-info__icon
+                            use(xlink:href="images/sprite.svg#icon-info").account-aside__badge-info
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" class="account-aside__cashback-icon"><path d="m23.327 15.528-4.18-6.554a1.86 1.86 0 0 0 .997-1.647c0-.782-.486-1.452-1.17-1.727l1.266-4.428a.547.547 0 0 0-.14-.537 2.163 2.163 0 0 0-3.055 0 1.06 1.06 0 0 1-.755.313 1.06 1.06 0 0 1-.755-.314L15.532.63a2.165 2.165 0 0 0-3.05-.005l-.016.016a1.069 1.069 0 0 1-1.507-.003l-.004-.004a2.163 2.163 0 0 0-3.056 0 .547.547 0 0 0-.139.538l1.27 4.426a1.862 1.862 0 0 0-1.174 1.728c0 .714.406 1.335.998 1.647l-4.18 6.554c-1.618 2.535-1.72 5.623-.275 8.26C5.845 26.426 8.503 28 11.511 28h4.978c3.008 0 5.666-1.574 7.112-4.212 1.446-2.637 1.343-5.725-.274-8.26ZM10.182 1.408l.004.005c.84.84 2.208.841 3.05.005l.016-.016a1.07 1.07 0 0 1 1.508.004l.002.003a2.163 2.163 0 0 0 3.056 0 1.069 1.069 0 0 1 1.268-.181l-1.212 4.24H10.13l-1.216-4.24a1.069 1.069 0 0 1 1.268.18Zm12.46 21.855c-1.25 2.281-3.551 3.643-6.153 3.643h-4.978c-2.602 0-4.902-1.362-6.153-3.643-1.25-2.282-1.162-4.954.237-7.147l4.42-6.93h1.524a.547.547 0 1 0 0-1.093H9.716a.767.767 0 0 1 0-1.532H18.284a.767.767 0 0 1 0 1.532h-1.823a.547.547 0 0 0 0 1.093h1.523l4.42 6.93c1.4 2.193 1.489 4.865.238 7.147Z"/><path d="M14.964 17.86a23.426 23.426 0 0 1-.417-.15v-2.48c.37.11.618.287.629.294a.547.547 0 0 0 .658-.873 3.34 3.34 0 0 0-1.287-.545v-.544a.547.547 0 1 0-1.094 0v.54a2.84 2.84 0 0 0-.282.069c-.77.231-1.345.89-1.501 1.718-.143.756.1 1.486.632 1.904.29.226.65.434 1.151.654v3.171c-.43-.027-.719-.125-1.199-.44a.547.547 0 1 0-.599.916c.7.458 1.175.588 1.798.619v.565a.547.547 0 1 0 1.094 0v-.622c1.171-.256 1.856-1.234 2.01-2.148.2-1.195-.424-2.234-1.593-2.647Zm-1.987-.928c-.21-.165-.299-.487-.232-.84.061-.325.28-.717.708-.862v2.003a3.277 3.277 0 0 1-.476-.301Zm2.501 3.395c-.079.468-.395.965-.931 1.184v-2.638l.053.02c.98.346.92 1.185.878 1.434ZM14 9.186a.551.551 0 0 0 .547-.547.551.551 0 0 0-.547-.546.55.55 0 0 0-.547.546.55.55 0 0 0 .547.547Z"/></svg>
+                        .account-aside__cashback-title Cashback
+                        .account-aside__cashback-amount 54$
                 .row__col--9.layout__account-row--col-main
-                  .account-settings.layout__account-settings
-                    form(action="#").account-settings__form
-                      .input-area-el.account-settings__line
-                        input(type="text" name="name" value="Vitalii")#settings-name.js-input-label.input-el.input-el--type-input.input-el--size-lg.input-el--theme-light.input-area-el__input
-                        label(for="settings-name").input-area-el__label First Name
-                      .input-area-el.account-settings__line
-                        input(type="text" name="surname" value="Vitalii")#settings-surname.js-input-label.input-el.input-el--type-input.input-el--size-lg.input-el--theme-light.input-area-el__input
-                        label(for="settings-surname").input-area-el__label Last Name
-                      .account-settings__footer
-                        button(type="submit").btn.btn--w-100.btn--size-sm.btn--theme-accent.account-settings__btn
-                          span.btn__inner
-                            span.btn__title Change password
-                        button(type="submit").btn.btn--w-100.btn--size-sm.btn--theme-accent.account-settings__btn
-                          span.btn__inner
-                            span.btn__title Edit
+                  .js-tabs-content.tabs-content
+                    #account-personal-data.tabs-content__block.is-show
+                      .account-settings.layout__account-settings
+                        form(action="#").account-settings__form
+                          .input-area-el.account-settings__line
+                            input(type="text" name="name" value="Vitalii")#settings-name.js-input-label.input-el.input-el--type-input.input-el--size-xl.input-el--theme-light.input-area-el__input
+                            label(for="settings-name").input-area-el__label First Name
+                          .input-area-el.account-settings__line
+                            input(type="text" name="surname" value="Vitalii")#settings-surname.js-input-label.input-el.input-el--type-input.input-el--size-xl.input-el--theme-light.input-area-el__input
+                            label(for="settings-surname").input-area-el__label Last Name
+                          .account-settings__line
+                            select(name="settings-country").js-select-init.select.select--size-xl
+                              option(value="Country") Country
+                              option(value="Ukraine") Ukraine
+                              option(value="Ukraine") Ukraine
+                              option(value="Ukraine") Ukraine
+                          .account-settings__line
+                            select(name="settings-state").js-select-init.select.select--size-xl
+                              option(value="State") State
+                              option(value="Tenopilska") Tenopilska
+                              option(value="Tenopilska") Tenopilska
+                              option(value="Tenopilska") Tenopilska
+                          .input-area-el.account-settings__line
+                            input(type="text" name="city" value="Tenopil")#settings-city.js-input-label.input-el.input-el--type-input.input-el--size-xl.input-el--theme-light.input-area-el__input
+                            label(for="settings-city").input-area-el__label City
+                          .input-area-el.account-settings__line
+                            input(type="text" name="street" value="Shevchenka")#settings-street.js-input-label.input-el.input-el--type-input.input-el--size-xl.input-el--theme-light.input-area-el__input
+                            label(for="settings-street").input-area-el__label Street Addres
+                          .input-area-el.account-settings__line
+                            input(type="text" name="apt" value="Shevchenka")#settings-apt.js-input-label.input-el.input-el--type-input.input-el--size-xl.input-el--theme-light.input-area-el__input
+                            label(for="settings-apt").input-area-el__label Apt/Suire
+                          .input-area-el.account-settings__line
+                            input(type="text" name="postal-code" value="545235")#settings-postal-code.js-input-label.input-el.input-el--type-input.input-el--size-xl.input-el--theme-light.input-area-el__input
+                            label(for="settings-postal-code").input-area-el__label Postal Code
+                          .account-settings__footer
+                            button(type="submit").btn.btn--size-xs.btn--theme-accent.account-settings__footer-btn
+                              span.btn__inner
+                                span.btn__title Change password
+                            button(type="submit").btn.btn--size-xs.btn--theme-accent.account-settings__footer-btn
+                              span.btn__inner
+                                span.btn__title Edit
 
-                      .account-settings__
-                      .account-settings__
+                          .account-settings__
+                          .account-settings__
+                    #account-order-history.tabs-content__block
+                      .account-history.layout__account-history
+                        .account-history__item
+                          .js-account-history-toggle.account-history__item-header
+                            .account-history__item-row
+                              .account-history__item-row-col.account-history__item-row-col--info
+                                .account-history__number #052532667
+                              .account-history__item-row-col.account-history__item-row-col--price
+                                .account-history__price 560$
+                              .account-history__item-row-col.account-history__item-row-col--date
+                                .account-history__date 25.03.2022
+                          .account-history__item-dropdown
+                            .account-history__item-card
+                              .account-history__item-row
+                                .account-history__item-row-col.account-history__item-row-col--info
+                                  article.account-history__good
+                                    picture.account-history__good-picture
+                                      img(src="images/good-card-2.jpg" alt="Silver earrings with cubic zirconia")
+                                    h3.account-history__good-title
+                                      a(href="#").account-history__good-link Silver earrings with cubic zirconia
+                                .account-history__item-row-col.account-history__item-row-col--price
+                                  .account-history__price 300$
+                            .account-history__item-card
+                              .account-history__item-row
+                                .account-history__item-row-col.account-history__item-row-col--info
+                                  article.account-history__good
+                                    picture.account-history__good-picture
+                                      img(src="images/good-card-2.jpg" alt="Silver earrings with cubic zirconia")
+                                    h3.account-history__good-title
+                                      a(href="#").account-history__good-link Silver earrings with cubic zirconia
+                                .account-history__item-row-col.account-history__item-row-col--price
+                                  .account-history__price 300$
+                        .account-history__item
+                          .js-account-history-toggle.account-history__item-header
+                            .account-history__item-row
+                              .account-history__item-row-col.account-history__item-row-col--info
+                                .account-history__number #052532667
+                              .account-history__item-row-col.account-history__item-row-col--price
+                                .account-history__price 560$
+                              .account-history__item-row-col.account-history__item-row-col--date
+                                .account-history__date 25.03.2022
+                          .account-history__item-dropdown
+                            .account-history__item-card
+                              .account-history__item-row
+                                .account-history__item-row-col.account-history__item-row-col--info
+                                  article.account-history__good
+                                    picture.account-history__good-picture
+                                      img(src="images/good-card-2.jpg" alt="Silver earrings with cubic zirconia")
+                                    h3.account-history__good-title
+                                      a(href="#").account-history__good-link Silver earrings with cubic zirconia
+                                .account-history__item-row-col.account-history__item-row-col--price
+                                  .account-history__price 300$
+                            .account-history__item-card
+                              .account-history__item-row
+                                .account-history__item-row-col.account-history__item-row-col--info
+                                  article.account-history__good
+                                    picture.account-history__good-picture
+                                      img(src="images/good-card-2.jpg" alt="Silver earrings with cubic zirconia")
+                                    h3.account-history__good-title
+                                      a(href="#").account-history__good-link Silver earrings with cubic zirconia
+                                .account-history__item-row-col.account-history__item-row-col--price
+                                  .account-history__price 300$
+                        .account-history__item
+                          .js-account-history-toggle.account-history__item-header
+                            .account-history__item-row
+                              .account-history__item-row-col.account-history__item-row-col--info
+                                .account-history__number #052532667
+                              .account-history__item-row-col.account-history__item-row-col--price
+                                .account-history__price 560$
+                              .account-history__item-row-col.account-history__item-row-col--date
+                                .account-history__date 25.03.2022
+                          .account-history__item-dropdown
+                            .account-history__item-card
+                              .account-history__item-row
+                                .account-history__item-row-col.account-history__item-row-col--info
+                                  article.account-history__good
+                                    picture.account-history__good-picture
+                                      img(src="images/good-card-2.jpg" alt="Silver earrings with cubic zirconia")
+                                    h3.account-history__good-title
+                                      a(href="#").account-history__good-link Silver earrings with cubic zirconia
+                                .account-history__item-row-col.account-history__item-row-col--price
+                                  .account-history__price 300$
+                            .account-history__item-card
+                              .account-history__item-row
+                                .account-history__item-row-col.account-history__item-row-col--info
+                                  article.account-history__good
+                                    picture.account-history__good-picture
+                                      img(src="images/good-card-2.jpg" alt="Silver earrings with cubic zirconia")
+                                    h3.account-history__good-title
+                                      a(href="#").account-history__good-link Silver earrings with cubic zirconia
+                                .account-history__item-row-col.account-history__item-row-col--price
+                                  .account-history__price 300$
+                        .account-history__item
+                          .js-account-history-toggle.account-history__item-header
+                            .account-history__item-row
+                              .account-history__item-row-col.account-history__item-row-col--info
+                                .account-history__number #052532667
+                              .account-history__item-row-col.account-history__item-row-col--price
+                                .account-history__price 560$
+                              .account-history__item-row-col.account-history__item-row-col--date
+                                .account-history__date 25.03.2022
+                          .account-history__item-dropdown
+                            .account-history__item-card
+                              .account-history__item-row
+                                .account-history__item-row-col.account-history__item-row-col--info
+                                  article.account-history__good
+                                    picture.account-history__good-picture
+                                      img(src="images/good-card-2.jpg" alt="Silver earrings with cubic zirconia")
+                                    h3.account-history__good-title
+                                      a(href="#").account-history__good-link Silver earrings with cubic zirconia
+                                .account-history__item-row-col.account-history__item-row-col--price
+                                  .account-history__price 300$
+                            .account-history__item-card
+                              .account-history__item-row
+                                .account-history__item-row-col.account-history__item-row-col--info
+                                  article.account-history__good
+                                    picture.account-history__good-picture
+                                      img(src="images/good-card-2.jpg" alt="Silver earrings with cubic zirconia")
+                                    h3.account-history__good-title
+                                      a(href="#").account-history__good-link Silver earrings with cubic zirconia
+                                .account-history__item-row-col.account-history__item-row-col--price
+                                  .account-history__price 300$
+                    #account-favorites.tabs-content__block
+                      .account-favorites.layout__account-favorites
+                        .row.account-favorites__row
+                          .row__col--4.account-favorites__col
+                            article.good-card.account-favorites__card
+                              button(type="button").js-good-card-favorites.action-btn.action-btn--size-md.good-card__btn-favorites.is-favorites-active
+                                svg.icon.action-btn__icon
+                                  use(xlink:href="images/sprite.svg#like-outline")
+                                svg.icon.action-btn__icon
+                                  use(xlink:href="images/sprite.svg#like-fill")
+                              picture.good-card__picture
+                                img(src="images/good-card-1.jpg" alt="Silver earrings with cubic zirconia")
+                              .good-card__content
+                                h3.title-size-5.good-card__title
+                                  a(href="#").good-card__link Silver earrings with cubic zirconia
+                                .good-card__price
+                                  .good-card__price-new 6264 грн
+                                  .good-card__price-old 8764 грн
+                          .row__col--4.account-favorites__col
+                            article.good-card.account-favorites__card
+                              button(type="button").js-good-card-favorites.action-btn.action-btn--size-md.good-card__btn-favorites.is-favorites-active
+                                svg.icon.action-btn__icon
+                                  use(xlink:href="images/sprite.svg#like-outline")
+                                svg.icon.action-btn__icon
+                                  use(xlink:href="images/sprite.svg#like-fill")
+                              picture.good-card__picture
+                                img(src="images/good-card-1.jpg" alt="Silver earrings with cubic zirconia")
+                              .good-card__content
+                                h3.title-size-5.good-card__title
+                                  a(href="#").good-card__link Silver earrings with cubic zirconia
+                                .good-card__price
+                                  .good-card__price-new 6264 грн
+                                  .good-card__price-old 8764 грн
+                          .row__col--4.account-favorites__col
+                            article.good-card.account-favorites__card
+                              button(type="button").js-good-card-favorites.action-btn.action-btn--size-md.good-card__btn-favorites.is-favorites-active
+                                svg.icon.action-btn__icon
+                                  use(xlink:href="images/sprite.svg#like-outline")
+                                svg.icon.action-btn__icon
+                                  use(xlink:href="images/sprite.svg#like-fill")
+                              picture.good-card__picture
+                                img(src="images/good-card-1.jpg" alt="Silver earrings with cubic zirconia")
+                              .good-card__content
+                                h3.title-size-5.good-card__title
+                                  a(href="#").good-card__link Silver earrings with cubic zirconia
+                                .good-card__price
+                                  .good-card__price-new 6264 грн
+                                  .good-card__price-old 8764 грн
+                          .row__col--4.account-favorites__col
+                            article.good-card.account-favorites__card
+                              button(type="button").js-good-card-favorites.action-btn.action-btn--size-md.good-card__btn-favorites.is-favorites-active
+                                svg.icon.action-btn__icon
+                                  use(xlink:href="images/sprite.svg#like-outline")
+                                svg.icon.action-btn__icon
+                                  use(xlink:href="images/sprite.svg#like-fill")
+                              picture.good-card__picture
+                                img(src="images/good-card-1.jpg" alt="Silver earrings with cubic zirconia")
+                              .good-card__content
+                                h3.title-size-5.good-card__title
+                                  a(href="#").good-card__link Silver earrings with cubic zirconia
+                                .good-card__price
+                                  .good-card__price-new 6264 грн
+                                  .good-card__price-old 8764 грн
+                          .row__col--4.account-favorites__col
+                            article.good-card.account-favorites__card
+                              button(type="button").js-good-card-favorites.action-btn.action-btn--size-md.good-card__btn-favorites.is-favorites-active
+                                svg.icon.action-btn__icon
+                                  use(xlink:href="images/sprite.svg#like-outline")
+                                svg.icon.action-btn__icon
+                                  use(xlink:href="images/sprite.svg#like-fill")
+                              picture.good-card__picture
+                                img(src="images/good-card-1.jpg" alt="Silver earrings with cubic zirconia")
+                              .good-card__content
+                                h3.title-size-5.good-card__title
+                                  a(href="#").good-card__link Silver earrings with cubic zirconia
+                                .good-card__price
+                                  .good-card__price-new 6264 грн
+                                  .good-card__price-old 8764 грн
+                          .row__col--4.account-favorites__col
+                            article.good-card.account-favorites__card
+                              button(type="button").js-good-card-favorites.action-btn.action-btn--size-md.good-card__btn-favorites.is-favorites-active
+                                svg.icon.action-btn__icon
+                                  use(xlink:href="images/sprite.svg#like-outline")
+                                svg.icon.action-btn__icon
+                                  use(xlink:href="images/sprite.svg#like-fill")
+                              picture.good-card__picture
+                                img(src="images/good-card-1.jpg" alt="Silver earrings with cubic zirconia")
+                              .good-card__content
+                                h3.title-size-5.good-card__title
+                                  a(href="#").good-card__link Silver earrings with cubic zirconia
+                                .good-card__price
+                                  .good-card__price-new 6264 грн
+                                  .good-card__price-old 8764 грн
 
       include includes/footer.pug
 

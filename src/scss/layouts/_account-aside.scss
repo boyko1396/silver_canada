@@ -1,12 +1,18 @@
 .account-aside {
-    &__nav {
+    &__box {
         background: $color-black-1;
+        color: $color-white-1;
+        border-radius: 5px;
+        &--nav {
+        }
+        &--cashback {
+        }
+    }
+    &__nav {
         margin: 0 0 20px;
         padding: 25px 30px;
         display: flex;
         align-items: center;
-        color: $color-white-1;
-        border-radius: 5px;
         &-list {
             margin: 0;
             padding: 0;
@@ -42,20 +48,24 @@
         }
     }
     &__cashback {
-        background: $color-black-1;
         padding: 15px 20px;
         display: flex;
         align-items: center;
-        color: $color-white-1;
-        border-radius: 5px;
+        position: relative;
+        &-badge-info {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+        }
         &-icon {
             width: 28px;
             height: 28px;
             margin-right: 8px;
             flex: 0 0 28px;
+            fill: $color-gray-14;
         }
         &-title {
-            padding-right: 15px;
+            padding: 5px 15px 0 0;
             font-weight: bold;
             font-size: 13px;
         }
