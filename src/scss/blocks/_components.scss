@@ -1452,7 +1452,7 @@ svg,
     }
     &--size {
         &-md {
-            --size-el: 16px;
+            --size-el: 14px;
         }
     }
     &--theme {
@@ -1468,8 +1468,8 @@ svg,
         }
     }
     &__icon {
-        width: 62.5%;
-        height: 62.5%;
+        width: 71.4285714286%;
+        height: 71.4285714286%;
         display: block;
     }
 }
@@ -1568,9 +1568,53 @@ svg,
         }
     }
     &__price {
-        padding: .2em 6px 0 0;
+        padding: .2em 4px 0 0;
         font-weight: bold;
         font-size: inherit;
         white-space: nowrap;
+    }
+}
+
+.scrollbar-css {
+    scrollbar-width: auto;
+    scrollbar-color: $color-black-1 $color-gray-16;
+    &::-webkit-scrollbar {
+        width: 2px;
+    }
+    &::-webkit-scrollbar-track {
+        background: $color-gray-16;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $color-black-1;
+        border-radius: 20px;
+        border: 0 solid #ffffff;
+    }
+}
+
+.btn-add-new {
+    display: inline-flex;
+    font-size: inherit;
+    line-height: 1;
+    box-shadow: inset 0 -1px 0 currentColor;
+    white-space: nowrap;
+    transition: all .4s;
+    transition-property: color, box-shadow;
+    cursor: pointer;
+    z-index: 1;
+    @extend .area-click, .btn-reset;
+    &:hover {
+        text-decoration: none;
+        @media (min-width: $lg-mf) {
+        }
+    }
+    &--theme {
+        &-gray {
+            color: $color-gray-10;
+            &:hover {
+                @media (min-width: $lg-mf) {
+                    color: $color-black-1;
+                }
+            }
+        }
     }
 }
