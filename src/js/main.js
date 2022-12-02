@@ -7,6 +7,8 @@ $(document).ready(function() {
     inputLabel();
     tabsAccount();
     accountHistory();
+    btnDetail();
+    cardPageFavorites();
 
     // header sticky
     var previousScroll = 0,
@@ -161,6 +163,22 @@ $(document).ready(function() {
         });
     }
 
+    // btn detail
+    function btnDetail() {
+        $('.js-btn-detail').on('click', function (e) {
+            $(this).toggleClass('is-active');
+            e.preventDefault();
+        });
+    }
+
+    // card page favorites
+    function cardPageFavorites() {
+        $('.js-card-page-favorites').on('click', function (e) {
+            $(this).toggleClass('is-favorites-active');
+            e.preventDefault();
+        });
+    }
+
     // slick slider init
     if ($('.js-main-slider-init').length > 0) {
         $('.js-main-slider-init').slick({
@@ -217,6 +235,31 @@ $(document).ready(function() {
                     }
                 }
             ]
+        });
+    }
+
+    if ($('.js-card-slider-mini-init').length > 0) {
+        $('.js-card-slider-mini-init').slick({
+            arrows: true,
+            infinite: false,
+            dots: false,
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            asNavFor: $('.js-card-slider-main-init'),
+            focusOnSelect: true,
+            vertical: true,
+            verticalSwiping: true
+        });
+    }
+
+    if ($('.js-card-slider-main-init').length > 0) {
+        $('.js-card-slider-main-init').slick({
+            arrows: false,
+            infinite: false,
+            dots: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            asNavFor: $('.js-card-slider-mini-init')
         });
     }
 

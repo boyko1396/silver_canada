@@ -7,10 +7,14 @@
     &__container {
     }
     &__text {
+        max-height: 11.1em;
         margin-top: -25px;
+        padding-right: 15px;
         font-weight: 300;
         font-size: 13px;
         line-height: 1.85;
         color: $color-gray-6;
+        overflow: auto;
+        @extend .scrollbar-css;
     }
 }

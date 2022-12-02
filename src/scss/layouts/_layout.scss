@@ -149,6 +149,7 @@
         }
     }
     &__order {
+        padding-bottom: 100px;
         &-row {
             justify-content: space-between;
             &--col-aside {
@@ -161,36 +162,27 @@
             }
         }
     }
+    &__card-page {
+        &-row {
+            &-col {
+                &--slider {
+                }
+                &--content {
+                }
+                &--cheaper {
+                }
+            }
+        }
+        &-cheaper {
+            &-title {
+                margin: 0 0 15px;
+            }
+            &-block {
+            }
+        }
+    }
 }
 
 .header.is-sticky ~ .main .layout__catalog-col--aside {
     padding-top: 0;
 }
-
-// .checkbox-el {
-//     display: block;
-//     cursor: pointer;
-// }
-
-// .checkbox-el__control {
-//     display: none;
-//     position: absolute;
-//     left: -9999px;
-// }
-
-// .checkbox-el__inner {
-//     display: flex;
-//     align-items: flex-start;
-//     line-height: 1.3;
-// }
-
-// .checkbox-el__icon {
-//     width: 20px;
-//     height: 20px;
-//     margin-right: 5px;
-//     flex: 0 0 20px;
-// }
-
-// .checkbox-el__text {
-//     line-height: 1em;
-// }
