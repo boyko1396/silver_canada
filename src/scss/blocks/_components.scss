@@ -1285,6 +1285,9 @@ svg,
     &__title {
         margin: 0 0 7px;
         font-weight: 300;
+        @media (max-width: $xs) {
+            font-size: 15px;
+        }
     }
     &__link {
         display: block;
@@ -1294,23 +1297,44 @@ svg,
         margin: 0;
         font-weight: bold;
         font-size: 17px;
+        @media (max-width: $xs) {
+            font-size: 16px;
+        }
     }
     &__btn {
         margin-left: auto;
         flex-shrink: 0;
+        @media (max-width: $xs) {
+            min-height: 40px;
+            font-size: 13px;
+        }
     }
 }
 
 .gift-list {
     &__row {
         margin-right: -25px;
-        margin-bottom: -50px;
+        margin-bottom: -45px;
         margin-left: -25px;
+        @media (max-width: $md) {
+            margin-right: -15px;
+            margin-bottom: -30px;
+            margin-left: -15px;
+        }
     }
     &__col {
-        margin-bottom: 50px;
+        margin-bottom: 45px;
         padding-right: 25px;
         padding-left: 25px;
+        @media (max-width: $md) {
+            margin-bottom: 30px;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        @media (max-width: $xs) {
+            max-width: 100%;
+            flex-basis: 100%;
+        }
     }
     &__card {
     }
@@ -2007,7 +2031,20 @@ svg,
         align-items: center;
         &-card {
             max-width: 330px;
-            flex: 1;
+            flex: 0 0 330px;
+            position: relative;
+            &:nth-child(odd):after {
+                background: 50% no-repeat;
+                background-image: url("data:image/svg+xml,%3Csvg width='46' height='46' viewBox='0 0 46 46' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.9778 1.02222C21.9778 0.457664 22.4354 0 23 0C23.5646 0 24.0222 0.457665 24.0222 1.02222V44.9778C24.0222 45.5423 23.5646 46 23 46C22.4354 46 21.9778 45.5423 21.9778 44.9778V1.02222Z' fill='%232D2C38'/%3E%3Cpath d='M44.9778 21.9781C45.5423 21.9781 46 22.4357 46 23.0003C46 23.5649 45.5423 24.0225 44.9778 24.0225L1.02222 24.0225C0.457664 24.0225 -2.46776e-08 23.5649 0 23.0003C2.46776e-08 22.4357 0.457665 21.9781 1.02222 21.9781L44.9778 21.9781Z' fill='%232D2C38'/%3E%3C/svg%3E%0A");
+                background-size: contain;
+                width: 46px;
+                height: 46px;
+                margin: -23px 0 0 54px;
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 100%;
+            }
         }
     }
     &__aside {

@@ -1,7 +1,11 @@
 .page-poster {
     overflow: hidden;
     &__media {
-    	height: 330px;
+        height: 330px;
+        @media (max-width: $lg) {
+            height: 0;
+            padding-bottom: 27.5%;
+        }
         img {
         }
     }

@@ -5,19 +5,30 @@
     display: flex;
     flex-wrap: wrap;
     color: $color-gray-10;
+    @media (max-width: $lg) {
+        display: block;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        overflow-x: auto;
+    }
     li {
         margin: -5px;
         padding: 5px;
         display: flex;
         align-items: center;
+        @media (max-width: $lg) {
+            display: inline-block;
+        }
         &:not(:last-child):after {
             margin: 0 .5em;
             content: '\007C';
             flex-shrink: 0;
+            @media (max-width: $lg) {
+                display: inline-block;
+            }
         }
     }
     a {
-        display: block;
         color: $color-black-1;
         transition: all .4s;
         &:hover {

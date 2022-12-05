@@ -10,11 +10,19 @@
     }
     &__title {
         margin: -20px 0 20px;
+        @media (max-width: $lg) {
+            margin-top: 0;
+        }
+        @media (max-width: $sm) {
+            margin-bottom: 15px;
+            font-size: 32px;
+        }
     }
     &__breadcrumbs {
         margin: 0 0 40px;
         @media (max-width: $lg) {
-            margin-bottom: 20px;
+            margin: 0 -15px 20px;
+            padding: 0 15px;
             font-size: 12px;
         }
     }
@@ -89,10 +97,16 @@
     }
     &__gift-list {
         margin: 0 0 60px;
+        @media (max-width: $sm) {
+            margin-bottom: 45px;
+        }
     }
     &__footer-text {
         margin: 0 0 15px;
-        line-height: 1.35;
+        line-height: 1.5;
+        @media (max-width: $sm) {
+            font-size: 16px;
+        }
     }
     &__promotions-section {
         

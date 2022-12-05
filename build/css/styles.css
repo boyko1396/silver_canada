@@ -841,6 +841,15 @@ b {
   flex-wrap: wrap;
   color: #9AA0A1;
 }
+@media (max-width: 1199px) {
+  .breadcrumbs-list {
+    display: block;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow-x: auto;
+  }
+}
 .breadcrumbs-list li {
   margin: -5px;
   padding: 5px;
@@ -849,14 +858,23 @@ b {
   -ms-flex-align: center;
   align-items: center;
 }
+@media (max-width: 1199px) {
+  .breadcrumbs-list li {
+    display: inline-block;
+  }
+}
 .breadcrumbs-list li:not(:last-child):after {
   margin: 0 0.5em;
   content: "|";
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
+@media (max-width: 1199px) {
+  .breadcrumbs-list li:not(:last-child):after {
+    display: inline-block;
+  }
+}
 .breadcrumbs-list a {
-  display: block;
   color: #2D2C38;
   transition: all 0.4s;
 }
@@ -2308,6 +2326,11 @@ svg,
   margin: 0 0 7px;
   font-weight: 300;
 }
+@media (max-width: 576px) {
+  .gift-card__title {
+    font-size: 15px;
+  }
+}
 .gift-card__link {
   display: block;
 }
@@ -2316,21 +2339,53 @@ svg,
   font-weight: bold;
   font-size: 17px;
 }
+@media (max-width: 576px) {
+  .gift-card__price {
+    font-size: 16px;
+  }
+}
 .gift-card__btn {
   margin-left: auto;
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
+@media (max-width: 576px) {
+  .gift-card__btn {
+    min-height: 40px;
+    font-size: 13px;
+  }
+}
 
 .gift-list__row {
   margin-right: -25px;
-  margin-bottom: -50px;
+  margin-bottom: -45px;
   margin-left: -25px;
 }
+@media (max-width: 991px) {
+  .gift-list__row {
+    margin-right: -15px;
+    margin-bottom: -30px;
+    margin-left: -15px;
+  }
+}
 .gift-list__col {
-  margin-bottom: 50px;
+  margin-bottom: 45px;
   padding-right: 25px;
   padding-left: 25px;
+}
+@media (max-width: 991px) {
+  .gift-list__col {
+    margin-bottom: 30px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+@media (max-width: 576px) {
+  .gift-list__col {
+    max-width: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+  }
 }
 .goods-grid__inner {
   margin: 0 var(--gap-) -30px;
@@ -3045,8 +3100,21 @@ svg,
 }
 .cheaper-block__list-card {
   max-width: 330px;
-  -ms-flex: 1;
-  flex: 1;
+  -ms-flex: 0 0 330px;
+  flex: 0 0 330px;
+  position: relative;
+}
+.cheaper-block__list-card:nth-child(odd):after {
+  background: 50% no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg width='46' height='46' viewBox='0 0 46 46' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.9778 1.02222C21.9778 0.457664 22.4354 0 23 0C23.5646 0 24.0222 0.457665 24.0222 1.02222V44.9778C24.0222 45.5423 23.5646 46 23 46C22.4354 46 21.9778 45.5423 21.9778 44.9778V1.02222Z' fill='%232D2C38'/%3E%3Cpath d='M44.9778 21.9781C45.5423 21.9781 46 22.4357 46 23.0003C46 23.5649 45.5423 24.0225 44.9778 24.0225L1.02222 24.0225C0.457664 24.0225 -2.46776e-08 23.5649 0 23.0003C2.46776e-08 22.4357 0.457665 21.9781 1.02222 21.9781L44.9778 21.9781Z' fill='%232D2C38'/%3E%3C/svg%3E%0A");
+  background-size: contain;
+  width: 46px;
+  height: 46px;
+  margin: -23px 0 0 54px;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
 }
 .cheaper-block__aside {
   background: #2D2C38;
@@ -4062,6 +4130,12 @@ svg,
 }
 .page-poster__media {
   height: 330px;
+}
+@media (max-width: 1199px) {
+  .page-poster__media {
+    height: 0;
+    padding-bottom: 27.5%;
+  }
 }
 @media (max-width: 1199px) {
   .filter-dropdown {
@@ -5292,12 +5366,24 @@ svg,
 .layout__title {
   margin: -20px 0 20px;
 }
+@media (max-width: 1199px) {
+  .layout__title {
+    margin-top: 0;
+  }
+}
+@media (max-width: 767px) {
+  .layout__title {
+    margin-bottom: 15px;
+    font-size: 32px;
+  }
+}
 .layout__breadcrumbs {
   margin: 0 0 40px;
 }
 @media (max-width: 1199px) {
   .layout__breadcrumbs {
-    margin-bottom: 20px;
+    margin: 0 -15px 20px;
+    padding: 0 15px;
     font-size: 12px;
   }
 }
@@ -5376,9 +5462,19 @@ svg,
 .layout__gift-list {
   margin: 0 0 60px;
 }
+@media (max-width: 767px) {
+  .layout__gift-list {
+    margin-bottom: 45px;
+  }
+}
 .layout__footer-text {
   margin: 0 0 15px;
-  line-height: 1.35;
+  line-height: 1.5;
+}
+@media (max-width: 767px) {
+  .layout__footer-text {
+    font-size: 16px;
+  }
 }
 .layout__info-screen {
   margin: 0 0 35px;
