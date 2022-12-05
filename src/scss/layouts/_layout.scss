@@ -202,10 +202,35 @@
             &--col-aside {
                 max-width: 33.333333333%;
                 flex-basis: 33.333333333%;
+                @media (max-width: $lg) {
+                    max-width: 400px;
+                    flex-basis: 400px;
+                }
+                @media (max-width: $md) {
+                    max-width: 374px;
+                    flex-basis: 374px;
+                }
+                @media (max-width: $sm) {
+                    max-width: 100%;
+                    flex-basis: 100%;
+                }
             }
             &--col-main {
                 max-width: 33.333333333%;
                 flex-basis: 33.333333333%;
+                @media (max-width: $lg) {
+                    max-width: 400px;
+                    flex-basis: 400px;
+                }
+                @media (max-width: $md) {
+                    max-width: 374px;
+                    flex-basis: 374px;
+                }
+                @media (max-width: $sm) {
+                    max-width: 100%;
+                    margin-top: 15px;
+                    flex-basis: 100%;
+                }
             }
         }
     }
@@ -213,8 +238,16 @@
         &-row {
             &-col {
                 &--slider {
+                    @media (max-width: $lg) {
+                        max-width: 100%;
+                        flex-basis: 100%;
+                    }
                 }
                 &--content {
+                    @media (max-width: $lg) {
+                        max-width: 100%;
+                        flex-basis: 100%;
+                    }
                 }
                 &--cheaper {
                 }

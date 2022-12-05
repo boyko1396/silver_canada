@@ -556,11 +556,14 @@ svg,
     background: linear-gradient(0deg,$color-white-1 33.33%,rgba($color-white-1,0) 100%);
 }
 
-.slick-vertical .slick-arrow {
+.slick-arrow {
     left: 0;
+    @media (max-width: $lg) {
+        
+    }
 }
 
-.slick-vertical .slick-prev {
+.slick-prev {
     top: 6px;
     &:after {
         margin-top: -12px;
@@ -573,7 +576,7 @@ svg,
     }
 }
 
-.slick-vertical .slick-next {
+.slick-next {
     bottom: 6px;
     &:after {
         margin-bottom: -12px;
@@ -1678,6 +1681,10 @@ svg,
         cursor: pointer;
         z-index: 1;
         @extend .area-click, .btn-reset;
+        @media (max-width: $sm) {
+            top: 5px;
+            right: 5px;
+        }
         &:hover {
             text-decoration: none;
             @media (min-width: $lg-mf) {
@@ -1697,6 +1704,12 @@ svg,
         justify-content: center;
         align-items: center;
         flex: 0 0 90px;
+        @media (max-width: $sm) {
+            width: 70px;
+            height: 70px;
+            margin-right: 10px;
+            flex-basis: 70px;
+        }
         img {
             max-width: 100%;
             max-height: 100%;
@@ -1707,7 +1720,7 @@ svg,
         flex-grow: 1;
     }
     &__title {
-        margin: 0;
+        margin: 0 10px 0 0;
         font-weight: 300;
         font-size: inherit;
         line-height: 1.3125;
@@ -1959,18 +1972,28 @@ svg,
     font-weight: 300;
     font-size: 18px;
     position: relative;
+    @media (max-width: $xs) {
+        font-size: 15px;
+    }
     &__media {
-        max-width: 150px;
+        background: $color-white-1;
+        max-width: 152px;
         margin-right: 24px;
-        flex: 0 0 150px;
+        flex: 0 0 152px;
+        border: 1px solid $color-gray-1;
+        border-radius: 10px;
+        overflow: hidden;
+        @media (max-width: $xs) {
+            max-width: 92px;
+            margin-right: 15px;
+            flex-basis: 92px;
+        }
     }
     &__picture {
-        background: $color-white-1;
         padding-bottom: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 1px solid $color-gray-1;
         border-radius: 10px;
         position: relative;
         overflow: hidden;
@@ -1986,6 +2009,9 @@ svg,
     &__content {
         max-width: 160px;
         flex-grow: 1;
+        @media (max-width: $sm) {
+            max-width: 100%;
+        }
     }
     &__title {
         margin: 0;
@@ -2038,8 +2064,16 @@ svg,
     }
     &__col {
         &--content {
+            @media (max-width: $lg) {
+                max-width: 100%;
+                flex-basis: 100%;
+            }
         }
         &--aside {
+            @media (max-width: $lg) {
+                max-width: 100%;
+                flex-basis: 100%;
+            }
         }
     }
     &__list {
@@ -2047,10 +2081,34 @@ svg,
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media (max-width: $lg) {
+            padding: 15px;
+        }
+        @media (max-width: $sm) {
+            flex-wrap: wrap;
+        }
         &-card {
             max-width: 330px;
             flex: 0 0 330px;
             position: relative;
+            @media (max-width: $lg) {
+                max-width: calc(50% - 100px);
+                flex-basis: calc(50% - 100px);
+            }
+            @media (max-width: $md) {
+                max-width: calc(50% - 60px);
+                flex-basis: calc(50% - 60px);
+            }
+            @media (max-width: $sm) {
+                width: 100%;
+                max-width: 100%;
+                flex-basis: 100%;
+            }
+            &:nth-child(odd) {
+                @media (max-width: $sm) {
+                    margin-bottom: 50px;
+                }
+            }
             &:nth-child(odd):after {
                 background: 50% no-repeat;
                 background-image: url("data:image/svg+xml,%3Csvg width='46' height='46' viewBox='0 0 46 46' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.9778 1.02222C21.9778 0.457664 22.4354 0 23 0C23.5646 0 24.0222 0.457665 24.0222 1.02222V44.9778C24.0222 45.5423 23.5646 46 23 46C22.4354 46 21.9778 45.5423 21.9778 44.9778V1.02222Z' fill='%232D2C38'/%3E%3Cpath d='M44.9778 21.9781C45.5423 21.9781 46 22.4357 46 23.0003C46 23.5649 45.5423 24.0225 44.9778 24.0225L1.02222 24.0225C0.457664 24.0225 -2.46776e-08 23.5649 0 23.0003C2.46776e-08 22.4357 0.457665 21.9781 1.02222 21.9781L44.9778 21.9781Z' fill='%232D2C38'/%3E%3C/svg%3E%0A");
@@ -2062,6 +2120,19 @@ svg,
                 position: absolute;
                 top: 50%;
                 left: 100%;
+                @media (max-width: $lg) {
+                    margin-left: 40px;
+                }
+                @media (max-width: $md) {
+                    margin-left: 30px;
+                }
+                @media (max-width: $sm) {
+                    width: 30px;
+                    height: 30px;
+                    margin: 5px 0 0 -15px;
+                    top: 100%;
+                    left: 50%;
+                }
             }
         }
     }
@@ -2075,7 +2146,12 @@ svg,
         align-items: center;
         color: $color-white-1;
         text-align: center;
+        border-radius: 0 10px 10px 0;
         flex-wrap: wrap;
+        @media (max-width: $lg) {
+            padding: 35px 15px;
+            border-radius: 0 0 10px 10px;
+        }
         &-price {
             width: 100%;
             margin: -5px -5px 15px;
@@ -2099,6 +2175,9 @@ svg,
         }
         &-btn {
             min-width: 84%;
+            @media (max-width: $lg) {
+                min-width: 180px;
+            }
         }
     }
 }

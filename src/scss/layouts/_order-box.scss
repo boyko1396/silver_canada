@@ -3,6 +3,9 @@
     border-radius: 10px;
     &__inner {
         padding: 20px;
+        @media (max-width: $sm) {
+            padding: 15px;
+        }
         &:not(:last-child) {
             border-bottom: 1px solid $color-gray-11;
         }
@@ -15,7 +18,7 @@
         @extend .scrollbar-css;
         &-item {
             &:not(:last-child) {
-                margin-bottom: 14px;
+                margin-bottom: 15px;
             }
         }
     }

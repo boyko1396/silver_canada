@@ -2,12 +2,18 @@
     overflow: hidden;
     &__el {
         margin: -6px 0;
+        @media (max-width: $lg) {
+            margin: 0 -3px;
+        }
     }
     &__slide {
         padding: 6px 0;
         border: none !important;
         cursor: pointer;
         vertical-align: top;
+        @media (max-width: $lg) {
+            padding: 0 3px;
+        }
     }
     &__picture {
         padding-bottom: 100%;
@@ -73,19 +79,38 @@
         margin-right: -32px;
         display: flex;
         align-items: flex-start;
+        @media (max-width: $lg) {
+            margin-right: 0;
+            flex-wrap: wrap;
+        }
     }
     &__slider-mini {
         max-width: 90px;
         margin-right: 12px;
         flex: 0 0 90px;
+        @media (max-width: $lg) {
+            max-width: 100%;
+            margin-right: 0;
+            flex: 0 0 100%;
+        }
     }
     &__slider-main {
         max-width: calc(100% - 102px);
         flex: 0 0 calc(100% - 102px);
+        @media (max-width: $lg) {
+            max-width: 100%;
+            margin-bottom: 10px;
+            flex: 0 0 100%;
+            order: -1;
+        }
     }
     &__content {
         margin-left: 32px;
         font-weight: 300;
+        @media (max-width: $lg) {
+            margin-left: 0;
+            padding: 20px 0 50px;
+        }
     }
     &__good-code {
         margin: 0 0 15px;
@@ -95,7 +120,7 @@
     }
     &__characteristics {
         max-width: 100%;
-        margin: 0 -10px 5px;
+        margin: 0 -10px 8px;
         border-collapse: collapse;
         td {
             padding: 3px 10px;
@@ -106,7 +131,7 @@
         vertical-align: top;
     }
     &__item {
-        margin: 0 0 30px;
+        margin: 0 0 24px;
     }
     &__subtitle {
         margin: 0 0 5px;
@@ -163,6 +188,22 @@
     }
     &__btns-action {
         margin: 0 0 25px;
+        .btn-group__list {
+            @media (max-width: $xs) {
+                justify-content: space-between;
+            }
+        }
+        .btn-group__list-item:first-child {
+            flex-grow: 1;
+            @media (max-width: $xs) {
+                flex-grow: 1;
+            }
+            .btn {
+                @media (max-width: $xs) {
+                    width: 100%;
+                }
+            }
+        }
     }
     &__benefits {
         background: $color-white-1;
@@ -172,6 +213,9 @@
         justify-content: space-around;
         align-items: center;
         border-radius: 5px;
+        @media (max-width: $lg) {
+            display: none;
+        }
         &-item {
             margin: 0 5px;
             display: flex;
@@ -189,6 +233,12 @@
     &__social {
         display: flex;
         align-items: center;
+        @media (max-width: $lg) {
+            background: $color-white-1;
+            padding: 15px;
+            justify-content: space-between;
+            border-radius: 10px;
+        }
         &-title {
             margin: 0 12px 0 0;
         }

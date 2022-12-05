@@ -248,7 +248,16 @@ $(document).ready(function() {
             asNavFor: $('.js-card-slider-main-init'),
             focusOnSelect: true,
             vertical: true,
-            verticalSwiping: true
+            verticalSwiping: true,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        vertical: false,
+                        verticalSwiping: false
+                    }
+                }
+            ]
         });
     }
 

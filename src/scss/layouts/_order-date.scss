@@ -1,10 +1,16 @@
 .order-date {
     &__customer-nav {
         margin: 0 0 40px;
+        @media (max-width: $sm) {
+            margin-bottom: 20px;
+        }
     }
     &__box {
         &:not(:last-child) {
             margin-bottom: 40px;
+            @media (max-width: $sm) {
+                margin-bottom: 30px;
+            }
         }
     }
     &__title {
