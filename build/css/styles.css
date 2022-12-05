@@ -5222,10 +5222,6 @@ svg,
   margin-bottom: 15px;
 }
 
-#preloader {
-  display: none !important;
-}
-
 @media (max-width: 1199px) {
   .main {
     overflow-x: hidden;
