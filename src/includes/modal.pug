@@ -1,0 +1,81 @@
+<div id="modal-login" class="modal">
+  <div class="modal__inner">
+    <div class="modal__center">
+      .modal__center-header
+        header.modal-header
+          p.modal-header__title Authorization
+          button(type="button").js-modal-close.btn-close.btn-close--size-md.modal-header__btn-close
+            svg.icon.btn-close__icon
+              use(xlink:href="images/sprite.svg#close")
+      .modal__center-body
+        form(action="#").modal__form
+          .input-area-el.modal__form-line
+            input(type="text" name="email" value="")#login-email.js-input-label.input-el.input-el--type-input.input-el--size-xl.input-el--theme-light.input-area-el__input
+            label(for="login-email").input-area-el__label E-mail
+          .input-area-el.modal__form-line
+            input(type="password" name="password" value="")#login-password.js-input-label.input-el.input-el--type-input.input-el--size-xl.input-el--theme-light.input-area-el__input
+            label(for="login-password").input-area-el__label Password
+          .modal__form-info
+            label.checkbox-el.modal__form-remember
+              input(type="checkbox" name="loginRemember" value="remember").checkbox-el__control
+              span.checkbox-el__inner
+                span.checkbox-el__icon
+                span.checkbox-el__title Remember me
+            a(href="#").modal__form-forgot Forgot password?
+          button(type="submit").btn.btn--size-md.btn--theme-accent.modal__form-btn
+            span.btn__inner
+              span.btn__title Exit
+          button(type="button").btn.btn--size-md.btn--theme-dark.modal__form-btn
+            span.btn__inner
+              span.btn__title Sign up
+    </div>
+  </div>
+</div>
+
+<div id="modal-registration" class="modal">
+  <div class="modal__inner">
+    <div class="modal__center">
+      .modal__center-header
+        header.modal-header
+          p.modal-header__title Registration
+          button(type="button").js-modal-close.btn-close.btn-close--size-md.modal-header__btn-close
+            svg.icon.btn-close__icon
+              use(xlink:href="images/sprite.svg#close")
+      .modal__center-body
+        form(action="#").modal__form
+          .input-area-el.modal__form-line
+            input(type="text" name="email" value="")#login-email.js-input-label.input-el.input-el--type-input.input-el--size-xl.input-el--theme-light.input-area-el__input
+            label(for="login-email").input-area-el__label E-mail
+          .input-area-el.modal__form-line
+            input(type="password" name="password" value="")#login-password.js-input-label.input-el.input-el--type-input.input-el--size-xl.input-el--theme-light.input-area-el__input
+            label(for="login-password").input-area-el__label Password
+          .input-area-el.modal__form-line
+            input(type="password" name="repeatPassword" value="")#login-password.js-input-label.input-el.input-el--type-input.input-el--size-xl.input-el--theme-light.input-area-el__input
+            label(for="login-password").input-area-el__label Password confirmation
+          button(type="submit").btn.btn--size-md.btn--theme-accent.modal__form-btn
+            span.btn__inner
+              span.btn__title Registration
+    </div>
+  </div>
+</div>
+
+<div id="modal-forgot-password" class="modal">
+  <div class="modal__inner">
+    <div class="modal__center">
+      .modal__center-header
+        header.modal-header
+          p.modal-header__title Forgot password
+          button(type="button").js-modal-close.btn-close.btn-close--size-md.modal-header__btn-close
+            svg.icon.btn-close__icon
+              use(xlink:href="images/sprite.svg#close")
+      .modal__center-body
+        form(action="#").modal__form
+          .input-area-el.modal__form-line
+            input(type="text" name="email" value="")#login-email.js-input-label.input-el.input-el--type-input.input-el--size-xl.input-el--theme-light.input-area-el__input
+            label(for="login-email").input-area-el__label E-mail
+          button(type="submit").btn.btn--size-md.btn--theme-accent.modal__form-btn
+            span.btn__inner
+              span.btn__title Restore password
+    </div>
+  </div>
+</div>

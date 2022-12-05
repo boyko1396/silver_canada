@@ -19,6 +19,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
     &.is-menu-opened,
+    &.is-modal-opened,
     &.is-filter-dropdown-opened {
         overflow: hidden;
         @media (min-width: $lg-mf) {

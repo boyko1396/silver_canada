@@ -15,7 +15,7 @@
   </head>
   <body>
     <div id="root">
-      <div class="preloader">
+      <div class="preloader" id="preloader">
         <div class="preloader__inner">
           <div class="preloader__logo-wrap"><img class="preloader__logo" src="images/logo-black.png" alt="preloader"/></div>
         </div>
@@ -165,7 +165,7 @@
             </div>
           </div>
         </div>
-      </header>
+      </header><a class="js-modal-init" href="#modal-login">modal login<br></a><a class="js-modal-init" href="#modal-registration">modal registration<br></a><a class="js-modal-init" href="#modal-forgot-password">modal forgot password<br></a>
       <main class="main" role="main">
         <section class="main-slider">
           <div class="js-main-slider-init main-slider__init">
@@ -893,7 +893,96 @@
             <p class="footer__bottom-developer">Develop:&nbsp;<a href="#">designwork</a></p>
           </div>
         </div>
-      </footer>
+      </footer><div id="modal-login" class="modal">
+<div class="modal__inner">
+<div class="modal__center">
+      <div class="modal__center-header">
+        <header class="modal-header">
+          <p class="modal-header__title">Authorization</p>
+          <button class="js-modal-close btn-close btn-close--size-md modal-header__btn-close" type="button">
+            <svg class="icon btn-close__icon">
+              <use xlink:href="images/sprite.svg#close"></use>
+            </svg>
+          </button>
+        </header>
+      </div>
+      <div class="modal__center-body">
+        <form class="modal__form" action="#">
+          <div class="input-area-el modal__form-line">
+            <input class="js-input-label input-el input-el--type-input input-el--size-xl input-el--theme-light input-area-el__input" type="text" name="email" value="" id="login-email"/>
+            <label class="input-area-el__label" for="login-email">E-mail</label>
+          </div>
+          <div class="input-area-el modal__form-line">
+            <input class="js-input-label input-el input-el--type-input input-el--size-xl input-el--theme-light input-area-el__input" type="password" name="password" value="" id="login-password"/>
+            <label class="input-area-el__label" for="login-password">Password</label>
+          </div>
+          <div class="modal__form-info">
+            <label class="checkbox-el modal__form-remember">
+              <input class="checkbox-el__control" type="checkbox" name="loginRemember" value="remember"/><span class="checkbox-el__inner"><span class="checkbox-el__icon"></span><span class="checkbox-el__title">Remember me</span></span>
+            </label><a class="modal__form-forgot" href="#">Forgot password?</a>
+          </div>
+          <button class="btn btn--size-md btn--theme-accent modal__form-btn" type="submit"><span class="btn__inner"><span class="btn__title">Exit</span></span></button>
+          <button class="btn btn--size-md btn--theme-dark modal__form-btn" type="button"><span class="btn__inner"><span class="btn__title">Sign up</span></span></button>
+        </form>
+      </div></div>
+</div>
+</div>
+<div id="modal-registration" class="modal">
+<div class="modal__inner">
+<div class="modal__center">
+      <div class="modal__center-header">
+        <header class="modal-header">
+          <p class="modal-header__title">Registration</p>
+          <button class="js-modal-close btn-close btn-close--size-md modal-header__btn-close" type="button">
+            <svg class="icon btn-close__icon">
+              <use xlink:href="images/sprite.svg#close"></use>
+            </svg>
+          </button>
+        </header>
+      </div>
+      <div class="modal__center-body">
+        <form class="modal__form" action="#">
+          <div class="input-area-el modal__form-line">
+            <input class="js-input-label input-el input-el--type-input input-el--size-xl input-el--theme-light input-area-el__input" type="text" name="email" value="" id="login-email"/>
+            <label class="input-area-el__label" for="login-email">E-mail</label>
+          </div>
+          <div class="input-area-el modal__form-line">
+            <input class="js-input-label input-el input-el--type-input input-el--size-xl input-el--theme-light input-area-el__input" type="password" name="password" value="" id="login-password"/>
+            <label class="input-area-el__label" for="login-password">Password</label>
+          </div>
+          <div class="input-area-el modal__form-line">
+            <input class="js-input-label input-el input-el--type-input input-el--size-xl input-el--theme-light input-area-el__input" type="password" name="repeatPassword" value="" id="login-password"/>
+            <label class="input-area-el__label" for="login-password">Password confirmation</label>
+          </div>
+          <button class="btn btn--size-md btn--theme-accent modal__form-btn" type="submit"><span class="btn__inner"><span class="btn__title">Registration</span></span></button>
+        </form>
+      </div></div>
+</div>
+</div>
+<div id="modal-forgot-password" class="modal">
+<div class="modal__inner">
+<div class="modal__center">
+      <div class="modal__center-header">
+        <header class="modal-header">
+          <p class="modal-header__title">Forgot password</p>
+          <button class="js-modal-close btn-close btn-close--size-md modal-header__btn-close" type="button">
+            <svg class="icon btn-close__icon">
+              <use xlink:href="images/sprite.svg#close"></use>
+            </svg>
+          </button>
+        </header>
+      </div>
+      <div class="modal__center-body">
+        <form class="modal__form" action="#">
+          <div class="input-area-el modal__form-line">
+            <input class="js-input-label input-el input-el--type-input input-el--size-xl input-el--theme-light input-area-el__input" type="text" name="email" value="" id="login-email"/>
+            <label class="input-area-el__label" for="login-email">E-mail</label>
+          </div>
+          <button class="btn btn--size-md btn--theme-accent modal__form-btn" type="submit"><span class="btn__inner"><span class="btn__title">Restore password</span></span></button>
+        </form>
+      </div></div>
+</div>
+</div>
     </div>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/slick.min.js"></script>

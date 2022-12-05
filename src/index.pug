@@ -8,6 +8,9 @@ html(lang='en')
 
       include includes/preloader.pug
       include includes/header.pug
+      a(href="#modal-login").js-modal-init modal login<br>
+      a(href="#modal-registration").js-modal-init modal registration<br>
+      a(href="#modal-forgot-password").js-modal-init modal forgot password<br>
       main(role="main").main
         include includes/main-slider.pug
         section.screen
@@ -303,5 +306,7 @@ html(lang='en')
         include includes/info-screen.pug
         include includes/seo-screen.pug
       include includes/footer.pug
+
+      include includes/modal.pug
 
     include includes/foot.pug

@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    preloaderRemove();
     sortCatalogBtn();
     filterPopupInit();
     rangeSliderInit();
@@ -9,6 +10,16 @@ $(document).ready(function() {
     accountHistory();
     btnDetail();
     cardPageFavorites();
+
+    function preloaderRemove() {
+        $(document).ready(function() {
+            window.onload = function () {
+                $('#preloader').fadeOut(500, function(){
+                    $('#preloader').remove();
+                });
+            }
+        });
+    }
 
     // header sticky
     var previousScroll = 0,
@@ -256,6 +267,14 @@ $(document).ready(function() {
                         vertical: false,
                         verticalSwiping: false
                     }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 5,
+                        vertical: false,
+                        verticalSwiping: false
+                    }
                 }
             ]
         });
@@ -381,4 +400,18 @@ $(document).ready(function() {
             e.preventDefault();
         });
     }
+
+    // modal sms
+    $('.js-modal-init').on('click', function (e) {
+        $('body').toggleClass('is-modal-opened');
+        var currentModal = $(this).attr('href');
+        $(currentModal).toggleClass('is-show');
+        e.preventDefault();
+    });
+
+    $('.js-modal-close').on('click', function (e) {
+        $('body').removeClass('is-modal-opened');
+        $(this).parents('.modal').removeClass('is-show');
+        e.preventDefault();
+    });
 });

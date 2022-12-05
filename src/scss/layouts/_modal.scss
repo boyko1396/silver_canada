@@ -1,0 +1,89 @@
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: all .4s;
+    transition-property: visibility, opacity;
+    z-index: 998;
+    &:not(.is-show) {
+        pointer-events: none;
+        opacity: 0;
+        visibility: hidden;
+    }
+    &--sms {
+    }
+    &__inner {
+        background: rgba($color-black-1, .8);
+        height: 100%;
+        padding-left: 40px;
+        display: flex;
+        justify-content: flex-end;
+        overflow-y: auto;
+    }
+    &__center {
+        background: $color-white-1;
+        width: 100%;
+        max-width: 574px;
+        max-height: 100%;
+        display: flex;
+        flex-direction: column;
+        color: $color-black-1;
+        overflow-y: auto;
+        position: relative;
+        z-index: 0;
+        &-header {
+            position: relative;
+        }
+        &-body {
+            padding: 25px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+        }
+    }
+    &__form {
+        width: 280px;
+        @media (max-width: $xs) {
+            width: 100%;
+        }
+        &-line {
+            margin: 0 0 10px;
+        }
+        &-info {
+            margin: -2px 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: 300;
+            font-size: 13px;
+        }
+        &-remember {
+            .checkbox-el__title {
+                font-size: 13px;
+            }
+        }
+        &-forgot {
+            font-weight: 500;
+            text-decoration: underline;
+            &:hover {
+                @media (min-width: $lg-mf) {
+                    text-decoration: none;
+                }
+            }
+        }
+        &-btn {
+            width: 100%;
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+#preloader {
+    display: none !important;
+}
