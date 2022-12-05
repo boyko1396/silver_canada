@@ -9,6 +9,9 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media (max-width: $sm) {
+            margin-top: 32px;
+        }
         &-btn {
             margin: 8px;
         }

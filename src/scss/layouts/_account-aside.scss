@@ -1,28 +1,51 @@
 .account-aside {
+    display: flex;
+    flex-direction: column;
     &__box {
         background: $color-black-1;
         color: $color-white-1;
         border-radius: 5px;
         &--nav {
+            @media (max-width: $sm) {
+                background: $color-white-1;
+                margin-bottom: 20px;
+                color: $color-black-1;
+                border-radius: 30px;
+            }
         }
         &--cashback {
+            margin-top: 20px;
+            @media (max-width: $sm) {
+                margin-top: 0;
+                margin-bottom: 24px;
+                order: -1;
+            }
         }
     }
     &__nav {
-        margin: 0 0 20px;
+        margin: 0;
         padding: 25px 30px;
-        display: flex;
-        align-items: center;
+        @media (max-width: $sm) {
+            padding: 0;
+        }
         &-list {
             margin: 0;
             padding: 0;
             list-style-type: none;
+            @media (max-width: $sm) {
+                display: flex;
+            }
         }
         &-item {
             margin: 0;
             padding: 0;
+            @media (max-width: $sm) {
+                flex-grow: 1;
+            }
             & + & {
-                margin-top: 10px;
+                @media (min-width: $sm-mf) {
+                    margin-top: 10px;
+                }
             }
         }
         &-link {
@@ -33,11 +56,25 @@
             transition: all .4s;
             transition-property: box-shadow;
             @extend .area-click;
+            @media (max-width: $sm) {
+                padding: 13px 2px;
+                display: block;
+                font-weight: 500;
+                font-size: 14px;
+                text-align: center;
+                border-radius: 30px;
+            }
             &.is-active {
-                font-weight: normal;
                 pointer-events: none;
                 cursor: default;
-                box-shadow: inset 0 -1px 0 currentColor;
+                @media (min-width: $sm-mf) {
+                    font-weight: normal;
+                    box-shadow: inset 0 -1px 0 currentColor;
+                }
+                @media (max-width: $sm) {
+                    background: $color-black-1;
+                    color: $color-white-1;
+                }
             }
             &:hover {
                 text-decoration: none;
@@ -52,6 +89,9 @@
         display: flex;
         align-items: center;
         position: relative;
+        @media (max-width: $sm) {
+            padding: 15px;
+        }
         &-badge-info {
             position: absolute;
             top: -10px;

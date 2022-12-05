@@ -143,6 +143,10 @@
         &-toggle-wrap {
             max-width: 40%;
             flex: 0 0 40%;
+            @media (max-width: $md) {
+                max-width: 31%;
+                flex-basis: 31%;
+            }
         }
         &-toggle {
             background: $color-white-1;
@@ -227,6 +231,10 @@
             justify-content: flex-end;
             align-items: center;
             position: relative;
+            @media (max-width: $md) {
+                max-width: 31%;
+                flex-basis: 31%;
+            }
             @media (max-width: $sm) {
                 z-index: 10;
             }

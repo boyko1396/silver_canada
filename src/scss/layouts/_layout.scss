@@ -21,8 +21,11 @@
     &__breadcrumbs {
         margin: 0 0 40px;
         @media (max-width: $lg) {
-            margin: 0 -15px 20px;
-            padding: 0 15px;
+            margin: -5px -15px 15px;
+            padding: 5px 15px;
+            overflow-x: auto;
+        }
+        @media (max-width: $sm) {
             font-size: 12px;
         }
     }
@@ -116,9 +119,15 @@
     }
     &__faq-list {
         margin: 0 0 100px;
+        @media (max-width: $sm) {
+            margin-bottom: 20px;
+        }
     }
     &__contacts {
         padding-bottom: 60px;
+        @media (max-width: $sm) {
+            padding-bottom: 290px;
+        }
         &-inner {
             padding: 1px 0;
             position: relative;
@@ -140,20 +149,44 @@
             margin: -81px 60px 60px auto;
             padding: 35px;
             border-radius: 10px;
+            @media (max-width: $sm) {
+                width: auto;
+                margin: 290px 15px -270px;
+                padding: 25px;
+            }
         }
     }
     &__account {
         padding-bottom: 50px;
         &-row {
         }
-        &--col {
+        &-row--col {
             &-aside {
+                @media (max-width: $md) {
+                    max-width: 35%;
+                    flex-basis: 35%;
+                }
+                @media (max-width: $sm) {
+                    max-width: 100%;
+                    flex-basis: 100%;
+                }
             }
             &-main {
+                @media (max-width: $md) {
+                    max-width: 65%;
+                    flex-basis: 65%;
+                }
+                @media (max-width: $sm) {
+                    max-width: 100%;
+                    flex-basis: 100%;
+                }
             }
         }
         &-settings {
             max-width: 400px;
+            @media (max-width: $sm) {
+                max-width: 100%;
+            }
         }
         &-history {
             width: 100%;

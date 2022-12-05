@@ -1394,6 +1394,10 @@ svg,
         position: relative;
         transition: all .24s;
         transition-property: background, color, border-radius;
+        @media (max-width: $md) {
+            padding-right: 20px;
+            padding-left: 20px;
+        }
         &:hover {
             @media (min-width: $lg-mf) {
                 background: $color-black-1;
@@ -1413,6 +1417,9 @@ svg,
             transition-property: color;
             cursor: pointer;
             @extend .btn-reset;
+            @media (max-width: $md) {
+                margin-right: 0;
+            }
             &:hover {
                 text-decoration: none;
                 @media (min-width: $lg-mf) {
@@ -1469,8 +1476,16 @@ svg,
     }
     &__dropdown {
         padding: 15px 30px 20px;
+        @media (max-width: $md) {
+            padding-right: 20px;
+            padding-left: 20px;
+        }
         &-text {
             line-height: 1.35;
+            @media (max-width: $sm) {
+                font-size: 16px;
+                line-height: 1.5;
+            }
         }
     }
     &:not(.is-active) &__dropdown {
@@ -1489,6 +1504,9 @@ svg,
 .form-block {
     &__title {
         margin: 0 0 25px;
+        @media (max-width: $sm) {
+            margin-bottom: 15px;
+        }
     }
     &__line {
         margin: 0 0 10px;
