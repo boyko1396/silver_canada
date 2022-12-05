@@ -241,8 +241,7 @@ $(document).ready(function() {
                     breakpoint: 1200,
                     settings: {
                         slidesToShow: 2,
-                        slidesToScroll: 2,
-                        dots: false
+                        slidesToScroll: 2
                     }
                 }
             ]
@@ -317,7 +316,7 @@ $(document).ready(function() {
                                         settings: {
                                             slidesToShow: 4,
                                             slidesToScroll: 4,
-                                            dots: false
+                                            dots: true
                                         }
                                     },
                                     {
@@ -325,7 +324,7 @@ $(document).ready(function() {
                                         settings: {
                                             slidesToShow: 3,
                                             slidesToScroll: 3,
-                                            dots: false
+                                            dots: true
                                         }
                                     },
                                     {
@@ -333,7 +332,7 @@ $(document).ready(function() {
                                         settings: {
                                             slidesToShow: 2,
                                             slidesToScroll: 2,
-                                            dots: false
+                                            dots: true
                                         }
                                     }
                                 ]
