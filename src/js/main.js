@@ -373,11 +373,6 @@ $(document).ready(function() {
             $('.js-select-init').select2({
                 minimumResultsForSearch: Infinity,
                 width: '100%'
-            });
-
-            $('.js-select-init').select2({
-                minimumResultsForSearch: Infinity,
-                width: '100%'
             }).on('select2:open', (elm) => {
                 const targetLabel = $(elm.target).prev('label');
                 targetLabel.addClass('is-selected');
@@ -386,7 +381,7 @@ $(document).ready(function() {
                 const targetLabel = target.prev('label');
                 const targetOptions = $(elm.target.selectedOptions);
                 if (targetOptions.length === 0) {
-                    targetLabel.removeAttr('class');
+                    targetLabel.removeClass('is-selected');
                 }
             });
         }

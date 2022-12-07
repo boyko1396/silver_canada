@@ -1,6 +1,7 @@
 $(document).ready(function() {
     preloaderRemove();
     sortCatalogBtn();
+    sortItemToggle();
     filterPopupInit();
     rangeSliderInit();
     faqCardCollapse();
@@ -89,17 +90,17 @@ $(document).ready(function() {
 
     // sort btn catalog
     function sortCatalogBtn() {
-        var classes = ['is-active-1', 'is-active-2', 'is-active-3'],
-            currentClass = 0;
         $('.js-sort-btn').on('click', function (e) {
-            $(this).removeClass(classes[currentClass]);
-            if (currentClass + 1 < classes.length) {
-                currentClass += 1;
-            }
-            else {
-                currentClass = 0;
-            }
-            $(this).addClass(classes[currentClass]);
+            $(this).toggleClass('is-active');
+            $(this).siblings('.sort-el__dropdown').toggleClass('is-show');
+            e.preventDefault();
+        });
+    }
+
+    // sort item toggle
+    function sortItemToggle() {
+        $('.js-sort-item-toggle').on('click', function (e) {
+            $(this).toggleClass('is-active');
             e.preventDefault();
         });
     }
@@ -372,11 +373,6 @@ $(document).ready(function() {
             $('.js-select-init').select2({
                 minimumResultsForSearch: Infinity,
                 width: '100%'
-            });
-
-            $('.js-select-init').select2({
-                minimumResultsForSearch: Infinity,
-                width: '100%'
             }).on('select2:open', (elm) => {
                 const targetLabel = $(elm.target).prev('label');
                 targetLabel.addClass('is-selected');
@@ -385,7 +381,7 @@ $(document).ready(function() {
                 const targetLabel = target.prev('label');
                 const targetOptions = $(elm.target.selectedOptions);
                 if (targetOptions.length === 0) {
-                    targetLabel.removeAttr('class');
+                    targetLabel.removeClass('is-selected');
                 }
             });
         }
