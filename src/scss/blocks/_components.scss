@@ -1134,6 +1134,7 @@ svg,
 }
 
 .sort-btn {
+    display: inline-block;
     font-size: 15px;
     transition: all .4s;
     transition-property: color;
@@ -1145,12 +1146,13 @@ svg,
         font-size: 13px;
     }
     &:hover {
-        &:hover {
-            text-decoration: none;
-            @media (min-width: $lg-mf) {
-                color: $color-gray-2;
-            }
+        text-decoration: none;
+        @media (min-width: $lg-mf) {
+            color: $color-gray-2;
         }
+    }
+    &.is-active {
+        color: $color-gray-2;
     }
     &__inner {
         display: flex;
@@ -1179,16 +1181,71 @@ svg,
         position: absolute;
         top: 0;
         left: 0;
-        opacity: 0;
-        visibility: hidden;
+        opacity: 1;
+        visibility: visible;
         transition: all .34s;
         transition-property: opacity, visibility;
     }
-    &.is-active-1 &__icon:nth-child(1),
-    &.is-active-2 &__icon:nth-child(2),
-    &.is-active-3 &__icon:nth-child(3) {
-        opacity: 1;
-        visibility: visible;
+}
+
+.sort-item {
+    background: transparent;
+    width: 100%;
+    padding: 10px 18px;
+    display: block;
+    font-size: 14px;
+    line-height: 1.2;
+    color: $color-gray-10;
+    text-align: left;
+    border: none;
+    outline: none;
+    user-select: none;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all .24s;
+    transition-property: background;
+    @extend .btn-reset;
+    &.is-active {
+        background: #F3F4F6;
+        color: $color-black-1;
+    }
+    &:empty {
+        display: none !important;
+        position: absolute;
+        left: -9999px;
+    }
+    &:hover {
+        text-decoration: none;
+        @media (min-width: $lg-mf) {
+            background: #F3F4F6;
+            color: $color-black-1;
+        }
+    }
+}
+
+.sort-el {
+    display: inline-block;
+    position: relative;
+    &__btn {
+    }
+    &__dropdown {
+        background: $color-white-1;
+        min-width: 140px;
+        margin-top: 4px;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        border-radius: 15px;
+        overflow: hidden;
+        transition: all .4s;
+        transition-property: transform, opacity, visibility;
+        z-index: 2;
+        &:not(.is-show) {
+            transform: translateY(4px);
+            pointer-events: none;
+            opacity: 0;
+            visibility: hidden;
+        }
     }
 }
 

@@ -1,6 +1,7 @@
 $(document).ready(function() {
     preloaderRemove();
     sortCatalogBtn();
+    sortItemToggle();
     filterPopupInit();
     rangeSliderInit();
     faqCardCollapse();
@@ -89,17 +90,17 @@ $(document).ready(function() {
 
     // sort btn catalog
     function sortCatalogBtn() {
-        var classes = ['is-active-1', 'is-active-2', 'is-active-3'],
-            currentClass = 0;
         $('.js-sort-btn').on('click', function (e) {
-            $(this).removeClass(classes[currentClass]);
-            if (currentClass + 1 < classes.length) {
-                currentClass += 1;
-            }
-            else {
-                currentClass = 0;
-            }
-            $(this).addClass(classes[currentClass]);
+            $(this).toggleClass('is-active');
+            $(this).siblings('.sort-el__dropdown').toggleClass('is-show');
+            e.preventDefault();
+        });
+    }
+
+    // sort item toggle
+    function sortItemToggle() {
+        $('.js-sort-item-toggle').on('click', function (e) {
+            $(this).toggleClass('is-active');
             e.preventDefault();
         });
     }

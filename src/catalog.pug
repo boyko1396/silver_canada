@@ -27,17 +27,19 @@ html(lang='en')
                           use(xlink:href="images/sprite.svg#filter-type-1")
                       span.filter-btn__text
                         span.filter-btn__title Filter
-                  button(type="button").js-sort-btn.sort-btn.layout__catalog-header-sort-btn.is-active-1
-                    span.sort-btn__inner
-                      span.sort-btn__text
-                        span.sort-btn__title Sort
-                      span.sort-btn__icon-wrap
-                        svg.icon.sort-btn__icon
-                          use(xlink:href="images/sprite.svg#sort-type-1")
-                        svg.icon.sort-btn__icon
-                          use(xlink:href="images/sprite.svg#sort-type-3")
-                        svg.icon.sort-btn__icon
-                          use(xlink:href="images/sprite.svg#sort-type-2")
+                  .layout__catalog-header-sort
+                    .sort-el
+                      button(type="button").js-sort-btn.sort-btn.sort-el__btn
+                        span.sort-btn__inner
+                          span.sort-btn__text
+                            span.sort-btn__title Sort
+                          span.sort-btn__icon-wrap
+                            svg.icon.sort-btn__icon
+                              use(xlink:href="images/sprite.svg#sort-type-1")
+                      .sort-el__dropdown
+                        button(type="button").js-sort-item-toggle.sort-item.sort-el__dropdown-item Sort 1
+                        button(type="button").js-sort-item-toggle.sort-item.sort-el__dropdown-item Sort 2
+                        button(type="button").js-sort-item-toggle.sort-item.sort-el__dropdown-item Sort 3
               .row__col--3.layout__catalog-col--aside
                   aside.layout__catalog-aside
                     .filter-dropdown--main.filter-dropdown.layout__catalog-aside-filter

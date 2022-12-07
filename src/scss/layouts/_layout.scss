@@ -70,8 +70,13 @@
             &-filter-btn {
                 margin-right: auto;
             }
-            &-sort-btn {
+            &-sort {
                 margin-left: auto;
+                position: relative;
+                &-btn {
+                }
+                &-select {
+                }
             }
         }
         &-aside {
