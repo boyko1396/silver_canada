@@ -160,6 +160,7 @@ $(document).ready(function() {
     function faqCardCollapse() {
         $('.js-faq-collapse').on('click', function (e) {
             $(this).parents().toggleClass('is-active');
+            $(this).parents().siblings('.faq-card__dropdown').slideToggle(400);
             e.preventDefault();
         });
     }
@@ -372,6 +373,21 @@ $(document).ready(function() {
                 minimumResultsForSearch: Infinity,
                 width: '100%'
             });
+
+            $('.js-select-init').select2({
+                minimumResultsForSearch: Infinity,
+                width: '100%'
+            }).on('select2:open', (elm) => {
+                const targetLabel = $(elm.target).prev('label');
+                targetLabel.addClass('is-selected');
+            }).on('select2:close', (elm) => {
+                const target = $(elm.target);
+                const targetLabel = target.prev('label');
+                const targetOptions = $(elm.target.selectedOptions);
+                if (targetOptions.length === 0) {
+                    targetLabel.removeAttr('class');
+                }
+            });
         }
     }
 
@@ -396,6 +412,7 @@ $(document).ready(function() {
     function accountHistory() {
         $('.js-account-history-toggle').on('click', function (e) {
             $(this).parent().toggleClass('is-active');
+            $(this).siblings('.account-history__item-dropdown').slideToggle(400);
             e.preventDefault();
         });
     }

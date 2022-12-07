@@ -34,23 +34,29 @@ html(lang='en')
                         input(type="text" name="surname" value="")#order-surname.js-input-label.input-el.input-el--type-input.input-el--size-lg.input-el--theme-light.input-area-el__input
                         label(for="order-surname").input-area-el__label Last Name
                       .input-area-el.order-date__line
-                        select(name="order-delivery").js-select-init.select.select--size-lg
-                          option(value="Delivery options") Delivery options
-                          option(value="Purolator") Purolator
-                          option(value="Fedex") Fedex
-                          option(value="Ups") Ups
+                        .select-el
+                          label(for="order-delivery").select-el__label Delivery options
+                          select(name="order-delivery")#order-delivery.js-select-init.select.select--size-xl.select-el__control
+                            option
+                            option(value="Purolator") Purolator
+                            option(value="Fedex") Fedex
+                            option(value="Ups") Ups
                       .order-date__line
-                        select(name="order-country").js-select-init.select.select--size-lg
-                          option(value="Country") Country
-                          option(value="Ukraine") Ukraine
-                          option(value="Ukraine") Ukraine
-                          option(value="Ukraine") Ukraine
+                        .select-el
+                          label(for="order-country").select-el__label Country
+                          select(name="order-country")#order-country.js-select-init.select.select--size-xl.select-el__control
+                            option
+                            option(value="Ukraine") Ukraine
+                            option(value="Ukraine") Ukraine
+                            option(value="Ukraine") Ukraine
                       .order-date__line
-                        select(name="order-state").js-select-init.select.select--size-lg
-                          option(value="State") State
-                          option(value="Tenopilska") Tenopilska
-                          option(value="Tenopilska") Tenopilska
-                          option(value="Tenopilska") Tenopilska
+                        .select-el
+                          label(for="order-state").select-el__label State
+                          select(name="order-state")#order-state.js-select-init.select.select--size-xl.select-el__control
+                            option
+                            option(value="Tenopilska") Tenopilska
+                            option(value="Tenopilska") Tenopilska
+                            option(value="Tenopilska") Tenopilska
                       .input-area-el.order-date__line
                         input(type="text" name="city" value="")#order-city.js-input-label.input-el.input-el--type-input.input-el--size-lg.input-el--theme-light.input-area-el__input
                         label(for="order-city").input-area-el__label City

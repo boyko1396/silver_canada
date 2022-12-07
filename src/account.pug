@@ -48,17 +48,21 @@ html(lang='en')
                             input(type="text" name="surname" value="Vitalii")#settings-surname.js-input-label.input-el.input-el--type-input.input-el--size-xl.input-el--theme-light.input-area-el__input
                             label(for="settings-surname").input-area-el__label Last Name
                           .account-settings__line
-                            select(name="settings-country").js-select-init.select.select--size-xl
-                              option(value="Country") Country
-                              option(value="Ukraine") Ukraine
-                              option(value="Ukraine") Ukraine
-                              option(value="Ukraine") Ukraine
+                            .select-el
+                              label(for="settings-country").select-el__label Country
+                              select(name="settings-country")#settings-country.js-select-init.select.select--size-xl.select-el__control
+                                option
+                                option(value="Ukraine") Ukraine
+                                option(value="Ukraine") Ukraine
+                                option(value="Ukraine") Ukraine
                           .account-settings__line
-                            select(name="settings-state").js-select-init.select.select--size-xl
-                              option(value="State") State
-                              option(value="Tenopilska") Tenopilska
-                              option(value="Tenopilska") Tenopilska
-                              option(value="Tenopilska") Tenopilska
+                            .select-el
+                              label(for="settings-state").select-el__label State
+                              select(name="settings-state")#settings-state.js-select-init.select.select--size-xl.select-el__control
+                                option
+                                option(value="Tenopilska") Tenopilska
+                                option(value="Tenopilska") Tenopilska
+                                option(value="Tenopilska") Tenopilska
                           .input-area-el.account-settings__line
                             input(type="text" name="city" value="Tenopil")#settings-city.js-input-label.input-el.input-el--type-input.input-el--size-xl.input-el--theme-light.input-area-el__input
                             label(for="settings-city").input-area-el__label City

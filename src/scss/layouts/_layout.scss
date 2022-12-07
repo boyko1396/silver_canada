@@ -34,13 +34,7 @@
         }
         &-col--aside {
             @media (min-width: $lg-mf) {
-                padding-top: 110px;
-                padding-bottom: 110px;
                 align-self: flex-start;
-                position: sticky;
-                top: 110px;
-                transition: all .34s;
-                transition-property: padding-top;
             }
             @media (max-width: $lg) {
                 max-width: 100%;
@@ -261,8 +255,4 @@
             }
         }
     }
-}
-
-.header.is-sticky ~ .main .layout__catalog-col--aside {
-    padding-top: 0;
 }

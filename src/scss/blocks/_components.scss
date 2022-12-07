@@ -1509,6 +1509,7 @@ svg,
     }
     &__dropdown {
         padding: 15px 30px 20px;
+        display: none;
         @media (max-width: $md) {
             padding-right: 20px;
             padding-left: 20px;
@@ -1520,9 +1521,6 @@ svg,
                 line-height: 1.5;
             }
         }
-    }
-    &:not(.is-active) &__dropdown {
-        display: none;
     }
 }
 
@@ -1686,6 +1684,8 @@ svg,
         height: 71.4285714286%;
         display: block;
         position: relative;
+    }
+    &--size-lg &__icon {
         top: 1px;
         left: 1px;
     }
