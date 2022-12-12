@@ -13,12 +13,8 @@ $(document).ready(function() {
     cardPageFavorites();
 
     function preloaderRemove() {
-        $(document).ready(function() {
-            window.onload = function () {
-                $('#preloader').fadeOut(500, function(){
-                    $('#preloader').remove();
-                });
-            }
+        $('#preloader').delay(500).fadeOut(500, function(){
+            $('#preloader').remove();
         });
     }
 
