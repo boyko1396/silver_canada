@@ -5512,11 +5512,11 @@ svg,
   }
 }
 .screen__goods-rubric {
-  margin: 0 0 59px;
+  margin-bottom: -55px;
 }
 @media (max-width: 767px) {
   .screen__goods-rubric {
-    margin-bottom: 30px;
+    margin-bottom: -20px;
   }
 }
 .screen__title {

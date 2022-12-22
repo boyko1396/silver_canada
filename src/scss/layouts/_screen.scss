@@ -1,5 +1,5 @@
 .screen {
-	padding: 55px 0;
+    padding: 55px 0;
     @media (max-width: $sm) {
         padding-top: 25px;
         padding-bottom: 25px;
@@ -7,14 +7,14 @@
     &__container {
     }
     &__goods-rubric {
-    	margin: 0 0 59px;
+        margin-bottom: -55px;
         @media (max-width: $sm) {
-            margin-bottom: 30px;
+            margin-bottom: -20px;
         }
     }
     &__title {
-    	margin: 0 0 13px;
-    	text-align: center;
+        margin: 0 0 13px;
+        text-align: center;
         @media (max-width: $md) {
             font-size: 36px;
         }
